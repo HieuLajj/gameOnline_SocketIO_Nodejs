@@ -64,15 +64,12 @@ public class NetworkManager : MonoBehaviour
         TextMeshProUGUI playerName = t1.GetComponent<TextMeshProUGUI>();
         playerName.text = playerinfomation.name;
         g.name = playerinfomation.name;
-        Debug.Log(position);
-        Debug.Log(rotation);
     }
 
     public void OnPlayerMove(String data){
-        Debug.Log("danga chay"+data);
         UserJSON userJSON = JsonUtility.FromJson<UserJSON>(data);
         Vector3 position = new Vector3(userJSON.position[0], userJSON.position[1], userJSON.position[2]);
-        Debug.Log(position);
+        Debug.Log(userJSON.name+ "ff"+ position);
 		// if it is the current player exit
 		if (userJSON.name == textName)
 		{
@@ -81,7 +78,7 @@ public class NetworkManager : MonoBehaviour
 		GameObject p = GameObject.Find(userJSON.name) as GameObject;
 		if (p != null)
 		{
-			p.transform.position = position;
+			p.transform.position = position; 
 		}
     }
 
@@ -125,7 +122,6 @@ public class NetworkManager : MonoBehaviour
         List<SpawnPoint> enemySpawnPoints = GetComponent<EnemySpawner>().enemySpawnPoints;
         PlayerJSON playerJSON = new PlayerJSON(playerName, playerSpawnPoints, enemySpawnPoints);
         string data = JsonUtility.ToJson(playerJSON);
-        Debug.Log("?");
         socketManager.Socket.Emit("play", data);
     }
 
