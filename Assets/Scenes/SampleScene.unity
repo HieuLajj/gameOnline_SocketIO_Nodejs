@@ -11703,6 +11703,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   playerNameInput: {fileID: 0}
   player: {fileID: 4310844819660251172, guid: 5524834450969bc469bc1cd7b52029ce, type: 3}
+  textName: 
 --- !u!4 &2000256469
 Transform:
   m_ObjectHideFlags: 0

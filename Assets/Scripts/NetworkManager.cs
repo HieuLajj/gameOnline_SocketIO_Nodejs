@@ -44,6 +44,7 @@ public class NetworkManager : MonoBehaviour
         socketManager.Socket.On("play", (String data)=>{OnPlay(data);});
 		// socketManager.Socket.On("play", OnPlay);
 		socketManager.Socket.On("player move", (String data)=>{OnPlayerMove(data);});
+        socketManager.Socket.On("weapon rotation",(String data)=>{OnPlayerWeaponRotation(data);});
 		// socketManager.Socket.On("player shoot", OnPlayerShoot);
 		// socketManager.Socket.On("health", OnHealth);
 		// socketManager.Socket.On("other player disconnected", OnOtherPlayerDisconnect);
@@ -52,9 +53,7 @@ public class NetworkManager : MonoBehaviour
 
 
     public void OnOtherPlayerConnected(String data){
-        Debug.Log(data);
-        Debug.Log("---------------------");
-        PlayerInfomationJson playerinfomation = JsonUtility.FromJson<PlayerInfomationJson>(data);
+        UserJSON playerinfomation = JsonUtility.FromJson<UserJSON>(data);
         Vector3 position = new Vector3(playerinfomation.position[0], playerinfomation.position[1], playerinfomation.position[2]);
         Quaternion rotation =  Quaternion.Euler(0f,0f,0f);
         GameObject g = Instantiate(player, position, rotation) as GameObject;
@@ -69,7 +68,6 @@ public class NetworkManager : MonoBehaviour
     public void OnPlayerMove(String data){
         UserJSON userJSON = JsonUtility.FromJson<UserJSON>(data);
         Vector3 position = new Vector3(userJSON.position[0], userJSON.position[1], userJSON.position[2]);
-        Debug.Log(userJSON.name+ "ff"+ position);
 		// if it is the current player exit
 		if (userJSON.name == textName)
 		{
@@ -82,29 +80,64 @@ public class NetworkManager : MonoBehaviour
 		}
     }
 
+    public void OnPlayerWeaponRotation(String data){
+        UserJSON userJSON = JsonUtility.FromJson<UserJSON>(data);
+        Vector3 rotationWeVec3 = new Vector3(userJSON.rotationWeapon[0], userJSON.rotationWeapon[1], userJSON.rotationWeapon[2]);
+        Quaternion rotationWe = Quaternion.Euler(rotationWeVec3);
+		// if it is the current player exit
+		if (userJSON.name == textName)
+		{
+			return;
+		}
+		GameObject p = GameObject.Find(userJSON.name) as GameObject;
+		if (p != null)
+		{
+            playercontroller pc = p.GetComponent<playercontroller>();
+            pc.weaponGun.gameObject.transform.rotation = rotationWe;
+		}
+    }
+
     public void ComandMove(Vector3 vec3){
         string data = JsonUtility.ToJson(new PositionJSON(vec3));
         socketManager.Socket.Emit("player move", data);
     }
 
+    public void ComandRotateWeapon(Vector3 vec3){
+        string data = JsonUtility.ToJson(new RotationWeaponJSON(vec3));
+        socketManager.Socket.Emit("weapon rotation", data);
+    }
+
     public void OnPlay(String data){
-        PlayerInfomationJson playerinfomation = JsonUtility.FromJson<PlayerInfomationJson>(data);
+        UserJSON playerinfomation = JsonUtility.FromJson<UserJSON>(data);
         Vector3 position = new Vector3(playerinfomation.position[0], playerinfomation.position[1], playerinfomation.position[2]);
+        Quaternion rotationWeapon = Quaternion.Euler(playerinfomation.rotationWeapon[0],playerinfomation.rotationWeapon[1],playerinfomation.rotationWeapon[2]);
         Quaternion rotation =  Quaternion.Euler(0f,0f,0f);    
         GameObject g = Instantiate(player, position, rotation) as GameObject;
         playercontroller pc = g.GetComponent<playercontroller>();
+        
+        // Vector3 omto = new Vector3(playerinfomation.rotationWeapon[0],playerinfomation.rotationWeapon[1],playerinfomation.rotationWeapon[2]);
+        // Debug.Log(omto);
+        // weapon rotation
+        GameObject weapon = pc.weaponGun.gameObject;
+        weapon.transform.rotation = rotationWeapon;
+        //pc.weaponGun.gameObject.transform.rotation = rotationWeapon;
+        //GameObject weapon = g.transform.Find("GunPos").gameObject;
+        PlayerAimWeapon aim = weapon.GetComponent<PlayerAimWeapon>();
+        aim.isLocalPlayer = true;
+        //GameObject weapon = aim.gameObject;
+        // if(aim){
+        //     Debug.Log(":))))");
+        // }
+
+        //aim.WeaponGun.transform.rotation = rotation; 
+
         Transform t  = g.transform.Find("Healthbar_Canvas");
         Transform t1 = t.transform.Find("PlayerName");
         TextMeshProUGUI playerName = t1.GetComponent<TextMeshProUGUI>();
         playerName.text = playerinfomation.name;
-
-
         textName = playerinfomation.name;
-
-
         pc.isLocalPlayer = true;
         g.name = playerinfomation.name;
-
         vCam.Follow = g.transform;
         //Debug.Log("dang tao");
     }
@@ -148,14 +181,6 @@ public class NetworkManager : MonoBehaviour
     }
 
     [Serializable]
-    public class PlayerInfomationJson{
-        public string name;
-        public  float[] position;
-        public int health;
-
-    }
-    
-    [Serializable]
     public class PointJSON{
         public float[] position;
         public PointJSON(SpawnPoint spawnPoint){
@@ -176,10 +201,19 @@ public class NetworkManager : MonoBehaviour
     }
 
     [Serializable]
+    public class RotationWeaponJSON{
+        public float[] rotation;
+        public RotationWeaponJSON(Vector3 _rotation){
+            rotation = new float[]{_rotation.x, _rotation.y, _rotation.z};
+        }
+    }
+
+    [Serializable]
     public class UserJSON{
         public string name;
         public float[] position;
         public float[] rotation;
+        public float[] rotationWeapon;
         public int health;
         public static UserJSON CreateFromJSON(string data){
             return JsonUtility.FromJson<UserJSON>(data);

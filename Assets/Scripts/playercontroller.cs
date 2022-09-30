@@ -5,6 +5,7 @@ using TMPro;
 
 public class playercontroller : MonoBehaviour
 {
+    public GameObject weaponGun;
     private bool isFacingRightl = true;
     private float movementHorizontal;
     private float movementVertical;
