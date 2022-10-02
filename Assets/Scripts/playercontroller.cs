@@ -29,6 +29,8 @@ public class playercontroller : MonoBehaviour
     private int m=0;
     
     public Transform transform2;
+    public Gun[] allGuns;
+    public int selectedGun;
 
     void Start()
     {
@@ -41,18 +43,20 @@ public class playercontroller : MonoBehaviour
     void Update()
     {
         Check();
+        //SwitchWeapon();
         if(isLocalPlayer){
+            SwitchWeapon();
             currentPosition = transform2.position;
             CheckInput();
             if(currentPosition != oldPosition){
-            NetworkManager.instance.GetComponent<NetworkManager>().ComandMove(transform2.position);
+                NetworkManager.instance.GetComponent<NetworkManager>().ComandMove(transform2.position);
+            }
         }
-        }
-        
+    
         currentPosition = transform2.position;
         indexFlip = currentPosition.x - oldPosition.x;
         if(currentPosition != oldPosition){
-           m=0;
+            m=0;
             if(!isWalking){
                 isWalking = true;
             }
@@ -70,6 +74,38 @@ public class playercontroller : MonoBehaviour
             CmdFire();
         }
     }
+
+    private void SwitchWeapon(){
+        if(Input.GetAxisRaw("Mouse ScrollWheel") > 0f){
+            ++selectedGun;
+            if(selectedGun >= allGuns.Length){
+                selectedGun = 0;
+            }
+            SwitchGun();
+        }else if( Input.GetAxisRaw("Mouse ScrollWheel") < 0f){
+            --selectedGun;
+            if(selectedGun <0){
+                selectedGun = allGuns.Length -1;
+            }
+            SwitchGun();
+        }
+    }
+    private void SwitchGun(){
+        foreach (Gun gun in allGuns){
+            gun.gameObject.SetActive(false);
+        }
+        allGuns[selectedGun].gameObject.SetActive(true);
+        NetworkManager.instance.GetComponent<NetworkManager>().ComandSelectedGuns(selectedGun);
+    }
+    public void ChangeWeapon(int selectedGun2){
+        if(!isLocalPlayer){
+            foreach (Gun gun in allGuns){
+                gun.gameObject.SetActive(false);
+            }
+            allGuns[selectedGun2].gameObject.SetActive(true);
+        }
+    }
+    
 
     public void CmdFire(){
        var bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation) as GameObject;

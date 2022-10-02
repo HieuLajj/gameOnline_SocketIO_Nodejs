@@ -45,6 +45,7 @@ public class NetworkManager : MonoBehaviour
 		// socketManager.Socket.On("play", OnPlay);
 		socketManager.Socket.On("player move", (String data)=>{OnPlayerMove(data);});
         socketManager.Socket.On("weapon rotation",(String data)=>{OnPlayerWeaponRotation(data);});
+        socketManager.Socket.On("selected gun",(String data)=>{SelectedGun(data);});
 		// socketManager.Socket.On("player shoot", OnPlayerShoot);
 		// socketManager.Socket.On("health", OnHealth);
 		// socketManager.Socket.On("other player disconnected", OnOtherPlayerDisconnect);
@@ -79,6 +80,22 @@ public class NetworkManager : MonoBehaviour
 			p.transform.position = position; 
 		}
     }
+    
+    public void SelectedGun(String data){
+        Debug.Log(data);
+        UserJSON userJSON = JsonUtility.FromJson<UserJSON>(data);
+        int selected = userJSON.selectedGun;
+		if (userJSON.name == textName)
+		{
+			return;
+		}
+		GameObject p = GameObject.Find(userJSON.name) as GameObject;
+		if (p != null)
+		{
+            playercontroller pc = p.GetComponent<playercontroller>();
+            pc.ChangeWeapon(selected);
+		}
+    }
 
     public void OnPlayerWeaponRotation(String data){
         UserJSON userJSON = JsonUtility.FromJson<UserJSON>(data);
@@ -107,6 +124,12 @@ public class NetworkManager : MonoBehaviour
         socketManager.Socket.Emit("weapon rotation", data);
     }
 
+    public void ComandSelectedGuns(int selectedGun){
+        string data = JsonUtility.ToJson(new SelectedGunJSON(selectedGun));
+        socketManager.Socket.Emit("selected gun",data);
+    }
+
+
     public void OnPlay(String data){
         UserJSON playerinfomation = JsonUtility.FromJson<UserJSON>(data);
         Vector3 position = new Vector3(playerinfomation.position[0], playerinfomation.position[1], playerinfomation.position[2]);
@@ -115,21 +138,12 @@ public class NetworkManager : MonoBehaviour
         GameObject g = Instantiate(player, position, rotation) as GameObject;
         playercontroller pc = g.GetComponent<playercontroller>();
         
-        // Vector3 omto = new Vector3(playerinfomation.rotationWeapon[0],playerinfomation.rotationWeapon[1],playerinfomation.rotationWeapon[2]);
-        // Debug.Log(omto);
-        // weapon rotation
         GameObject weapon = pc.weaponGun.gameObject;
         weapon.transform.rotation = rotationWeapon;
-        //pc.weaponGun.gameObject.transform.rotation = rotationWeapon;
-        //GameObject weapon = g.transform.Find("GunPos").gameObject;
+       
         PlayerAimWeapon aim = weapon.GetComponent<PlayerAimWeapon>();
         aim.isLocalPlayer = true;
-        //GameObject weapon = aim.gameObject;
-        // if(aim){
-        //     Debug.Log(":))))");
-        // }
-
-        //aim.WeaponGun.transform.rotation = rotation; 
+       
 
         Transform t  = g.transform.Find("Healthbar_Canvas");
         Transform t1 = t.transform.Find("PlayerName");
@@ -151,32 +165,27 @@ public class NetworkManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         int h = UnityEngine.Random.Range(0, 100);
         string playerName = "hieulaiday"+h;
-        List<SpawnPoint> playerSpawnPoints = GetComponent<PlayerSpawner>().playerSpawnPoints;
-        List<SpawnPoint> enemySpawnPoints = GetComponent<EnemySpawner>().enemySpawnPoints;
-        PlayerJSON playerJSON = new PlayerJSON(playerName, playerSpawnPoints, enemySpawnPoints);
+         List<SpawnPoint> playerSpawnPoints = GetComponent<PlayerSpawner>().playerSpawnPoints;
+        // List<SpawnPoint> enemySpawnPoints = GetComponent<EnemySpawner>().enemySpawnPoints;
+        //PlayerJSON playerJSON = new PlayerJSON(playerName, playerSpawnPoints, enemySpawnPoints);
+        PlayerJSON playerJSON = new PlayerJSON(playerName, playerSpawnPoints);
         string data = JsonUtility.ToJson(playerJSON);
         socketManager.Socket.Emit("play", data);
     }
 
     [Serializable]
     public class PlayerJSON{
-        public int i=0;
-        public int j=0;
         public string name;
         public List<PointJSON> playerSpawnPoints;
-        public List<PointJSON> enemySpawnPoints;
-        public PlayerJSON(string _name, List<SpawnPoint> _playerSpawnPoints, List<SpawnPoint> _enemySpawnPoints ){
-            playerSpawnPoints = new List<PointJSON>();
-            enemySpawnPoints = new List<PointJSON>();
+        public PlayerJSON(string _name, List<SpawnPoint> _playerSpawnPoints){
             name = _name;
+            playerSpawnPoints = new List<PointJSON>();
+           
             foreach(SpawnPoint playerSpawnPoint in _playerSpawnPoints){
                 PointJSON pointJSON = new PointJSON(playerSpawnPoint);
                 playerSpawnPoints.Add(pointJSON);
             }
-            foreach(SpawnPoint enemySpawnPoint in _enemySpawnPoints){
-                PointJSON pointJSON = new PointJSON(enemySpawnPoint);
-                enemySpawnPoints.Add(pointJSON);
-            }
+            
         }
     }
 
@@ -207,6 +216,13 @@ public class NetworkManager : MonoBehaviour
             rotation = new float[]{_rotation.x, _rotation.y, _rotation.z};
         }
     }
+    [Serializable]
+    public class SelectedGunJSON{
+        public int selectedGun;
+        public SelectedGunJSON (int _selectedGun){
+            selectedGun = _selectedGun;
+        }
+    }
 
     [Serializable]
     public class UserJSON{
@@ -214,6 +230,7 @@ public class NetworkManager : MonoBehaviour
         public float[] position;
         public float[] rotation;
         public float[] rotationWeapon;
+        public int selectedGun;
         public int health;
         public static UserJSON CreateFromJSON(string data){
             return JsonUtility.FromJson<UserJSON>(data);

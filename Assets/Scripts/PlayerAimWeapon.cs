@@ -9,10 +9,12 @@ public class PlayerAimWeapon : MonoBehaviour
     /// any of the Update methods is called the first time.
     /// </summary>
     public bool isLocalPlayer = false;
+    private float waitTime = 1/24f;
     Rect screenRect;
     void Start()
     {
         screenRect = new Rect(0, 0, Screen.width, Screen.height);
+    
     
     }
     void Update()
@@ -26,12 +28,17 @@ public class PlayerAimWeapon : MonoBehaviour
             float gunangle = Mathf.Atan2(mousepos.y, mousepos.x) * Mathf.Rad2Deg;
             if(Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x){
                 transform.rotation = Quaternion.Euler(new Vector3(180f, 0f, -gunangle));
-                NetworkManager.instance.ComandRotateWeapon(new Vector3(180f, 0f, -gunangle));
+               // NetworkManager.instance.ComandRotateWeapon(new Vector3(180f, 0f, -gunangle));
+                StartCoroutine(SendRotate(waitTime, new Vector3(180f, 0f, -gunangle)));
             }else{
                 transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, gunangle));
-                NetworkManager.instance.ComandRotateWeapon(new Vector3(0f, 0f, gunangle));
-                
+               // NetworkManager.instance.ComandRotateWeapon(new Vector3(0f, 0f, gunangle));
+                StartCoroutine(SendRotate(waitTime, new Vector3(0f, 0f, gunangle)));
             } 
         }       
+    }
+    private IEnumerator SendRotate(float waitTime, Vector3 rotateVector){
+        yield return new WaitForSeconds(waitTime);
+        NetworkManager.instance.ComandRotateWeapon(rotateVector);
     }
 }
