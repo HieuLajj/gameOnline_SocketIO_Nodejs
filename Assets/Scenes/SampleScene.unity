@@ -11647,7 +11647,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2000256469}
   - component: {fileID: 2000256468}
-  - component: {fileID: 2000256467}
   - component: {fileID: 2000256466}
   m_Layer: 0
   m_Name: NetworkManager
@@ -11671,22 +11670,6 @@ MonoBehaviour:
   playerSpawnPoints:
   - {fileID: 169748242}
   - {fileID: 710647190}
---- !u!114 &2000256467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000256465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaf26cd92bf8e4d408286b230f09d262, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 4310844819660251172, guid: 24fd4e23973a9ca4d8b023cf1e57a5da, type: 3}
-  spawnPoint: {fileID: 6853934164042562523, guid: d94097f9a64daee42944fd3c538892b2, type: 3}
-  numberOfEnemies: 2
-  enemySpawnPoints: []
 --- !u!114 &2000256468
 MonoBehaviour:
   m_ObjectHideFlags: 0

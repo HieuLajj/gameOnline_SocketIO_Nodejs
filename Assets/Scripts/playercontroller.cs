@@ -51,6 +51,10 @@ public class playercontroller : MonoBehaviour
             if(currentPosition != oldPosition){
                 NetworkManager.instance.GetComponent<NetworkManager>().ComandMove(transform2.position);
             }
+            if(Input.GetKeyDown(KeyCode.Space)){
+                CmdFire();
+                NetworkManager.instance.GetComponent<NetworkManager>().CommandShoot();
+            }
         }
     
         currentPosition = transform2.position;
@@ -70,9 +74,6 @@ public class playercontroller : MonoBehaviour
             }
         }
         UpdateAnimation(); 
-        if(Input.GetKeyDown(KeyCode.Space)){
-            CmdFire();
-        }
     }
 
     private void SwitchWeapon(){

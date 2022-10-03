@@ -42,10 +42,10 @@ public class NetworkManager : MonoBehaviour
         //socketManager.Socket.On("enemies", OnEnemies);
 		socketManager.Socket.On("other player connected",(String data)=>{OnOtherPlayerConnected(data);});
         socketManager.Socket.On("play", (String data)=>{OnPlay(data);});
-		// socketManager.Socket.On("play", OnPlay);
 		socketManager.Socket.On("player move", (String data)=>{OnPlayerMove(data);});
         socketManager.Socket.On("weapon rotation",(String data)=>{OnPlayerWeaponRotation(data);});
         socketManager.Socket.On("selected gun",(String data)=>{SelectedGun(data);});
+        socketManager.Socket.On("player shoot",(String data)=> {OnPlayerShoot(data);});
 		// socketManager.Socket.On("player shoot", OnPlayerShoot);
 		// socketManager.Socket.On("health", OnHealth);
 		// socketManager.Socket.On("other player disconnected", OnOtherPlayerDisconnect);
@@ -79,6 +79,13 @@ public class NetworkManager : MonoBehaviour
 		{
 			p.transform.position = position; 
 		}
+    }
+
+    public void OnPlayerShoot(String data){
+        ShootJSON shootJSON = ShootJSON.CreateFromJSON(data);
+        GameObject p = GameObject.Find(shootJSON.name);
+        playercontroller pc = p.GetComponent<playercontroller>();
+        pc.CmdFire();
     }
     
     public void SelectedGun(String data){
@@ -122,6 +129,10 @@ public class NetworkManager : MonoBehaviour
     public void ComandRotateWeapon(Vector3 vec3){
         string data = JsonUtility.ToJson(new RotationWeaponJSON(vec3));
         socketManager.Socket.Emit("weapon rotation", data);
+    }
+
+    public void CommandShoot(){
+        socketManager.Socket.Emit("player shoot");
     }
 
     public void ComandSelectedGuns(int selectedGun){
