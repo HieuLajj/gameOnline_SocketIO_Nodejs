@@ -43,11 +43,10 @@ public class NetworkManager : MonoBehaviour
 		socketManager.Socket.On("other player connected",(String data)=>{OnOtherPlayerConnected(data);});
         socketManager.Socket.On("play", (String data)=>{OnPlay(data);});
 		socketManager.Socket.On("player move", (String data)=>{OnPlayerMove(data);});
-        socketManager.Socket.On("weapon rotation",(String data)=>{OnPlayerWeaponRotation(data);});
-        socketManager.Socket.On("selected gun",(String data)=>{SelectedGun(data);});
-        socketManager.Socket.On("player shoot",(String data)=> {OnPlayerShoot(data);});
-		// socketManager.Socket.On("player shoot", OnPlayerShoot);
-		// socketManager.Socket.On("health", OnHealth);
+        socketManager.Socket.On("weapon rotation", (String data)=>{OnPlayerWeaponRotation(data);});
+        socketManager.Socket.On("selected gun", (String data)=>{SelectedGun(data);});
+        socketManager.Socket.On("player shoot", (String data)=> {OnPlayerShoot(data);});
+        socketManager.Socket.On("health", (String data)=>{OnHealth(data);});
 		// socketManager.Socket.On("other player disconnected", OnOtherPlayerDisconnect);
         JoinGame();
     }
@@ -59,6 +58,14 @@ public class NetworkManager : MonoBehaviour
         Quaternion rotation =  Quaternion.Euler(0f,0f,0f);
         GameObject g = Instantiate(player, position, rotation) as GameObject;
         playercontroller pc = g.GetComponent<playercontroller>();
+        pc.selectedGun = playerinfomation.selectedGun;
+        pc.ChangeWeapon(playerinfomation.selectedGun);
+        Vector3 rotationWeVec3 = new Vector3(playerinfomation.rotationWeapon[0], playerinfomation.rotationWeapon[1], playerinfomation.rotationWeapon[2]);
+        pc.weaponGun.gameObject.transform.rotation = Quaternion.Euler(rotationWeVec3);
+        Health health = g.GetComponent<Health>();
+        health.currentHealth = playerinfomation.health;
+        Debug.Log(playerinfomation.name+ "ok"+ playerinfomation.health);
+        health.OnChangeHealth();
         Transform t  = g.transform.Find("Healthbar_Canvas");
         Transform t1 = t.transform.Find("PlayerName");
         TextMeshProUGUI playerName = t1.GetComponent<TextMeshProUGUI>();
@@ -81,6 +88,15 @@ public class NetworkManager : MonoBehaviour
 		}
     }
 
+    public void OnHealth(String data){
+        Debug.Log(data+"PPPP");
+        UserHealthJSON userHealthJSON = UserHealthJSON.CreateFromJSON(data);
+        GameObject p = GameObject.Find(userHealthJSON.name);
+		Health h = p.GetComponent<Health>();
+		h.currentHealth = userHealthJSON.health;
+		h.OnChangeHealth();
+    }
+
     public void OnPlayerShoot(String data){
         ShootJSON shootJSON = ShootJSON.CreateFromJSON(data);
         GameObject p = GameObject.Find(shootJSON.name);
@@ -89,7 +105,6 @@ public class NetworkManager : MonoBehaviour
     }
     
     public void SelectedGun(String data){
-        Debug.Log(data);
         UserJSON userJSON = JsonUtility.FromJson<UserJSON>(data);
         int selected = userJSON.selectedGun;
 		if (userJSON.name == textName)
@@ -100,6 +115,7 @@ public class NetworkManager : MonoBehaviour
 		if (p != null)
 		{
             playercontroller pc = p.GetComponent<playercontroller>();
+            pc.selectedGun = selected;
             pc.ChangeWeapon(selected);
 		}
     }
@@ -138,6 +154,10 @@ public class NetworkManager : MonoBehaviour
     public void ComandSelectedGuns(int selectedGun){
         string data = JsonUtility.ToJson(new SelectedGunJSON(selectedGun));
         socketManager.Socket.Emit("selected gun",data);
+    }
+        public void CommandHealthChange(GameObject playerFrom, GameObject playerTo, int healthChange){
+        HealthChangeJSON healthChangeJSON = new HealthChangeJSON(playerTo.name, healthChange, playerFrom.name);
+		socketManager.Socket.Emit("health", JsonUtility.ToJson(healthChangeJSON));
     }
 
 
@@ -253,20 +273,10 @@ public class NetworkManager : MonoBehaviour
         public string name;
         public int healthChange;
         public string from;
-        public bool isEnemy;
-        public HealthChangeJSON(string _name, int _healthChange, string _from, bool _isEnemy){
+        public HealthChangeJSON(string _name, int _healthChange, string _from){
             name = _name;
             healthChange = _healthChange;
             from = _from;
-            isEnemy = _isEnemy;
-        }
-    }
-
-    [Serializable]
-    public class EnemiesJSON{
-        public List<UserJSON> enemies;
-        public static EnemiesJSON CreateFromJSON(string data){
-            return JsonUtility.FromJson<EnemiesJSON>(data);
         }
     }
 

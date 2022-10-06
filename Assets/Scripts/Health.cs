@@ -14,18 +14,22 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        healthBar.SetMaxHealth(maxHealth);
         playercontroller pc = GetComponent<playercontroller>();
         isLocalPlayer = pc.isLocalPlayer;
+        if(isLocalPlayer){
+            healthBar.SetMaxHealth(maxHealth);
+        }
     }
 
     public void TakeDamage(GameObject playerFrom, int amount){
         currentHealth -= amount;
-        Debug.Log("da bi trung dan"+currentHealth);
-        OnChangeHealth();
+        //Debug.Log("da bi trung dan"+currentHealth);
+        //OnChangeHealth();
+        NetworkManager.instance.GetComponent<NetworkManager>().CommandHealthChange(playerFrom, this.gameObject, amount);
     }
 
     public void OnChangeHealth(){
+        Debug.Log(currentHealth+"dang xent lai");
         healthBar.SetHealth((currentHealth));
         // healthBar.sizeDelta = new Vector2(currentHealth, healthBar.sizeDelta.y);
         if(currentHealth <= 0){

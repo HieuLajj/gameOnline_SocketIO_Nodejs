@@ -30,6 +30,7 @@ public class playercontroller : MonoBehaviour
     
     public Transform transform2;
     public Gun[] allGuns;
+    public Gun gun;
     public int selectedGun;
 
     void Start()
@@ -38,6 +39,7 @@ public class playercontroller : MonoBehaviour
         transform2 = GetComponent<Transform>();
         oldPosition = transform2.position;
         currentPosition = transform2.position;
+        gun.SwitchGunWeapon(selectedGun);
     }
 
     void Update()
@@ -92,25 +94,30 @@ public class playercontroller : MonoBehaviour
         }
     }
     private void SwitchGun(){
-        foreach (Gun gun in allGuns){
-            gun.gameObject.SetActive(false);
-        }
-        allGuns[selectedGun].gameObject.SetActive(true);
+        //Debug.Log(selectedGun);
+        // foreach (Gun gun in allGuns){
+        //     gun.gameObject.SetActive(false);
+        // }
+        // allGuns[selectedGun].gameObject.SetActive(true);
+        gun.SwitchGunWeapon(selectedGun);
         NetworkManager.instance.GetComponent<NetworkManager>().ComandSelectedGuns(selectedGun);
     }
     public void ChangeWeapon(int selectedGun2){
-        if(!isLocalPlayer){
-            foreach (Gun gun in allGuns){
-                gun.gameObject.SetActive(false);
-            }
-            allGuns[selectedGun2].gameObject.SetActive(true);
-        }
+        gun.SwitchGunWeapon(selectedGun2);
+        // if(!isLocalPlayer){
+        //     foreach (Gun gun in allGuns){
+        //         gun.gameObject.SetActive(false);
+        //     }
+        //     allGuns[selectedGun2].gameObject.SetActive(true);
+        // }
     }
     
 
     public void CmdFire(){
        var bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation) as GameObject;
        Bullet b = bullet.GetComponent<Bullet>();
+       b.a = selectedGun;
+       b.playerFrom = gameObject;
        b.GetComponent<Rigidbody2D>().velocity = (bulletSpawn.position - centerGun.position) * 6;
        Destroy(bullet,2.0f);
     }

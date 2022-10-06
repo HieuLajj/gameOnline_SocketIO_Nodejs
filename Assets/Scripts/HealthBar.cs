@@ -15,7 +15,9 @@ public class HealthBar : MonoBehaviour
         fill.color = gradient.Evaluate(1f);
     }
     public void SetHealth(int health){
+        Debug.Log(health+":)))");
         slider.value = health;
+        Debug.Log(slider.value);
         fill.color = gradient.Evaluate(slider.normalizedValue);
     }
 }
