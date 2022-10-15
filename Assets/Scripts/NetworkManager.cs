@@ -47,12 +47,15 @@ public class NetworkManager : MonoBehaviour
         socketManager.Socket.On("selected gun", (String data)=>{SelectedGun(data);});
         socketManager.Socket.On("player shoot", (String data)=> {OnPlayerShoot(data);});
         socketManager.Socket.On("health", (String data)=>{OnHealth(data);});
-		// socketManager.Socket.On("other player disconnected", OnOtherPlayerDisconnect);
-        JoinGame();
+		socketManager.Socket.On("other player disconnected",(String data) =>{OnOtherPlayerDisconnect(data);});
+        //JoinGame();
     }
 
 
     public void OnOtherPlayerConnected(String data){
+        Debug.Log("-------------------");
+        Debug.Log(data);
+        Debug.Log("-------------------");
         UserJSON playerinfomation = JsonUtility.FromJson<UserJSON>(data);
         Vector3 position = new Vector3(playerinfomation.position[0], playerinfomation.position[1], playerinfomation.position[2]);
         Quaternion rotation =  Quaternion.Euler(0f,0f,0f);
@@ -71,6 +74,11 @@ public class NetworkManager : MonoBehaviour
         TextMeshProUGUI playerName = t1.GetComponent<TextMeshProUGUI>();
         playerName.text = playerinfomation.name;
         g.name = playerinfomation.name;
+    }
+
+    public void OnOtherPlayerDisconnect (String data){
+        UserJSON userJSON = JsonUtility.FromJson<UserJSON>(data);
+        Destroy(GameObject.Find(userJSON.name));
     }
 
     public void OnPlayerMove(String data){
@@ -174,8 +182,7 @@ public class NetworkManager : MonoBehaviour
        
         PlayerAimWeapon aim = weapon.GetComponent<PlayerAimWeapon>();
         aim.isLocalPlayer = true;
-       
-
+        
         Transform t  = g.transform.Find("Healthbar_Canvas");
         Transform t1 = t.transform.Find("PlayerName");
         TextMeshProUGUI playerName = t1.GetComponent<TextMeshProUGUI>();
@@ -187,21 +194,25 @@ public class NetworkManager : MonoBehaviour
         //Debug.Log("dang tao");
     }
 
-    public void JoinGame(){
-        StartCoroutine(ConnectToServer());
+    public void JoinGame(String name){
+        StartCoroutine(ConnectToServer(name));
     }
-    IEnumerator ConnectToServer(){
+    IEnumerator ConnectToServer(String playerName){
         yield return new WaitForSeconds(0.5f);
         socketManager.Socket.Emit("player connect");
         yield return new WaitForSeconds(1f);
         int h = UnityEngine.Random.Range(0, 100);
-        string playerName = "hieulaiday"+h;
+        //string playerName = name;
          List<SpawnPoint> playerSpawnPoints = GetComponent<PlayerSpawner>().playerSpawnPoints;
         // List<SpawnPoint> enemySpawnPoints = GetComponent<EnemySpawner>().enemySpawnPoints;
         //PlayerJSON playerJSON = new PlayerJSON(playerName, playerSpawnPoints, enemySpawnPoints);
         PlayerJSON playerJSON = new PlayerJSON(playerName, playerSpawnPoints);
         string data = JsonUtility.ToJson(playerJSON);
         socketManager.Socket.Emit("play", data);
+        
+        
+        socketManager.Socket.Emit("joinGame");
+        
     }
 
     [Serializable]
@@ -257,6 +268,7 @@ public class NetworkManager : MonoBehaviour
 
     [Serializable]
     public class UserJSON{
+        public string id;
         public string name;
         public float[] position;
         public float[] rotation;

@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player
+    uniqueID: 634340693
+    locked: 0
+  - name: Dust
+    uniqueID: 2420960167
+    locked: 0
