@@ -9,6 +9,7 @@ public class UI : MonoBehaviour
     // Start is called before the first frame update
     public Button playBtn;
     public TMP_InputField namePlayerText;
+    public TMP_InputField lobbyText;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     public void Ingame(){
         //Debug.Log(namePlayerText.text);
-        NetworkManager.instance.JoinGame(namePlayerText.text);
+        NetworkManager.instance.JoinGame(namePlayerText.text, lobbyText.text);
         gameObject.SetActive(false);
     }
     void Update()

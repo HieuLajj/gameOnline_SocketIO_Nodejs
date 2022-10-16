@@ -194,24 +194,23 @@ public class NetworkManager : MonoBehaviour
         //Debug.Log("dang tao");
     }
 
-    public void JoinGame(String name){
-        StartCoroutine(ConnectToServer(name));
+    public void JoinGame(String name, String lobbyName){
+        StartCoroutine(ConnectToServer(name, lobbyName));
     }
-    IEnumerator ConnectToServer(String playerName){
+    IEnumerator ConnectToServer(String playerName, String lobbyName){
         yield return new WaitForSeconds(0.5f);
-        socketManager.Socket.Emit("player connect");
+        socketManager.Socket.Emit("joinGame", lobbyName);
         yield return new WaitForSeconds(1f);
+        socketManager.Socket.Emit("player connect");
+
         int h = UnityEngine.Random.Range(0, 100);
         //string playerName = name;
-         List<SpawnPoint> playerSpawnPoints = GetComponent<PlayerSpawner>().playerSpawnPoints;
+        List<SpawnPoint> playerSpawnPoints = GetComponent<PlayerSpawner>().playerSpawnPoints;
         // List<SpawnPoint> enemySpawnPoints = GetComponent<EnemySpawner>().enemySpawnPoints;
         //PlayerJSON playerJSON = new PlayerJSON(playerName, playerSpawnPoints, enemySpawnPoints);
         PlayerJSON playerJSON = new PlayerJSON(playerName, playerSpawnPoints);
         string data = JsonUtility.ToJson(playerJSON);
-        socketManager.Socket.Emit("play", data);
-        
-        
-        socketManager.Socket.Emit("joinGame");
+        socketManager.Socket.Emit("play", data);      
         
     }
 
