@@ -9,7 +9,7 @@ public class BulletManager : MonoBehaviour
 public interface IBullet{
     Sprite ShowSprite();
 }
-public class BlueBullet : MonoBehaviour, IBullet
+public class BlueBullet : IBullet
 {
     public Sprite spriteBullet;
     public Sprite ShowSprite()
@@ -19,7 +19,7 @@ public class BlueBullet : MonoBehaviour, IBullet
     }
 }
 
-public class RedBullet : MonoBehaviour, IBullet
+public class RedBullet : IBullet
 {
     public Sprite spriteBullet;
     public Sprite ShowSprite(){

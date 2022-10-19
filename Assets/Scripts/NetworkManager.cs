@@ -10,6 +10,11 @@ using TMPro;
 
 public class NetworkManager : MonoBehaviour
 {
+    public enum State {
+        Waiting,
+        Ready
+    }
+    public State state;
     public CinemachineVirtualCamera vCam;
     public static NetworkManager instance;
     public Canvas canvas;
@@ -18,28 +23,48 @@ public class NetworkManager : MonoBehaviour
     public SocketManager socketManager;
 
     public string textName;
-    
+
+    public string stringname;
+    public string stringphong;
+    public GameObject managerPlayer;
     private void Awake() {
+        
         if(instance == null){
             instance = this;
         }
         else if (instance != this){
             Destroy(gameObject);
-            Debug.Log("?");
         }
         DontDestroyOnLoad(gameObject);
     }
 
     void Start()
-    {
+    {  
+        // socketManager = new SocketManager(new Uri("http://localhost:3000"));
+        // socketManager.Socket.On("connection",()=>{
+        //     Debug.Log("hahaha");
+        //     Debug.Log(socketManager.Socket);
+        //     Debug.Log("hihihi");
+        //     Debug.Log(socketManager.Socket.Id);});        
+		// socketManager.Socket.On("other player connected",(String data)=>{OnOtherPlayerConnected(data);});
+        // socketManager.Socket.On("play", (String data)=>{OnPlay(data);});
+		// socketManager.Socket.On("player move", (String data)=>{OnPlayerMove(data);});
+        // socketManager.Socket.On("weapon rotation", (String data)=>{OnPlayerWeaponRotation(data);});
+        // socketManager.Socket.On("selected gun", (String data)=>{SelectedGun(data);});
+        // socketManager.Socket.On("player shoot", (String data)=> {OnPlayerShoot(data);});
+        // socketManager.Socket.On("health", (String data)=>{OnHealth(data);});
+		// socketManager.Socket.On("other player disconnected",(String data) =>{OnOtherPlayerDisconnect(data);});
+    }
+
+    public void ConnectSocket(){
+        state = State.Waiting;
         socketManager = new SocketManager(new Uri("http://localhost:3000"));
         socketManager.Socket.On("connection",()=>{
             Debug.Log("hahaha");
             Debug.Log(socketManager.Socket);
             Debug.Log("hihihi");
-            Debug.Log(socketManager.Socket.Id);});        
-        
-        //socketManager.Socket.On("enemies", OnEnemies);
+            Debug.Log(socketManager.Socket.Id);}
+        );        
 		socketManager.Socket.On("other player connected",(String data)=>{OnOtherPlayerConnected(data);});
         socketManager.Socket.On("play", (String data)=>{OnPlay(data);});
 		socketManager.Socket.On("player move", (String data)=>{OnPlayerMove(data);});
@@ -48,18 +73,15 @@ public class NetworkManager : MonoBehaviour
         socketManager.Socket.On("player shoot", (String data)=> {OnPlayerShoot(data);});
         socketManager.Socket.On("health", (String data)=>{OnHealth(data);});
 		socketManager.Socket.On("other player disconnected",(String data) =>{OnOtherPlayerDisconnect(data);});
-        //JoinGame();
+        socketManager.Socket.On("list Room",(String data)=>{ListRoom(data);});
+        socketManager.Socket.On("xoa Room",(String data)=>{DeleteRoom(data);});
+        state = State.Ready;
     }
-
-
     public void OnOtherPlayerConnected(String data){
-        Debug.Log("-------------------");
-        Debug.Log(data);
-        Debug.Log("-------------------");
         UserJSON playerinfomation = JsonUtility.FromJson<UserJSON>(data);
         Vector3 position = new Vector3(playerinfomation.position[0], playerinfomation.position[1], playerinfomation.position[2]);
         Quaternion rotation =  Quaternion.Euler(0f,0f,0f);
-        GameObject g = Instantiate(player, position, rotation) as GameObject;
+        GameObject g = Instantiate(player, position, rotation, managerPlayer.transform) as GameObject;
         playercontroller pc = g.GetComponent<playercontroller>();
         pc.selectedGun = playerinfomation.selectedGun;
         pc.ChangeWeapon(playerinfomation.selectedGun);
@@ -74,6 +96,15 @@ public class NetworkManager : MonoBehaviour
         TextMeshProUGUI playerName = t1.GetComponent<TextMeshProUGUI>();
         playerName.text = playerinfomation.name;
         g.name = playerinfomation.name;
+    }
+
+    public void ListRoom(String data){
+        Lobby lobby = JsonUtility.FromJson<Lobby>(data);
+        LobbyUIManager.instance.ThemLobby(lobby);
+    }
+    public void DeleteRoom(String data){
+        Lobby lobby = JsonUtility.FromJson<Lobby>(data);
+        LobbyUIManager.instance.XoaLobby(lobby);
     }
 
     public void OnOtherPlayerDisconnect (String data){
@@ -173,8 +204,8 @@ public class NetworkManager : MonoBehaviour
         UserJSON playerinfomation = JsonUtility.FromJson<UserJSON>(data);
         Vector3 position = new Vector3(playerinfomation.position[0], playerinfomation.position[1], playerinfomation.position[2]);
         Quaternion rotationWeapon = Quaternion.Euler(playerinfomation.rotationWeapon[0],playerinfomation.rotationWeapon[1],playerinfomation.rotationWeapon[2]);
-        Quaternion rotation =  Quaternion.Euler(0f,0f,0f);    
-        GameObject g = Instantiate(player, position, rotation) as GameObject;
+        Quaternion rotation =  Quaternion.Euler(0f,0f,0f);  
+        GameObject g = Instantiate(player, position, rotation, managerPlayer.transform) as GameObject;
         playercontroller pc = g.GetComponent<playercontroller>();
         
         GameObject weapon = pc.weaponGun.gameObject;
@@ -194,8 +225,8 @@ public class NetworkManager : MonoBehaviour
         //Debug.Log("dang tao");
     }
 
-    public void JoinGame(String name, String lobbyName){
-        StartCoroutine(ConnectToServer(name, lobbyName));
+    public void JoinGame(){
+        StartCoroutine(ConnectToServer(stringname, stringphong));
     }
     IEnumerator ConnectToServer(String playerName, String lobbyName){
         yield return new WaitForSeconds(0.5f);
@@ -203,12 +234,12 @@ public class NetworkManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         socketManager.Socket.Emit("player connect");
 
-        int h = UnityEngine.Random.Range(0, 100);
+        //int h = UnityEngine.Random.Range(0, 100);
         //string playerName = name;
-        List<SpawnPoint> playerSpawnPoints = GetComponent<PlayerSpawner>().playerSpawnPoints;
+        //List<SpawnPoint> playerSpawnPoints = GetComponent<PlayerSpawner>().playerSpawnPoints;
         // List<SpawnPoint> enemySpawnPoints = GetComponent<EnemySpawner>().enemySpawnPoints;
         //PlayerJSON playerJSON = new PlayerJSON(playerName, playerSpawnPoints, enemySpawnPoints);
-        PlayerJSON playerJSON = new PlayerJSON(playerName, playerSpawnPoints);
+        PlayerJSON playerJSON = new PlayerJSON(playerName);
         string data = JsonUtility.ToJson(playerJSON);
         socketManager.Socket.Emit("play", data);      
         
@@ -216,17 +247,9 @@ public class NetworkManager : MonoBehaviour
 
     [Serializable]
     public class PlayerJSON{
-        public string name;
-        public List<PointJSON> playerSpawnPoints;
-        public PlayerJSON(string _name, List<SpawnPoint> _playerSpawnPoints){
+        public string name; 
+        public PlayerJSON(string _name){
             name = _name;
-            playerSpawnPoints = new List<PointJSON>();
-           
-            foreach(SpawnPoint playerSpawnPoint in _playerSpawnPoints){
-                PointJSON pointJSON = new PointJSON(playerSpawnPoint);
-                playerSpawnPoints.Add(pointJSON);
-            }
-            
         }
     }
 

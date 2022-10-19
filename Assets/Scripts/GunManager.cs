@@ -8,7 +8,7 @@ public class GunManager : MonoBehaviour
 public interface IGun{
     Sprite ShowSprite();
 }
-public class Sungtruong : MonoBehaviour, IGun {
+public class Sungtruong : IGun {
     public Sprite spriteGun;
     public Sprite ShowSprite(){
         spriteGun = Resources.LoadAll<Sprite>("Load/Gun/Spritesheet_alt")[20];
@@ -16,7 +16,7 @@ public class Sungtruong : MonoBehaviour, IGun {
     }
 }
 
-public class ShotGun : MonoBehaviour, IGun {
+public class ShotGun : IGun {
     public Sprite spriteGun;
     public Sprite ShowSprite(){
         spriteGun = Resources.LoadAll<Sprite>("Load/Gun/Spritesheet_alt")[17];
