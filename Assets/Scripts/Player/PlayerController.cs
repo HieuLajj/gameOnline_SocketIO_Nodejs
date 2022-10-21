@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class playercontroller : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public GameObject weaponGun;
     private bool isFacingRightl = true;
@@ -58,7 +58,6 @@ public class playercontroller : MonoBehaviour
                 NetworkManager.instance.GetComponent<NetworkManager>().CommandShoot();
             }
         }
-    
         currentPosition = transform2.position;
         indexFlip = currentPosition.x - oldPosition.x;
         if(currentPosition != oldPosition){
@@ -94,24 +93,12 @@ public class playercontroller : MonoBehaviour
         }
     }
     private void SwitchGun(){
-        //Debug.Log(selectedGun);
-        // foreach (Gun gun in allGuns){
-        //     gun.gameObject.SetActive(false);
-        // }
-        // allGuns[selectedGun].gameObject.SetActive(true);
         gun.SwitchGunWeapon(selectedGun);
         NetworkManager.instance.GetComponent<NetworkManager>().ComandSelectedGuns(selectedGun);
     }
     public void ChangeWeapon(int selectedGun2){
         gun.SwitchGunWeapon(selectedGun2);
-        // if(!isLocalPlayer){
-        //     foreach (Gun gun in allGuns){
-        //         gun.gameObject.SetActive(false);
-        //     }
-        //     allGuns[selectedGun2].gameObject.SetActive(true);
-        // }
     }
-    
 
     public void CmdFire(){
        var bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation) as GameObject;

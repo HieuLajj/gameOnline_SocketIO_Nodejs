@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnPoint : MonoBehaviour
+public class win : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,5 +14,11 @@ public class SpawnPoint : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnCollisionEnter2D(Collision2D col){
+        Debug.Log("Ban da chien thang");
+        NetworkManager.instance.BackLobby("chienthang");
+        Destroy(gameObject);
     }
 }

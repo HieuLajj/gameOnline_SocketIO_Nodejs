@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2086318672010592049}
   - component: {fileID: 7384570946817907864}
   - component: {fileID: 1960804754122314984}
+  - component: {fileID: 7166980683750823537}
   m_Layer: 5
   m_Name: Button_Templace
   m_TagString: Untagged
@@ -121,6 +122,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7166980683750823537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2913877840280265242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13598b7b40e48274488d64bbfb1b3bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LobbyId: {fileID: 7973828614600124967}
 --- !u!1 &5133441468995470642
 GameObject:
   m_ObjectHideFlags: 0

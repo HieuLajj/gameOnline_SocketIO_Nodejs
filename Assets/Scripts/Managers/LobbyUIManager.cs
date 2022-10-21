@@ -6,8 +6,7 @@ using TMPro;
 
 public class LobbyUIManager : MonoBehaviour
 {
-    public static LobbyUIManager instance;
-    public List<Lobby> listRoom = new List<Lobby>();    
+    public static LobbyUIManager instance;   
     public Button playBtn;
     public TMP_InputField namePlayerText;
     public TMP_InputField lobbyText;
@@ -15,6 +14,7 @@ public class LobbyUIManager : MonoBehaviour
     public GameObject buttonTemplate;
     public GameObject LobbyUI;
     public GameObject backButton;
+    public GameObject playButton;
 
     private void Awake() {
         if(instance == null){
@@ -28,66 +28,49 @@ public class LobbyUIManager : MonoBehaviour
     {
         backButton.SetActive(false);
         backButton.GetComponent<Button>().onClick.AddListener(delegate(){
-            Debug.Log("dang an nhe con");
+            NetworkManager.instance.JoinGame("0");
+            LobbyUI.SetActive(true);
+            backButton.SetActive(false);
+            for(var i = NetworkManager.instance.managerPlayer.transform.childCount-1; i>=0; i--){
+                Destroy(NetworkManager.instance.managerPlayer.transform.GetChild(i).gameObject);
+            }
         });
-        playBtn.interactable = false;
+        //playBtn.interactable = false;
         playBtn.onClick.AddListener(delegate(){Ingame(lobbyText.text);});  
+    
+        playButton.SetActive(false);
+        playButton.GetComponent<Button>().onClick.AddListener(delegate(){
+            NetworkManager.instance.StartGame("phong1");
+        });
     }
 
     // Update is called once per frame
     public void Ingame(string lobbyId){
-        NetworkManager.instance.stringphong = lobbyId;
-        NetworkManager.instance.JoinGame();
+        NetworkManager.instance.JoinGame(lobbyId);
         LobbyUI.SetActive(false);
         backButton.SetActive(true);
-    }
-    void Update()
-    {
-        if(NetworkManager.instance.state == NetworkManager.State.Ready){
-            playBtn.interactable = true;
-        }else{
-            playBtn.interactable = false;
-        }
-        
-    }
-    void HienthiLobby(){
-        for(var i = panelLobby.childCount-1; i>=0; i--){
-            Destroy(panelLobby.GetChild(i));
-        }
-        int N = listRoom.Count;
-        GameObject g;
-        for(int i = 0; i< N ; i++ ){
-            g = Instantiate(buttonTemplate, panelLobby);
-            g.transform.GetChild(0).GetComponent<Text>().text = "Game"+listRoom[i].id; 
-        }
+        playButton.SetActive(true);
     }
     public void XoaLobby(Lobby lobby){
         for(var i = panelLobby.childCount-1; i>=0; i--){
-            if(panelLobby.GetChild(i).transform.GetChild(0).GetComponent<Text>().text == lobby.id){
+            if(panelLobby.GetChild(i).GetComponent<LobbyButton>().lobby.id == lobby.id){
                 Destroy(panelLobby.GetChild(i).gameObject);
             }
         }
     }
 
     public void ThemLobby(Lobby lobby){
-        //listRoom.Add(lobby);
         GameObject g = Instantiate(buttonTemplate, panelLobby);
-        g.transform.GetChild(0).GetComponent<Text>().text = lobby.id; 
-        g.GetComponent<Button>().onClick.AddListener(delegate(){
-            LobbyClicked(lobby.id);
-        });
-    }
-    void LobbyClicked(string lobbyId){
-        Ingame(lobbyId);
-        //Debug.Log(lobbyId);
+        LobbyButton h = g.GetComponent<LobbyButton>();
+        h.lobby = lobby;
+        h.Hienthi();
     }
 }
 
 public struct Lobby{
     public string id;
-    public string connections;
-    public string settings;
-    public string lobbyState;
+    public string currentState;
+    public string roommaster;
     public static Lobby CreateFromJSON(string data){
         return JsonUtility.FromJson<Lobby>(data);
     }

@@ -55,6 +55,14 @@ public class SceneManagementManager : Singleton<SceneManagementManager>
             // }
         }
 
+        public void LoadAddScene (string levelName){
+            SceneManager.LoadScene(levelName, LoadSceneMode.Additive);
+        }
+
+        public void UnLoadScene(string levelName){
+            SceneManager.UnloadSceneAsync(levelName);
+        }
+
         // public void UnLoadLevel(string levelName) {
         //     foreach (string item in currentlyLoadedScenes) {
         //         if (item == levelName) {
@@ -77,5 +85,7 @@ public class SceneManagementManager : Singleton<SceneManagementManager>
     public static class SceneList {
         public const string LOBBY_SCENE = "LobbyScene";
         public const string MENU_SCENE = "MenuScene";
+
+        public const string GAME = "Game";
         //public const string ONLINE = "Online";
     }

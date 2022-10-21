@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playercontroller pc = GetComponent<playercontroller>();
+        PlayerController pc = GetComponent<PlayerController>();
         isLocalPlayer = pc.isLocalPlayer;
         if(isLocalPlayer){
             healthBar.SetMaxHealth(maxHealth);
