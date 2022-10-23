@@ -18,7 +18,7 @@ public class win : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col){
         Debug.Log("Ban da chien thang");
-        NetworkManager.instance.BackLobby("chienthang");
+        NetworkManager.instance.BackLobby();
         Destroy(gameObject);
     }
 }

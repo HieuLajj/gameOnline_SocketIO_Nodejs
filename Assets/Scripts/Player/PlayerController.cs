@@ -12,7 +12,8 @@ public class PlayerController : MonoBehaviour
     public float indexFlip;
     public bool isWalking = false;
     public Animator anim;
-    public TextMeshProUGUI name;
+    public new TextMeshProUGUI name;
+    public TextMeshProUGUI status;
     private float speed = 10.0f;
     public Vector2 direction;
     public Vector2 directionClient;
@@ -32,6 +33,7 @@ public class PlayerController : MonoBehaviour
     public Gun[] allGuns;
     public Gun gun;
     public int selectedGun;
+    public int roommaster;
 
     void Start()
     {
@@ -96,8 +98,9 @@ public class PlayerController : MonoBehaviour
         gun.SwitchGunWeapon(selectedGun);
         NetworkManager.instance.GetComponent<NetworkManager>().ComandSelectedGuns(selectedGun);
     }
-    public void ChangeWeapon(int selectedGun2){
-        gun.SwitchGunWeapon(selectedGun2);
+    public void ChangeWeapon(int selectedGun){
+        this.selectedGun = selectedGun;
+        gun.SwitchGunWeapon(selectedGun);
     }
 
     public void CmdFire(){
@@ -109,7 +112,9 @@ public class PlayerController : MonoBehaviour
        Destroy(bullet,2.0f);
     }
     private void FixedUpdate() {
-         Movement();
+        //if(isLocalPlayer){
+            Movement();
+        //}
     }
     private void CheckInput(){
         movementHorizontal = Input.GetAxisRaw("Horizontal");
@@ -133,5 +138,26 @@ public class PlayerController : MonoBehaviour
     }
     private void UpdateAnimation(){
         anim.SetBool("isWalking",isWalking);
+    }
+
+    // chuyen doi cac trang thai cua play trong networkmanager
+
+    public void Status(int roommaster){
+        this.roommaster = roommaster;
+        status.text = StatusUnit(roommaster);
+    }
+
+    private string StatusUnit(int status){
+        string statusString;
+        if(status == 1){
+            statusString = "chu phong";
+        }
+        else if (status == 2){
+            statusString = "san sang";
+        }
+        else{
+            statusString = "chua san sang";
+        }
+        return statusString;
     }
 }

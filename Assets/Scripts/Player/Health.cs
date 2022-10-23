@@ -28,16 +28,14 @@ public class Health : MonoBehaviour
         NetworkManager.instance.GetComponent<NetworkManager>().CommandHealthChange(playerFrom, this.gameObject, amount);
     }
 
-    public void OnChangeHealth(){
-        Debug.Log(currentHealth+"dang xent lai");
+    public void OnChangeHealth( int currentHealth){
+        this.currentHealth = currentHealth;
         healthBar.SetHealth((currentHealth));
-        // healthBar.sizeDelta = new Vector2(currentHealth, healthBar.sizeDelta.y);
         if(currentHealth <= 0){
             if(destroyOnDeath){
                 Destroy(gameObject);
             }else{
                 currentHealth = maxHealth;
-               // healthBar.sizeDelta = new Vector2(currentHealth, healthBar.sizeDelta.y);
                 Respawn();
             }
         }

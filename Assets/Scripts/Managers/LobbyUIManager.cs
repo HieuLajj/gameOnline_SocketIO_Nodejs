@@ -16,6 +16,11 @@ public class LobbyUIManager : MonoBehaviour
     public GameObject backButton;
     public GameObject playButton;
 
+    public Button StatusButton;
+    public bool statusBool = false;
+
+    public Dropdown luachonmap;
+
     private void Awake() {
         if(instance == null){
             instance = this;
@@ -40,8 +45,24 @@ public class LobbyUIManager : MonoBehaviour
     
         playButton.SetActive(false);
         playButton.GetComponent<Button>().onClick.AddListener(delegate(){
-            NetworkManager.instance.StartGame("phong1");
+            NetworkManager.instance.StartGame(Luachonmap());
         });
+
+        StatusButton.onClick.AddListener(delegate(){
+            int statusInt;
+            statusBool = !statusBool;
+            if(statusBool){
+                statusInt = 2;
+                
+            }else{
+                statusInt = 0;
+            }
+            NetworkManager.instance.CommandStatusChange(statusInt);
+            //PlayerController.Instantiate
+        });
+        // luachonmap.onValueChanged.AddListener(delegate{
+        //     Luachonmap();
+        // });
     }
 
     // Update is called once per frame
@@ -64,6 +85,12 @@ public class LobbyUIManager : MonoBehaviour
         LobbyButton h = g.GetComponent<LobbyButton>();
         h.lobby = lobby;
         h.Hienthi();
+    }
+
+    public string Luachonmap(){
+        int m_DropdownValue = luachonmap.value;
+        string hh = luachonmap.options[m_DropdownValue].text;
+        return hh;
     }
 }
 

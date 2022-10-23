@@ -55,15 +55,15 @@ public class NetworkManager : MonoBehaviour
         socketManager.Socket.Emit("start game", data);
     }
     public void OnStartGame(String data){
-        SceneManagementManager.Instance.LoadAddScene(SceneList.GAME);
+        SceneManagementManager.Instance.LoadAddScene(data);
     }
 
-    public void BackLobby(String data){
-        socketManager.Socket.Emit("back lobby", data);
+    public void BackLobby(){
+        socketManager.Socket.Emit("back lobby");
     }
 
     public void OnBackLobby(String data){
-        SceneManagementManager.Instance.UnLoadScene(SceneList.GAME);
+        SceneManagementManager.Instance.UnLoadScene(data);
     }
 
     public void ConnectSocket(){
@@ -83,25 +83,29 @@ public class NetworkManager : MonoBehaviour
         socketManager.Socket.On("xoa Room",(String data)=>{DeleteRoom(data);});
         socketManager.Socket.On("start game",(String data)=>{OnStartGame(data);});
         socketManager.Socket.On("back lobby",(String data)=>{OnBackLobby(data);});
+        socketManager.Socket.On("change status", (String data)=>{OnStatusChange(data);});
+        socketManager.Socket.On("change roommaster", (String data)=>{OnChangeRoommaster(data);});
     }
     public void OnOtherPlayerConnected(String data){
         UserJSON playerinfomation = JsonUtility.FromJson<UserJSON>(data);
+
         Vector3 position = new Vector3(playerinfomation.position[0], playerinfomation.position[1], playerinfomation.position[2]);
         Quaternion rotation =  Quaternion.Euler(0f,0f,0f);
+
         GameObject g = Instantiate(player, position, rotation, managerPlayer.transform) as GameObject;
         PlayerController pc = g.GetComponent<PlayerController>();
-        pc.selectedGun = playerinfomation.selectedGun;
+       
         pc.ChangeWeapon(playerinfomation.selectedGun);
+
+        pc.Status(playerinfomation.roommaster); 
+
         Vector3 rotationWeVec3 = new Vector3(playerinfomation.rotationWeapon[0], playerinfomation.rotationWeapon[1], playerinfomation.rotationWeapon[2]);
         pc.weaponGun.gameObject.transform.rotation = Quaternion.Euler(rotationWeVec3);
+             
         Health health = g.GetComponent<Health>();
-        health.currentHealth = playerinfomation.health;
-        Debug.Log(playerinfomation.name+ "ok"+ playerinfomation.health);
-        health.OnChangeHealth();
-        Transform t  = g.transform.Find("Healthbar_Canvas");
-        Transform t1 = t.transform.Find("PlayerName");
-        TextMeshProUGUI playerName = t1.GetComponent<TextMeshProUGUI>();
-        playerName.text = playerinfomation.name;
+        health.OnChangeHealth(playerinfomation.health);
+    
+        pc.name.text = playerinfomation.name;
         g.name = playerinfomation.name;
     }
 
@@ -110,13 +114,11 @@ public class NetworkManager : MonoBehaviour
         LobbyUIManager.instance.ThemLobby(lobby);
     }
     public void DeleteRoom(String data){
-        Debug.Log(data);
         Lobby lobby = JsonUtility.FromJson<Lobby>(data);
         LobbyUIManager.instance.XoaLobby(lobby);
     }
 
     public void OnOtherPlayerDisconnect (String data){
-        Debug.Log(data);
         UserJSON userJSON = JsonUtility.FromJson<UserJSON>(data);
         Destroy(GameObject.Find(userJSON.name));
     }
@@ -137,12 +139,11 @@ public class NetworkManager : MonoBehaviour
     }
 
     public void OnHealth(String data){
-        Debug.Log(data+"PPPP");
         UserHealthJSON userHealthJSON = UserHealthJSON.CreateFromJSON(data);
         GameObject p = GameObject.Find(userHealthJSON.name);
 		Health h = p.GetComponent<Health>();
-		h.currentHealth = userHealthJSON.health;
-		h.OnChangeHealth();
+		//h.currentHealth = userHealthJSON.health;
+		h.OnChangeHealth(userHealthJSON.health);
     }
 
     public void OnPlayerShoot(String data){
@@ -203,35 +204,57 @@ public class NetworkManager : MonoBehaviour
         string data = JsonUtility.ToJson(new SelectedGunJSON(selectedGun));
         socketManager.Socket.Emit("selected gun",data);
     }
-        public void CommandHealthChange(GameObject playerFrom, GameObject playerTo, int healthChange){
+    public void CommandHealthChange(GameObject playerFrom, GameObject playerTo, int healthChange){
         HealthChangeJSON healthChangeJSON = new HealthChangeJSON(playerTo.name, healthChange, playerFrom.name);
 		socketManager.Socket.Emit("health", JsonUtility.ToJson(healthChangeJSON));
     }
 
+    public void CommandStatusChange(int StatusUnit){
+        socketManager.Socket.Emit("change status", StatusUnit);
+    }
+    public void OnStatusChange(String data){
+        UserJSON userJSON = JsonUtility.FromJson<UserJSON>(data);
+        GameObject p = GameObject.Find(userJSON.name);
+        PlayerController pc = p.GetComponent<PlayerController>();
+        pc.Status(userJSON.roommaster); 
+    }
+
+    public void OnChangeRoommaster(String data){
+       OnStatusChange(data);
+       LobbyUIManager.instance.StatusButton.gameObject.SetActive(false);
+    }
 
     public void OnPlay(String data){
         UserJSON playerinfomation = JsonUtility.FromJson<UserJSON>(data);
+        
         Vector3 position = new Vector3(playerinfomation.position[0], playerinfomation.position[1], playerinfomation.position[2]);
         Quaternion rotationWeapon = Quaternion.Euler(playerinfomation.rotationWeapon[0],playerinfomation.rotationWeapon[1],playerinfomation.rotationWeapon[2]);
         Quaternion rotation =  Quaternion.Euler(0f,0f,0f);  
+        
         GameObject g = Instantiate(player, position, rotation, managerPlayer.transform) as GameObject;
         PlayerController pc = g.GetComponent<PlayerController>();
-        
+
+        pc.Status(playerinfomation.roommaster); 
+
         GameObject weapon = pc.weaponGun.gameObject;
         weapon.transform.rotation = rotationWeapon;
        
         PlayerAimWeapon aim = weapon.GetComponent<PlayerAimWeapon>();
         aim.isLocalPlayer = true;
+       
+        pc.name.text = playerinfomation.name;
+        g.name = playerinfomation.name;
         
-        Transform t  = g.transform.Find("Healthbar_Canvas");
-        Transform t1 = t.transform.Find("PlayerName");
-        TextMeshProUGUI playerName = t1.GetComponent<TextMeshProUGUI>();
-        playerName.text = playerinfomation.name;
         textName = playerinfomation.name;
         pc.isLocalPlayer = true;
-        g.name = playerinfomation.name;
+        
         vCam.Follow = g.transform;
-        //Debug.Log("dang tao");
+
+        if(playerinfomation.roommaster == 1 && pc.isLocalPlayer == true){
+            LobbyUIManager.instance.StatusButton.gameObject.SetActive(false);
+        }else{
+            LobbyUIManager.instance.StatusButton.gameObject.SetActive(true);
+        }
     }
 
     public void JoinGame(String stringphong){
@@ -300,6 +323,7 @@ public class NetworkManager : MonoBehaviour
         public float[] rotationWeapon;
         public int selectedGun;
         public int health;
+        public int roommaster;
         public static UserJSON CreateFromJSON(string data){
             return JsonUtility.FromJson<UserJSON>(data);
         }

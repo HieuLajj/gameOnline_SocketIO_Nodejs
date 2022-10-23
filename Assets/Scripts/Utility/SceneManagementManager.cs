@@ -87,5 +87,7 @@ public class SceneManagementManager : Singleton<SceneManagementManager>
         public const string MENU_SCENE = "MenuScene";
 
         public const string GAME = "Game";
+        public const string GAME1 = "Game1";
+        public const string GAME2= "Game2";
         //public const string ONLINE = "Online";
     }
