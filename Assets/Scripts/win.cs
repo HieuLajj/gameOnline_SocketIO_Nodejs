@@ -1,24 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class win : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    //public int flag = 0;
+    private bool isTiming = false;
+    public float timeTillKeyIsPressed = 0;
+    [SerializeField]
+    private int team;
+    public SpriteRenderer spriteRenderer;
+    private void Start() {
+        if(team == 0){
+            spriteRenderer.color = Color.blue;
+        }else if(team == 1){
+            spriteRenderer.color = Color.red;
+        }
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
+        if(isTiming){
+            timeTillKeyIsPressed += Time.deltaTime;
+        }
+        if( timeTillKeyIsPressed > 10f){
+            Win();
+        }
         
     }
 
-    void OnCollisionEnter2D(Collision2D col){
+    private void OnTriggerEnter2D(Collider2D other) {
+        int teamOther = other.gameObject.GetComponent<PlayerController>().team;
+        if(teamOther != this.team){
+            isTiming = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        isTiming = false;
+        timeTillKeyIsPressed = 0;
+    }
+    private void Win(){
         Debug.Log("Ban da chien thang");
         NetworkManager.instance.BackLobby();
         Destroy(gameObject);
     }
+    
 }

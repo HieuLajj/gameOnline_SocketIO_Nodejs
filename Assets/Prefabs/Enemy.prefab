@@ -125,8 +125,6 @@ GameObject:
   - component: {fileID: 4310844819660251175}
   - component: {fileID: 4310844819660251173}
   - component: {fileID: 4310844819660251168}
-  - component: {fileID: 4310844819660251169}
-  - component: {fileID: 873336294346223305}
   - component: {fileID: 4445296041886580715}
   m_Layer: 0
   m_Name: Enemy
@@ -191,40 +189,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4310844819660251169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4310844819660251172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a35cdfdeca3c4cf45b662971e13ce4dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 3314946689548914698}
-  bulletPrefab: {fileID: 5562323223837552924, guid: ed17c28b5bf5b7045a342e37588389c3, type: 3}
-  body: {fileID: 3770800175353263414}
-  bulletSpawn: {fileID: 2040680624275216745}
-  centerGun: {fileID: 5797100971308217092}
-  isLocalPlayer: 1
---- !u!114 &873336294346223305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4310844819660251172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35b2b13c026320c4eb9b8af551e475e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 1592412326736373662}
-  destroyOnDeath: 0
-  currentHealth: 100
-  isEnemy: 0
 --- !u!61 &4445296041886580715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1124,17 +1088,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1592412326736373662 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1769924173961528753, guid: 7bf63a34bfdd8124e8874a7c4d72c52e, type: 3}
-  m_PrefabInstance: {fileID: 1047485187212550703}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3700fe169cb1b64a9de8d1d9fef3945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2651311034702972226 stripped

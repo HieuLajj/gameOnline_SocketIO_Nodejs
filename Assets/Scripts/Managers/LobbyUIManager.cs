@@ -28,10 +28,14 @@ public class LobbyUIManager : MonoBehaviour
         else if (instance != this){
             Destroy(gameObject);
         }
+
+        luachonmap.gameObject.SetActive(false);
+        backButton.SetActive(false);
+        playButton.SetActive(false);
+        StatusButton.gameObject.SetActive(false);
     }
     void Start()
     {
-        backButton.SetActive(false);
         backButton.GetComponent<Button>().onClick.AddListener(delegate(){
             NetworkManager.instance.JoinGame("0");
             LobbyUI.SetActive(true);
@@ -40,10 +44,9 @@ public class LobbyUIManager : MonoBehaviour
                 Destroy(NetworkManager.instance.managerPlayer.transform.GetChild(i).gameObject);
             }
         });
-        //playBtn.interactable = false;
+        
         playBtn.onClick.AddListener(delegate(){Ingame(lobbyText.text);});  
-    
-        playButton.SetActive(false);
+        
         playButton.GetComponent<Button>().onClick.AddListener(delegate(){
             NetworkManager.instance.StartGame(Luachonmap());
         });
@@ -58,11 +61,17 @@ public class LobbyUIManager : MonoBehaviour
                 statusInt = 0;
             }
             NetworkManager.instance.CommandStatusChange(statusInt);
-            //PlayerController.Instantiate
         });
-        // luachonmap.onValueChanged.AddListener(delegate{
-        //     Luachonmap();
-        // });
+    }
+    public void chuphong(){
+        StatusButton.gameObject.SetActive(false);
+        playButton.SetActive(true);
+        luachonmap.gameObject.SetActive(true);
+    }
+
+    public void khachthamgia(){
+        StatusButton.gameObject.SetActive(true);
+        playButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -70,7 +79,6 @@ public class LobbyUIManager : MonoBehaviour
         NetworkManager.instance.JoinGame(lobbyId);
         LobbyUI.SetActive(false);
         backButton.SetActive(true);
-        playButton.SetActive(true);
     }
     public void XoaLobby(Lobby lobby){
         for(var i = panelLobby.childCount-1; i>=0; i--){

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class PlayerController : MonoBehaviour
@@ -29,18 +30,26 @@ public class PlayerController : MonoBehaviour
     public Vector2 currentPosition;
     private int m=0;
     
-    public Transform transform2;
+    private Transform transformPlayer;
     public Gun[] allGuns;
     public Gun gun;
     public int selectedGun;
     public int roommaster;
 
+    public int isRed;
+
+    [SerializeField]
+    private SpriteRenderer bodyPlayer;
+
+    public int team;
+    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        transform2 = GetComponent<Transform>();
-        oldPosition = transform2.position;
-        currentPosition = transform2.position;
+        transformPlayer = GetComponent<Transform>();
+        oldPosition = transformPlayer.position;
+        currentPosition = transformPlayer.position;
         gun.SwitchGunWeapon(selectedGun);
     }
 
@@ -50,17 +59,17 @@ public class PlayerController : MonoBehaviour
         //SwitchWeapon();
         if(isLocalPlayer){
             SwitchWeapon();
-            currentPosition = transform2.position;
+            currentPosition = transformPlayer.position;
             CheckInput();
             if(currentPosition != oldPosition){
-                NetworkManager.instance.GetComponent<NetworkManager>().ComandMove(transform2.position);
+                NetworkManager.instance.GetComponent<NetworkManager>().ComandMove(transformPlayer.position);
             }
-            if(Input.GetKeyDown(KeyCode.Space)){
+            if(Input.GetMouseButtonDown(0)){
                 CmdFire();
                 NetworkManager.instance.GetComponent<NetworkManager>().CommandShoot();
             }
         }
-        currentPosition = transform2.position;
+        currentPosition = transformPlayer.position;
         indexFlip = currentPosition.x - oldPosition.x;
         if(currentPosition != oldPosition){
             m=0;
@@ -112,9 +121,7 @@ public class PlayerController : MonoBehaviour
        Destroy(bullet,2.0f);
     }
     private void FixedUpdate() {
-        //if(isLocalPlayer){
             Movement();
-        //}
     }
     private void CheckInput(){
         movementHorizontal = Input.GetAxisRaw("Horizontal");
@@ -140,8 +147,16 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isWalking",isWalking);
     }
 
+    // doi phong
+    public void ChangeTeam(int team){
+        this.team = team;
+        if (team == 0){
+            this.bodyPlayer.color = Color.blue; 
+        }else if(team == 1){
+            this.bodyPlayer.color = Color.red; 
+        }
+    }
     // chuyen doi cac trang thai cua play trong networkmanager
-
     public void Status(int roommaster){
         this.roommaster = roommaster;
         status.text = StatusUnit(roommaster);

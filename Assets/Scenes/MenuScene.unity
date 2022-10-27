@@ -591,14 +591,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93e56038024a5941a177dc881003578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
   vCam: {fileID: 391418766}
   canvas: {fileID: 0}
   playerNameInput: {fileID: 0}
   player: {fileID: 4310844819660251172, guid: 5524834450969bc469bc1cd7b52029ce, type: 3}
+  enemy: {fileID: 4310844819660251172, guid: 24fd4e23973a9ca4d8b023cf1e57a5da, type: 3}
   textName: 
   stringname: 
-  stringphong: 
   managerPlayer: {fileID: 2013231776}
 --- !u!4 &435523192
 Transform:

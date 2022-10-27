@@ -15,6 +15,7 @@ public class NetworkManager : MonoBehaviour
     public Canvas canvas;
     public InputField playerNameInput;
     public GameObject player;
+    public GameObject enemy;
     public SocketManager socketManager;
 
     public string textName;
@@ -22,6 +23,7 @@ public class NetworkManager : MonoBehaviour
     public string stringname;
     //public string stringphong;
     public GameObject managerPlayer;
+    public int isRoommaster = 0;
     private void Awake() {
         
         if(instance == null){
@@ -66,6 +68,14 @@ public class NetworkManager : MonoBehaviour
         SceneManagementManager.Instance.UnLoadScene(data);
     }
 
+    public void OnPointTeamInMap(List<SpawnPoint> bluePoints, List<SpawnPoint> redPoints){
+        Debug.Log("dangguimap");
+        if(isRoommaster ==1){
+            MapJSON mapJSON = new MapJSON(bluePoints, redPoints);
+            socketManager.Socket.Emit("mapPositionPlayer", JsonUtility.ToJson(mapJSON));
+        }
+    }
+
     public void ConnectSocket(){
         socketManager = new SocketManager(new Uri("http://localhost:3000"));
         socketManager.Socket.On("connection",()=>{
@@ -85,6 +95,18 @@ public class NetworkManager : MonoBehaviour
         socketManager.Socket.On("back lobby",(String data)=>{OnBackLobby(data);});
         socketManager.Socket.On("change status", (String data)=>{OnStatusChange(data);});
         socketManager.Socket.On("change roommaster", (String data)=>{OnChangeRoommaster(data);});
+        socketManager.Socket.On("serverSpawn", (String data)=>{ServerSpawn(data);});
+        socketManager.Socket.On("positionPlayerInMap",(String data)=>{OnPositionPlayerInMap(data);});
+    }
+    public void OnPositionPlayerInMap(String data){
+        PositionJSON2 positionJSON = JsonUtility.FromJson<PositionJSON2>(data);
+        Vector3 position = new Vector3(positionJSON.position[0], positionJSON.position[1], positionJSON.position[2]);
+		GameObject p = GameObject.Find(positionJSON.name) as GameObject;
+		if (p != null)
+		{
+			p.transform.position = position; 
+		}
+        
     }
     public void OnOtherPlayerConnected(String data){
         UserJSON playerinfomation = JsonUtility.FromJson<UserJSON>(data);
@@ -98,6 +120,8 @@ public class NetworkManager : MonoBehaviour
         pc.ChangeWeapon(playerinfomation.selectedGun);
 
         pc.Status(playerinfomation.roommaster); 
+
+        pc.ChangeTeam(playerinfomation.team); // xac dinh doi
 
         Vector3 rotationWeVec3 = new Vector3(playerinfomation.rotationWeapon[0], playerinfomation.rotationWeapon[1], playerinfomation.rotationWeapon[2]);
         pc.weaponGun.gameObject.transform.rotation = Quaternion.Euler(rotationWeVec3);
@@ -221,8 +245,10 @@ public class NetworkManager : MonoBehaviour
 
     public void OnChangeRoommaster(String data){
        OnStatusChange(data);
-       LobbyUIManager.instance.StatusButton.gameObject.SetActive(false);
+       LobbyUIManager.instance.chuphong();
+       this.isRoommaster = 1;
     }
+    
 
     public void OnPlay(String data){
         UserJSON playerinfomation = JsonUtility.FromJson<UserJSON>(data);
@@ -248,13 +274,25 @@ public class NetworkManager : MonoBehaviour
         textName = playerinfomation.name;
         pc.isLocalPlayer = true;
         
+        pc.ChangeTeam(playerinfomation.team);
+
         vCam.Follow = g.transform;
 
         if(playerinfomation.roommaster == 1 && pc.isLocalPlayer == true){
-            LobbyUIManager.instance.StatusButton.gameObject.SetActive(false);
+            LobbyUIManager.instance.chuphong();
+            this.isRoommaster = 1;
         }else{
-            LobbyUIManager.instance.StatusButton.gameObject.SetActive(true);
+            LobbyUIManager.instance.khachthamgia();
         }
+    }
+
+    public void ServerSpawn(String data){
+        ItemJSON itemJSON = JsonUtility.FromJson<ItemJSON>(data);
+        Vector3 position = new Vector3(itemJSON.position[0], itemJSON.position[1],0);
+        Quaternion rotation =  Quaternion.Euler(0f,0f,0f);  
+        GameObject g = Instantiate(enemy, position, rotation);
+        Debug.Log(position+"fhakyhewfa");
+        Debug.Log(data);
     }
 
     public void JoinGame(String stringphong){
@@ -278,24 +316,57 @@ public class NetworkManager : MonoBehaviour
             name = _name;
         }
     }
+    [Serializable]
+    public class MapJSON{
+        public List<PointJSON> blueSpawnPoints;
+        public List<PointJSON> redSpawnPoints;
+        public MapJSON( List<SpawnPoint> _blueSpawnPoints, List<SpawnPoint> _redSpawnPoints)
+		{
+			blueSpawnPoints = new List<PointJSON>();
+            redSpawnPoints = new List<PointJSON>();
+			
+			foreach (SpawnPoint blueSpawnPoint in _blueSpawnPoints)
+			{
+				PointJSON pointJSON = new PointJSON(blueSpawnPoint);
+				blueSpawnPoints.Add(pointJSON);
+			}
+            foreach (SpawnPoint redSpawnPoint in _redSpawnPoints)
+			{
+				PointJSON pointJSON = new PointJSON(redSpawnPoint);
+				redSpawnPoints.Add(pointJSON);
+			}
+		}
+    }
 
-    // [Serializable]
-    // public class PointJSON{
-    //     public float[] position;
-    //     public PointJSON(SpawnPoint spawnPoint){
-    //         position = new float[]{
-    //             spawnPoint.transform.position.x,
-    //             spawnPoint.transform.position.y,
-    //             spawnPoint.transform.position.z
-    //         };
-    //     }
-    // }
+    [Serializable]
+    public class PointJSON{
+        public float[] position;
+        public PointJSON(SpawnPoint spawnPoint){
+            position = new float[]{
+                spawnPoint.transform.position.x,
+                spawnPoint.transform.position.y,
+                spawnPoint.transform.position.z
+            };
+        }
+    }
 
     [Serializable]
     public class PositionJSON{
         public float[] position;
         public PositionJSON(Vector3 _position){
             position =  new float[]{_position.x, _position.y, _position.z};
+        }
+        public static PositionJSON CreateFromJSON(string data){
+            return JsonUtility.FromJson<PositionJSON>(data);
+        }
+    }
+
+    [Serializable]
+    public class PositionJSON2{
+        public float[] position;
+        public string name;
+        public static PositionJSON2 CreateFromJSON(string data){
+            return JsonUtility.FromJson<PositionJSON2>(data);
         }
     }
 
@@ -324,6 +395,7 @@ public class NetworkManager : MonoBehaviour
         public int selectedGun;
         public int health;
         public int roommaster;
+        public int team;
         public static UserJSON CreateFromJSON(string data){
             return JsonUtility.FromJson<UserJSON>(data);
         }
@@ -355,6 +427,17 @@ public class NetworkManager : MonoBehaviour
         public int health;
         public static UserHealthJSON CreateFromJSON(string data){
             return JsonUtility.FromJson<UserHealthJSON>(data);
+        }
+    }
+
+    [Serializable]
+    public class ItemJSON{
+        public string id;
+        public string name;
+        public float[] position;
+
+        public static ItemJSON CreateFromJSON(string data){
+            return JsonUtility.FromJson<ItemJSON>(data);
         }
     }
 }

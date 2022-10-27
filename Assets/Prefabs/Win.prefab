@@ -96,6 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b483a40360d33499b4e25eceb8691a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeTillKeyIsPressed: 0
+  team: 0
+  spriteRenderer: {fileID: 1983214502088774181}
 --- !u!61 &1983214502088774203
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -106,7 +109,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -120,5 +123,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
