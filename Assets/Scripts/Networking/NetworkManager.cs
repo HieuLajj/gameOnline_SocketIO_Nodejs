@@ -17,13 +17,13 @@ public class NetworkManager : MonoBehaviour
     public GameObject player;
     public GameObject enemy;
     public SocketManager socketManager;
-
     public string textName;
-
     public string stringname;
     //public string stringphong;
     public GameObject managerPlayer;
+    public GameObject managerItems;
     public int isRoommaster = 0;
+    public string statusRoom;
     private void Awake() {
         
         if(instance == null){
@@ -35,29 +35,12 @@ public class NetworkManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    void Start()
-    {  
-        // socketManager = new SocketManager(new Uri("http://localhost:3000"));
-        // socketManager.Socket.On("connection",()=>{
-        //     Debug.Log("hahaha");
-        //     Debug.Log(socketManager.Socket);
-        //     Debug.Log("hihihi");
-        //     Debug.Log(socketManager.Socket.Id);});        
-		// socketManager.Socket.On("other player connected",(String data)=>{OnOtherPlayerConnected(data);});
-        // socketManager.Socket.On("play", (String data)=>{OnPlay(data);});
-		// socketManager.Socket.On("player move", (String data)=>{OnPlayerMove(data);});
-        // socketManager.Socket.On("weapon rotation", (String data)=>{OnPlayerWeaponRotation(data);});
-        // socketManager.Socket.On("selected gun", (String data)=>{SelectedGun(data);});
-        // socketManager.Socket.On("player shoot", (String data)=> {OnPlayerShoot(data);});
-        // socketManager.Socket.On("health", (String data)=>{OnHealth(data);});
-		// socketManager.Socket.On("other player disconnected",(String data) =>{OnOtherPlayerDisconnect(data);});
-    }
-
     public void StartGame(String data){
         socketManager.Socket.Emit("start game", data);
     }
     public void OnStartGame(String data){
         SceneManagementManager.Instance.LoadAddScene(data);
+        LobbyUIManager.instance.playerUI.SetActive(false);
     }
 
     public void BackLobby(){
@@ -66,14 +49,32 @@ public class NetworkManager : MonoBehaviour
 
     public void OnBackLobby(String data){
         SceneManagementManager.Instance.UnLoadScene(data);
+        LobbyUIManager.instance.playerUI.SetActive(true);
+        this.DeleteAllItemServer();
     }
 
     public void OnPointTeamInMap(List<SpawnPoint> bluePoints, List<SpawnPoint> redPoints){
-        Debug.Log("dangguimap");
         if(isRoommaster ==1){
             MapJSON mapJSON = new MapJSON(bluePoints, redPoints);
             socketManager.Socket.Emit("mapPositionPlayer", JsonUtility.ToJson(mapJSON));
         }
+    }
+    public void OnReborn(String data){
+        RebornJSON rebornJSON = JsonUtility.FromJson<RebornJSON>(data);
+        Vector3 position = new Vector3(rebornJSON.position[0], rebornJSON.position[1], rebornJSON.position[2]);
+    
+		GameObject p = GameObject.Find(rebornJSON.name) as GameObject;
+		if (p != null)
+		{
+			p.transform.position = position; 
+            Health health = p.GetComponent<Health>();
+            health.OnChangeHealth(rebornJSON.health);
+            PlayerController pc = p.GetComponent<PlayerController>();
+            pc.setAvtivePlayer = true;
+		}
+    }
+    public void ResetRoom(){
+        socketManager.Socket.Emit("resetRoom");
     }
 
     public void ConnectSocket(){
@@ -97,6 +98,13 @@ public class NetworkManager : MonoBehaviour
         socketManager.Socket.On("change roommaster", (String data)=>{OnChangeRoommaster(data);});
         socketManager.Socket.On("serverSpawn", (String data)=>{ServerSpawn(data);});
         socketManager.Socket.On("positionPlayerInMap",(String data)=>{OnPositionPlayerInMap(data);});
+        socketManager.Socket.On("reborn",(String data)=>{OnReborn(data);});
+        socketManager.Socket.On("statuslobby",(String data)=>{OnStatusLobby(data);});
+        socketManager.Socket.On("item server",(String data)=>{OnItemServer(data);});
+    }
+    public void OnStatusLobby(String data){
+        Lobby lobby = JsonUtility.FromJson<Lobby>(data);
+        statusRoom = lobby.currentState;
     }
     public void OnPositionPlayerInMap(String data){
         PositionJSON2 positionJSON = JsonUtility.FromJson<PositionJSON2>(data);
@@ -110,6 +118,11 @@ public class NetworkManager : MonoBehaviour
     }
     public void OnOtherPlayerConnected(String data){
         UserJSON playerinfomation = JsonUtility.FromJson<UserJSON>(data);
+        GameObject findPlayer = GameObject.Find(playerinfomation.name) as GameObject;
+		if (findPlayer != null)
+		{
+            Destroy(findPlayer);
+		}
 
         Vector3 position = new Vector3(playerinfomation.position[0], playerinfomation.position[1], playerinfomation.position[2]);
         Quaternion rotation =  Quaternion.Euler(0f,0f,0f);
@@ -117,14 +130,14 @@ public class NetworkManager : MonoBehaviour
         GameObject g = Instantiate(player, position, rotation, managerPlayer.transform) as GameObject;
         PlayerController pc = g.GetComponent<PlayerController>();
        
-        pc.ChangeWeapon(playerinfomation.selectedGun);
+        pc.playerActivity.ChangeWeapon(playerinfomation.selectedGun);
 
         pc.Status(playerinfomation.roommaster); 
 
         pc.ChangeTeam(playerinfomation.team); // xac dinh doi
 
         Vector3 rotationWeVec3 = new Vector3(playerinfomation.rotationWeapon[0], playerinfomation.rotationWeapon[1], playerinfomation.rotationWeapon[2]);
-        pc.weaponGun.gameObject.transform.rotation = Quaternion.Euler(rotationWeVec3);
+        pc.playerActivity.weaponGun.gameObject.transform.rotation = Quaternion.Euler(rotationWeVec3);
              
         Health health = g.GetComponent<Health>();
         health.OnChangeHealth(playerinfomation.health);
@@ -174,7 +187,7 @@ public class NetworkManager : MonoBehaviour
         ShootJSON shootJSON = ShootJSON.CreateFromJSON(data);
         GameObject p = GameObject.Find(shootJSON.name);
         PlayerController pc = p.GetComponent<PlayerController>();
-        pc.CmdFire();
+        pc.playerActivity.Shoot(pc.team);
     }
     
     public void SelectedGun(String data){
@@ -188,8 +201,8 @@ public class NetworkManager : MonoBehaviour
 		if (p != null)
 		{
             PlayerController pc = p.GetComponent<PlayerController>();
-            pc.selectedGun = selected;
-            pc.ChangeWeapon(selected);
+            pc.playerActivity.selectedGun = selected;
+            pc.playerActivity.ChangeWeapon(selected);
 		}
     }
 
@@ -206,7 +219,7 @@ public class NetworkManager : MonoBehaviour
 		if (p != null)
 		{
             PlayerController pc = p.GetComponent<PlayerController>();
-            pc.weaponGun.gameObject.transform.rotation = rotationWe;
+            pc.playerActivity.weaponGun.gameObject.transform.rotation = rotationWe;
 		}
     }
 
@@ -236,6 +249,11 @@ public class NetworkManager : MonoBehaviour
     public void CommandStatusChange(int StatusUnit){
         socketManager.Socket.Emit("change status", StatusUnit);
     }
+
+    // itemServer
+    public void CommandItemServer(string data){
+        socketManager.Socket.Emit("item server", data);
+    }
     public void OnStatusChange(String data){
         UserJSON userJSON = JsonUtility.FromJson<UserJSON>(data);
         GameObject p = GameObject.Find(userJSON.name);
@@ -252,6 +270,12 @@ public class NetworkManager : MonoBehaviour
 
     public void OnPlay(String data){
         UserJSON playerinfomation = JsonUtility.FromJson<UserJSON>(data);
+        GameObject findPlayer = GameObject.Find(playerinfomation.name) as GameObject;
+		if (findPlayer != null)
+		{
+            Destroy(findPlayer);
+		}
+
         
         Vector3 position = new Vector3(playerinfomation.position[0], playerinfomation.position[1], playerinfomation.position[2]);
         Quaternion rotationWeapon = Quaternion.Euler(playerinfomation.rotationWeapon[0],playerinfomation.rotationWeapon[1],playerinfomation.rotationWeapon[2]);
@@ -261,8 +285,7 @@ public class NetworkManager : MonoBehaviour
         PlayerController pc = g.GetComponent<PlayerController>();
 
         pc.Status(playerinfomation.roommaster); 
-
-        GameObject weapon = pc.weaponGun.gameObject;
+        GameObject weapon = pc.playerActivity.weaponGun;
         weapon.transform.rotation = rotationWeapon;
        
         PlayerAimWeapon aim = weapon.GetComponent<PlayerAimWeapon>();
@@ -286,13 +309,30 @@ public class NetworkManager : MonoBehaviour
         }
     }
 
+    public void OnItemServer(String data){
+        
+        itemServer [] iteminServer = managerItems.GetComponentsInChildren<itemServer>();
+
+        foreach(var item in iteminServer)
+        {
+            if($"\"{item.id}\"" == data){
+                Destroy(item.gameObject);
+            }
+        }
+    }
+    public void DeleteAllItemServer(){
+        for(var i = managerItems.transform.childCount-1; i>=0; i--){
+            Destroy(managerItems.transform.GetChild(i).gameObject);
+        }
+    }
+
     public void ServerSpawn(String data){
+        //Debug.Log(data);
         ItemJSON itemJSON = JsonUtility.FromJson<ItemJSON>(data);
         Vector3 position = new Vector3(itemJSON.position[0], itemJSON.position[1],0);
         Quaternion rotation =  Quaternion.Euler(0f,0f,0f);  
-        GameObject g = Instantiate(enemy, position, rotation);
-        Debug.Log(position+"fhakyhewfa");
-        Debug.Log(data);
+        GameObject g = Instantiate(enemy, position, rotation, managerItems.transform);
+        g.name = itemJSON.id;
     }
 
     public void JoinGame(String stringphong){
@@ -410,6 +450,15 @@ public class NetworkManager : MonoBehaviour
             name = _name;
             healthChange = _healthChange;
             from = _from;
+        }
+    }
+    [Serializable]
+    public class RebornJSON{
+        public string name;
+        public float[] position;
+        public int health;
+        public static RebornJSON CreateFromJSON(string data){
+            return JsonUtility.FromJson<RebornJSON>(data);
         }
     }
 

@@ -24,16 +24,18 @@ public class win : MonoBehaviour
         if(isTiming){
             timeTillKeyIsPressed += Time.deltaTime;
         }
-        if( timeTillKeyIsPressed > 10f){
+        if( timeTillKeyIsPressed > 5f){
             Win();
         }
         
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        int teamOther = other.gameObject.GetComponent<PlayerController>().team;
-        if(teamOther != this.team){
-            isTiming = true;
+        if(other.tag == "Player"){
+            int teamOther = other.gameObject.GetComponent<PlayerController>().team;
+            if(teamOther != this.team){
+                isTiming = true;
+            }
         }
     }
 

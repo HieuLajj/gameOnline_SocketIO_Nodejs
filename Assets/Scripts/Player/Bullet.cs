@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public int teamPlayerFrom;
     public int a;
     public SpriteRenderer spriteRenderer;
     public IBullet bulletSprite;
@@ -26,10 +27,12 @@ public class Bullet : MonoBehaviour
         Bung();
     }
     public GameObject playerFrom;
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnTriggerEnter2D(Collider2D other){
+        if (other.tag != "Player") return; 
         var hit = other.gameObject;
-        if(hit.name != playerFrom.name){
-            Debug.Log(hit.name);
+        PlayerController playerHit = hit.GetComponent<PlayerController>();
+        if(hit.name != playerFrom.name && playerHit.team != teamPlayerFrom){
+            //Debug.Log(hit.name);
             var health = hit.GetComponent<Health>();
             if(health != null){
                 health.TakeDamage(playerFrom,10);

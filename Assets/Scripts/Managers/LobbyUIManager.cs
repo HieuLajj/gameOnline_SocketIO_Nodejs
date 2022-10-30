@@ -7,14 +7,16 @@ using TMPro;
 public class LobbyUIManager : MonoBehaviour
 {
     public static LobbyUIManager instance;   
-    public Button playBtn;
+    public Button createRoomBtn;
     public TMP_InputField namePlayerText;
     public TMP_InputField lobbyText;
     public Transform panelLobby;
     public GameObject buttonTemplate;
     public GameObject LobbyUI;
-    public GameObject backButton;
-    public GameObject playButton;
+    public Button backButton;
+    public Button playButton;
+    public Button resetBtn;
+    public GameObject playerUI;
 
     public Button StatusButton;
     public bool statusBool = false;
@@ -28,26 +30,32 @@ public class LobbyUIManager : MonoBehaviour
         else if (instance != this){
             Destroy(gameObject);
         }
-
-        luachonmap.gameObject.SetActive(false);
-        backButton.SetActive(false);
-        playButton.SetActive(false);
-        StatusButton.gameObject.SetActive(false);
+        HideButtonClient();
     }
     void Start()
     {
-        backButton.GetComponent<Button>().onClick.AddListener(delegate(){
+        backButton.onClick.AddListener(delegate(){
+            HideButtonClient();
             NetworkManager.instance.JoinGame("0");
+            NetworkManager.instance.isRoommaster=0;
             LobbyUI.SetActive(true);
-            backButton.SetActive(false);
+            backButton.gameObject.SetActive(false);
             for(var i = NetworkManager.instance.managerPlayer.transform.childCount-1; i>=0; i--){
                 Destroy(NetworkManager.instance.managerPlayer.transform.GetChild(i).gameObject);
             }
         });
         
-        playBtn.onClick.AddListener(delegate(){Ingame(lobbyText.text);});  
+        createRoomBtn.onClick.AddListener(()=>{
+            Ingame(lobbyText.text);
+        });
+
+        resetBtn.onClick.AddListener(()=>{
+            this.DeleteAllLobby();
+            NetworkManager.instance.ResetRoom();
+        });
+
         
-        playButton.GetComponent<Button>().onClick.AddListener(delegate(){
+        playButton.onClick.AddListener(delegate(){
             NetworkManager.instance.StartGame(Luachonmap());
         });
 
@@ -65,20 +73,25 @@ public class LobbyUIManager : MonoBehaviour
     }
     public void chuphong(){
         StatusButton.gameObject.SetActive(false);
-        playButton.SetActive(true);
+        playButton.gameObject.SetActive(true);
         luachonmap.gameObject.SetActive(true);
     }
 
     public void khachthamgia(){
         StatusButton.gameObject.SetActive(true);
-        playButton.SetActive(false);
+        playButton.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     public void Ingame(string lobbyId){
         NetworkManager.instance.JoinGame(lobbyId);
         LobbyUI.SetActive(false);
-        backButton.SetActive(true);
+        backButton.gameObject.SetActive(true);
+    }
+    protected void DeleteAllLobby(){
+        for(var i = panelLobby.childCount-1; i>=0; i--){
+                Destroy(panelLobby.GetChild(i).gameObject);
+        }
     }
     public void XoaLobby(Lobby lobby){
         for(var i = panelLobby.childCount-1; i>=0; i--){
@@ -99,6 +112,13 @@ public class LobbyUIManager : MonoBehaviour
         int m_DropdownValue = luachonmap.value;
         string hh = luachonmap.options[m_DropdownValue].text;
         return hh;
+    }
+
+    public void HideButtonClient(){
+        luachonmap.gameObject.SetActive(false);
+        backButton.gameObject.SetActive(false);
+        playButton.gameObject.SetActive(false);
+        StatusButton.gameObject.SetActive(false);
     }
 }
 

@@ -11,10 +11,11 @@ public class Health : MonoBehaviour
     public bool isEnemy = false;
     //public RectTransform healthBar;
     private bool isLocalPlayer;
+    private PlayerController pc;
     // Start is called before the first frame update
     void Start()
     {
-        PlayerController pc = GetComponent<PlayerController>();
+        pc = GetComponent<PlayerController>();
         isLocalPlayer = pc.isLocalPlayer;
         if(isLocalPlayer){
             healthBar.SetMaxHealth(maxHealth);
@@ -29,15 +30,19 @@ public class Health : MonoBehaviour
     }
 
     public void OnChangeHealth( int currentHealth){
+        Debug.Log(currentHealth+"fahfiuawehfuajwhef");
         this.currentHealth = currentHealth;
         healthBar.SetHealth((currentHealth));
         if(currentHealth <= 0){
-            if(destroyOnDeath){
-                Destroy(gameObject);
-            }else{
-                currentHealth = maxHealth;
-                Respawn();
-            }
+            
+            //gameObject.SetActive(false);
+            // if(destroyOnDeath){
+            //     Destroy(gameObject);
+            // }else{
+            //     currentHealth = maxHealth;
+            //     Respawn();
+            // }
+            pc.setAvtivePlayer = false;
         }
     }
 

@@ -6,66 +6,81 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject weaponGun;
-    private bool isFacingRightl = true;
+    //public GameObject weaponGun;
+    // private bool isFacingRightl = true;
     private float movementHorizontal;
     private float movementVertical;
-    public float indexFlip;
+    protected float indexFlip;
     public bool isWalking = false;
-    public Animator anim;
+    // public Animator anim;
     public new TextMeshProUGUI name;
     public TextMeshProUGUI status;
-    private float speed = 10.0f;
-    public Vector2 direction;
+    //private float speed = 10.0f;
+    //public Vector2 direction;
     public Vector2 directionClient;
     private Rigidbody2D rb;
 
     // :)) network ?
-    public GameObject bulletPrefab;
-    public Transform body;
-    public Transform bulletSpawn;
-    public Transform centerGun;
+    //public GameObject bulletPrefab;
+    // public Transform body;
+    //public Transform bulletSpawn;
+    //public Transform centerGun;
     public bool isLocalPlayer = false;
+    public bool setAvtivePlayer = true;
     public Vector2 oldPosition;
     public Vector2 currentPosition;
     private int m=0;
+
     
     private Transform transformPlayer;
-    public Gun[] allGuns;
-    public Gun gun;
-    public int selectedGun;
+    // public Gun[] allGuns;
+    // public Gun gun;
+    // public int selectedGun;
     public int roommaster;
 
-    public int isRed;
+    //public int isRed;
 
     [SerializeField]
     private SpriteRenderer bodyPlayer;
 
     public int team;
+
+
+    [SerializeField]
+    private PlayerMovement playerMovement;
+    [SerializeField]
+    private PlayerAnimation playerAnimation;
+    public PlayerActivity playerActivity;
+
     
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerMovement = GetComponent<PlayerMovement>();
+        playerAnimation = GetComponent<PlayerAnimation>();
+        //playerActivity = GetComponent<PlayerActivity>();
+        
         transformPlayer = GetComponent<Transform>();
         oldPosition = transformPlayer.position;
         currentPosition = transformPlayer.position;
-        gun.SwitchGunWeapon(selectedGun);
+        //gun.SwitchGunWeapon(selectedGun);
     }
 
     void Update()
     {
-        Check();
+        if (!setAvtivePlayer) return;
+        playerMovement.Check(indexFlip);
         //SwitchWeapon();
         if(isLocalPlayer){
-            SwitchWeapon();
+            playerActivity.SwitchWeapon();
             currentPosition = transformPlayer.position;
             CheckInput();
             if(currentPosition != oldPosition){
                 NetworkManager.instance.GetComponent<NetworkManager>().ComandMove(transformPlayer.position);
             }
-            if(Input.GetMouseButtonDown(0)){
-                CmdFire();
+            if(Input.GetMouseButtonDown(0) && NetworkManager.instance.statusRoom == "Game"){
+                playerActivity.Shoot(this.team);
                 NetworkManager.instance.GetComponent<NetworkManager>().CommandShoot();
             }
         }
@@ -85,67 +100,68 @@ public class PlayerController : MonoBehaviour
                 m=0;
             }
         }
-        UpdateAnimation(); 
+        playerAnimation.UpdateAnimation(isWalking); 
     }
 
-    private void SwitchWeapon(){
-        if(Input.GetAxisRaw("Mouse ScrollWheel") > 0f){
-            ++selectedGun;
-            if(selectedGun >= allGuns.Length){
-                selectedGun = 0;
-            }
-            SwitchGun();
-        }else if( Input.GetAxisRaw("Mouse ScrollWheel") < 0f){
-            --selectedGun;
-            if(selectedGun <0){
-                selectedGun = allGuns.Length -1;
-            }
-            SwitchGun();
-        }
-    }
-    private void SwitchGun(){
-        gun.SwitchGunWeapon(selectedGun);
-        NetworkManager.instance.GetComponent<NetworkManager>().ComandSelectedGuns(selectedGun);
-    }
-    public void ChangeWeapon(int selectedGun){
-        this.selectedGun = selectedGun;
-        gun.SwitchGunWeapon(selectedGun);
-    }
+    // private void SwitchWeapon(){
+    //     if(Input.GetAxisRaw("Mouse ScrollWheel") > 0f){
+    //         ++selectedGun;
+    //         if(selectedGun >= allGuns.Length){
+    //             selectedGun = 0;
+    //         }
+    //         SwitchGun();
+    //     }else if( Input.GetAxisRaw("Mouse ScrollWheel") < 0f){
+    //         --selectedGun;
+    //         if(selectedGun <0){
+    //             selectedGun = allGuns.Length -1;
+    //         }
+    //         SwitchGun();
+    //     }
+    // }
+    // private void SwitchGun(){
+    //     gun.SwitchGunWeapon(selectedGun);
+    //     NetworkManager.instance.GetComponent<NetworkManager>().ComandSelectedGuns(selectedGun);
+    // }
+    // public void ChangeWeapon(int selectedGun){
+    //     this.selectedGun = selectedGun;
+    //     gun.SwitchGunWeapon(selectedGun);
+    // }
 
-    public void CmdFire(){
-       var bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation) as GameObject;
-       Bullet b = bullet.GetComponent<Bullet>();
-       b.a = selectedGun;
-       b.playerFrom = gameObject;
-       b.GetComponent<Rigidbody2D>().velocity = (bulletSpawn.position - centerGun.position) * 6;
-       Destroy(bullet,2.0f);
-    }
+    // public void CmdFire(){
+    //    var bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation) as GameObject;
+    //    Bullet b = bullet.GetComponent<Bullet>();
+    //    b.a = selectedGun;
+    //    b.playerFrom = gameObject;
+    //    b.teamPlayerFrom = this.team;
+    //    b.GetComponent<Rigidbody2D>().velocity = (bulletSpawn.position - centerGun.position) * 6;
+    //    Destroy(bullet, 5.0f);
+    // }
     private void FixedUpdate() {
-            Movement();
+        playerMovement.Movement(rb,movementHorizontal,movementVertical);
     }
     private void CheckInput(){
         movementHorizontal = Input.GetAxisRaw("Horizontal");
         movementVertical = Input.GetAxisRaw("Vertical");
     }
-    private void Movement(){      
-        direction = new Vector2(movementHorizontal,movementVertical);
-        rb.velocity = direction.normalized*speed;
-    }
+    // private void Movement(){      
+    //     direction = new Vector2(movementHorizontal,movementVertical);
+    //     rb.velocity = direction.normalized*speed;
+    // }
     
-    private void Check(){
-        if(isFacingRightl && indexFlip < 0){
-            Flip();
-        }else if(!isFacingRightl && indexFlip > 0){
-            Flip();
-        }
-    }
-    private void Flip(){
-        isFacingRightl =! isFacingRightl;
-        body.Rotate(0.0f,180.0f,0.0f);
-    }
-    private void UpdateAnimation(){
-        anim.SetBool("isWalking",isWalking);
-    }
+    // private void Check(){
+    //     if(isFacingRightl && indexFlip < 0){
+    //         Flip();
+    //     }else if(!isFacingRightl && indexFlip > 0){
+    //         Flip();
+    //     }
+    // }
+    // private void Flip(){
+    //     isFacingRightl =! isFacingRightl;
+    //     body.Rotate(0.0f,180.0f,0.0f);
+    // }
+    // private void UpdateAnimation(){
+    //     anim.SetBool("isWalking",isWalking);
+    // }
 
     // doi phong
     public void ChangeTeam(int team){

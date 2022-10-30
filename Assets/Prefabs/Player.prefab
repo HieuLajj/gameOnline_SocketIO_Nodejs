@@ -5083,6 +5083,9 @@ GameObject:
   - component: {fileID: 4310844819660251169}
   - component: {fileID: 873336294346223305}
   - component: {fileID: 4445296041886580715}
+  - component: {fileID: 8246234438072345606}
+  - component: {fileID: 2150539731536151356}
+  - component: {fileID: 1326548638088835029}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5159,30 +5162,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35cdfdeca3c4cf45b662971e13ce4dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponGun: {fileID: 7578052193598885174}
-  indexFlip: 0
   isWalking: 0
-  anim: {fileID: 3314946689548914698}
   name: {fileID: 4310844821511283614}
   status: {fileID: 1220203354736136585}
-  direction: {x: 0, y: 0}
   directionClient: {x: 0, y: 0}
-  bulletPrefab: {fileID: 5562323223837552924, guid: ed17c28b5bf5b7045a342e37588389c3, type: 3}
-  body: {fileID: 3770800175353263414}
-  bulletSpawn: {fileID: 2040680624275216745}
-  centerGun: {fileID: 5797100971308217092}
   isLocalPlayer: 0
+  setAvtivePlayer: 1
   oldPosition: {x: 0, y: 0}
   currentPosition: {x: 0, y: 0}
-  transform2: {fileID: 0}
   allGuns:
   - {fileID: 0}
   - {fileID: 0}
   gun: {fileID: 8145110798306643252}
-  selectedGun: 0
   roommaster: 0
   isRed: 0
   bodyPlayer: {fileID: 9049654218928476036}
+  team: 0
+  playerActivity: {fileID: 1326548638088835029}
 --- !u!114 &873336294346223305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5225,6 +5221,54 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.2205105, y: 6.7799997}
   m_EdgeRadius: 0
+--- !u!114 &8246234438072345606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4310844819660251172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feec3fe632f4528408ae9a82100a5faa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 3770800175353263414}
+--- !u!114 &2150539731536151356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4310844819660251172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aac84aad7b5d74043a633d54de320a42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 3314946689548914698}
+--- !u!114 &1326548638088835029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4310844819660251172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50af5187331bcc34fb79de6d833bce1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponGun: {fileID: 7578052193598885174}
+  HIeu: 43
+  bulletPrefab: {fileID: 5562323223837552924, guid: ed17c28b5bf5b7045a342e37588389c3, type: 3}
+  bulletSpawn: {fileID: 2040680624275216745}
+  centerGun: {fileID: 394409526379148629}
+  selectedGun: 0
+  allGuns:
+  - {fileID: 0}
+  - {fileID: 0}
+  gun: {fileID: 8145110798306643252}
 --- !u!1 &4310844819878133715
 GameObject:
   m_ObjectHideFlags: 0
@@ -5993,6 +6037,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &2702626714197476060 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3100942298170614003, guid: 7bf63a34bfdd8124e8874a7c4d72c52e, type: 3}
+  m_PrefabInstance: {fileID: 1047485187212550703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1954281161360986822 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1555547711739097321, guid: 7bf63a34bfdd8124e8874a7c4d72c52e, type: 3}
@@ -6004,11 +6053,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &2702626714197476060 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3100942298170614003, guid: 7bf63a34bfdd8124e8874a7c4d72c52e, type: 3}
-  m_PrefabInstance: {fileID: 1047485187212550703}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1592412326736373662 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1769924173961528753, guid: 7bf63a34bfdd8124e8874a7c4d72c52e, type: 3}
