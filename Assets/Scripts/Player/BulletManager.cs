@@ -27,4 +27,29 @@ public class RedBullet : IBullet
         return spriteBullet;
     }
 }
+public class BlueBullet2 : IBullet
+{
+    public Sprite spriteBullet;
+    public Sprite ShowSprite()
+    {
+       spriteBullet = Resources.Load<Sprite>("Load/Bullet/11");
+       return spriteBullet;
+    }
+} 
+public class RedBullet2 : IBullet
+{
+    public Sprite spriteBullet;
+    public Sprite ShowSprite(){
+        spriteBullet = Resources.Load<Sprite>("Load/Bullet/14");
+        return spriteBullet;
+    }
+}
+public class RedBullet3 : IBullet
+{
+    public Sprite spriteBullet;
+    public Sprite ShowSprite(){
+        spriteBullet = Resources.Load<Sprite>("Load/Bullet/33");
+        return spriteBullet;
+    }
+}
 

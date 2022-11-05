@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99fd6d40a0dedef4fb72f1528a9a1961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamPlayerFrom: 0
+  movespeed: 30
   a: 0
   spriteRenderer: {fileID: 0}
   playerFrom: {fileID: 0}

@@ -16,6 +16,7 @@ public class LobbyUIManager : MonoBehaviour
     public Button backButton;
     public Button playButton;
     public Button resetBtn;
+    public Button changeTeamBtn;
     public GameObject playerUI;
 
     public Button StatusButton;
@@ -54,6 +55,10 @@ public class LobbyUIManager : MonoBehaviour
             NetworkManager.instance.ResetRoom();
         });
 
+        changeTeamBtn.onClick.AddListener(()=>{
+            NetworkManager.instance.ComandChangeTeam();
+        });
+
         
         playButton.onClick.AddListener(delegate(){
             NetworkManager.instance.StartGame(Luachonmap());
@@ -87,6 +92,8 @@ public class LobbyUIManager : MonoBehaviour
         NetworkManager.instance.JoinGame(lobbyId);
         LobbyUI.SetActive(false);
         backButton.gameObject.SetActive(true);
+        changeTeamBtn.gameObject.SetActive(true);
+        
     }
     protected void DeleteAllLobby(){
         for(var i = panelLobby.childCount-1; i>=0; i--){
@@ -116,6 +123,7 @@ public class LobbyUIManager : MonoBehaviour
 
     public void HideButtonClient(){
         luachonmap.gameObject.SetActive(false);
+        changeTeamBtn.gameObject.SetActive(false);
         backButton.gameObject.SetActive(false);
         playButton.gameObject.SetActive(false);
         StatusButton.gameObject.SetActive(false);

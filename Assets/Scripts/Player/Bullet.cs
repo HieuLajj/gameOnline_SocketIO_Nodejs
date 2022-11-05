@@ -5,6 +5,9 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public int teamPlayerFrom;
+    [SerializeField]
+    private int movespeed = 1;
+    private Vector3 direction = Vector3.right;
     public int a;
     public SpriteRenderer spriteRenderer;
     public IBullet bulletSprite;
@@ -17,15 +20,22 @@ public class Bullet : MonoBehaviour
             case 1:
                 bulletSprite = new RedBullet();
                 break;
+            case 2:
+                bulletSprite = new BlueBullet2();
+                break;
+            case 3:
+                bulletSprite = new RedBullet2();
+                break;
+            case 4:
+                bulletSprite = new RedBullet3();
+                break;
             default:
                 bulletSprite = new RedBullet();
                 break;
         }  
         spriteRenderer.sprite = bulletSprite.ShowSprite();
     }
-    private void Start() {
-        Bung();
-    }
+
     public GameObject playerFrom;
     private void OnTriggerEnter2D(Collider2D other){
         if (other.tag != "Player") return; 
@@ -39,5 +49,13 @@ public class Bullet : MonoBehaviour
             }
             Destroy(gameObject);
         }
+    }
+
+    private void Start() {
+        Bung();
+    }
+    
+    private void Update() {
+        transform.Translate(this.direction * this.movespeed * Time.deltaTime); 
     }
 }

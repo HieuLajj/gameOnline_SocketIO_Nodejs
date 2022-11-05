@@ -4,22 +4,31 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public IGun gunSprite;
+    public IGun gunPlayer;
     public SpriteRenderer spriteRenderer;
     public void SwitchGunWeapon(int h){
         spriteRenderer = GetComponent<SpriteRenderer>();
         switch(h){
             case 0:
-                gunSprite = new Sungtruong();
+                gunPlayer = new Sungtruong();
                 break;
             case 1:
-                gunSprite = new ShotGun();
+                gunPlayer = new ShotGun();
+                break;
+            case 2:
+                gunPlayer = new Shot1();
+                break;
+            case 3:
+                gunPlayer = new Shot2();
+                break;
+            case 4:
+                gunPlayer = new Shot3();
                 break;
             default:
-                gunSprite = new Sungtruong();
+                gunPlayer = new Sungtruong();
                 break;
         }
-        spriteRenderer.sprite = gunSprite.ShowSprite();
+        spriteRenderer.sprite = gunPlayer.ShowSprite();
     }
     public bool isAutomatic;
     public float timeBetweenShots = .1f, heatPerShot = 1f;

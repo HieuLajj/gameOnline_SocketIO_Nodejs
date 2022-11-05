@@ -101,6 +101,17 @@ public class NetworkManager : MonoBehaviour
         socketManager.Socket.On("reborn",(String data)=>{OnReborn(data);});
         socketManager.Socket.On("statuslobby",(String data)=>{OnStatusLobby(data);});
         socketManager.Socket.On("item server",(String data)=>{OnItemServer(data);});
+        socketManager.Socket.On("changeTeam",(String data)=>{OnChangeTeam(data);});
+    }
+
+    public void OnChangeTeam(String data){
+        UserJSON playerinfomation = JsonUtility.FromJson<UserJSON>(data);
+        GameObject findPlayer = GameObject.Find(playerinfomation.name) as GameObject;
+        PlayerController pc = findPlayer.GetComponent<PlayerController>();
+        pc.ChangeTeam(playerinfomation.team);
+    }
+    public void ComandChangeTeam(){
+        socketManager.Socket.Emit("changeTeam");
     }
     public void OnStatusLobby(String data){
         Lobby lobby = JsonUtility.FromJson<Lobby>(data);
@@ -193,14 +204,15 @@ public class NetworkManager : MonoBehaviour
     public void SelectedGun(String data){
         UserJSON userJSON = JsonUtility.FromJson<UserJSON>(data);
         int selected = userJSON.selectedGun;
-		if (userJSON.name == textName)
-		{
-			return;
-		}
+		// if (userJSON.name == textName)
+		// {
+		// 	return;
+		// }
 		GameObject p = GameObject.Find(userJSON.name) as GameObject;
 		if (p != null)
 		{
             PlayerController pc = p.GetComponent<PlayerController>();
+            if(selected==pc.playerActivity.selectedGun) return;
             pc.playerActivity.selectedGun = selected;
             pc.playerActivity.ChangeWeapon(selected);
 		}
@@ -244,6 +256,10 @@ public class NetworkManager : MonoBehaviour
     public void CommandHealthChange(GameObject playerFrom, GameObject playerTo, int healthChange){
         HealthChangeJSON healthChangeJSON = new HealthChangeJSON(playerTo.name, healthChange, playerFrom.name);
 		socketManager.Socket.Emit("health", JsonUtility.ToJson(healthChangeJSON));
+    }
+    public void CommandHealthPlus(String name, int hp){
+       HealthChangeJSON healthChangeJSON = new HealthChangeJSON(name, hp);
+       socketManager.Socket.Emit("healthplus", JsonUtility.ToJson(healthChangeJSON));
     }
 
     public void CommandStatusChange(int StatusUnit){
@@ -311,7 +327,7 @@ public class NetworkManager : MonoBehaviour
 
     public void OnItemServer(String data){
         
-        itemServer [] iteminServer = managerItems.GetComponentsInChildren<itemServer>();
+        Item [] iteminServer = managerItems.GetComponentsInChildren<Item>();
 
         foreach(var item in iteminServer)
         {
@@ -327,12 +343,14 @@ public class NetworkManager : MonoBehaviour
     }
 
     public void ServerSpawn(String data){
-        //Debug.Log(data);
         ItemJSON itemJSON = JsonUtility.FromJson<ItemJSON>(data);
         Vector3 position = new Vector3(itemJSON.position[0], itemJSON.position[1],0);
         Quaternion rotation =  Quaternion.Euler(0f,0f,0f);  
         GameObject g = Instantiate(enemy, position, rotation, managerItems.transform);
+        Item item = g.GetComponent<Item>();
+        item.SwitchItem(itemJSON.type);
         g.name = itemJSON.id;
+
     }
 
     public void JoinGame(String stringphong){
@@ -451,6 +469,10 @@ public class NetworkManager : MonoBehaviour
             healthChange = _healthChange;
             from = _from;
         }
+        public HealthChangeJSON(string _name, int _healthChange){
+            name = _name;
+            healthChange = _healthChange;
+        }
     }
     [Serializable]
     public class RebornJSON{
@@ -484,6 +506,7 @@ public class NetworkManager : MonoBehaviour
         public string id;
         public string name;
         public float[] position;
+        public int type;
 
         public static ItemJSON CreateFromJSON(string data){
             return JsonUtility.FromJson<ItemJSON>(data);

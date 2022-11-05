@@ -6,45 +6,30 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    //public GameObject weaponGun;
-    // private bool isFacingRightl = true;
     private float movementHorizontal;
     private float movementVertical;
     protected float indexFlip;
     public bool isWalking = false;
-    // public Animator anim;
+
     public new TextMeshProUGUI name;
     public TextMeshProUGUI status;
-    //private float speed = 10.0f;
-    //public Vector2 direction;
+    
     public Vector2 directionClient;
     private Rigidbody2D rb;
 
-    // :)) network ?
-    //public GameObject bulletPrefab;
-    // public Transform body;
-    //public Transform bulletSpawn;
-    //public Transform centerGun;
     public bool isLocalPlayer = false;
     public bool setAvtivePlayer = true;
     public Vector2 oldPosition;
     public Vector2 currentPosition;
     private int m=0;
 
-    
     private Transform transformPlayer;
-    // public Gun[] allGuns;
-    // public Gun gun;
-    // public int selectedGun;
     public int roommaster;
-
-    //public int isRed;
 
     [SerializeField]
     private SpriteRenderer bodyPlayer;
 
     public int team;
-
 
     [SerializeField]
     private PlayerMovement playerMovement;
@@ -52,19 +37,14 @@ public class PlayerController : MonoBehaviour
     private PlayerAnimation playerAnimation;
     public PlayerActivity playerActivity;
 
-    
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         playerMovement = GetComponent<PlayerMovement>();
         playerAnimation = GetComponent<PlayerAnimation>();
-        //playerActivity = GetComponent<PlayerActivity>();
-        
         transformPlayer = GetComponent<Transform>();
         oldPosition = transformPlayer.position;
         currentPosition = transformPlayer.position;
-        //gun.SwitchGunWeapon(selectedGun);
     }
 
     void Update()
@@ -73,7 +53,7 @@ public class PlayerController : MonoBehaviour
         playerMovement.Check(indexFlip);
         //SwitchWeapon();
         if(isLocalPlayer){
-            playerActivity.SwitchWeapon();
+            //playerActivity.SwitchWeapon();
             currentPosition = transformPlayer.position;
             CheckInput();
             if(currentPosition != oldPosition){
