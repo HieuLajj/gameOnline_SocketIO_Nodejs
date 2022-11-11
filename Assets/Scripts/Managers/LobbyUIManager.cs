@@ -107,6 +107,16 @@ public class LobbyUIManager : MonoBehaviour
             }
         }
     }
+    public void LobbyStatus(Lobby lobby){
+
+        for(var i = panelLobby.childCount-1; i>=0; i--){
+            LobbyButton lobbyButton = panelLobby.GetChild(i).GetComponent<LobbyButton>();
+            if(lobbyButton.lobby.id == lobby.id){
+                lobbyButton.lobby = lobby;
+                lobbyButton.ChangeStatus();
+            }
+        }
+    }
 
     public void ThemLobby(Lobby lobby){
         GameObject g = Instantiate(buttonTemplate, panelLobby);

@@ -1,0 +1,6963 @@
+fileFormatVersion: 2
+guid: 1f100ae964ed2134a836a40ce33c05a0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: DungeonColor3@128x128_0
+  - first:
+      213: 21300002
+    second: DungeonColor3@128x128_1
+  - first:
+      213: 21300004
+    second: DungeonColor3@128x128_2
+  - first:
+      213: 21300006
+    second: DungeonColor3@128x128_3
+  - first:
+      213: 21300008
+    second: DungeonColor3@128x128_4
+  - first:
+      213: 21300010
+    second: DungeonColor3@128x128_5
+  - first:
+      213: 21300012
+    second: DungeonColor3@128x128_6
+  - first:
+      213: 21300014
+    second: DungeonColor3@128x128_7
+  - first:
+      213: 21300016
+    second: DungeonColor3@128x128_8
+  - first:
+      213: 21300018
+    second: DungeonColor3@128x128_9
+  - first:
+      213: 21300020
+    second: DungeonColor3@128x128_10
+  - first:
+      213: 21300022
+    second: DungeonColor3@128x128_11
+  - first:
+      213: 21300024
+    second: DungeonColor3@128x128_12
+  - first:
+      213: 21300026
+    second: DungeonColor3@128x128_13
+  - first:
+      213: 21300028
+    second: DungeonColor3@128x128_14
+  - first:
+      213: 21300030
+    second: DungeonColor3@128x128_15
+  - first:
+      213: 21300032
+    second: DungeonColor3@128x128_16
+  - first:
+      213: 21300034
+    second: DungeonColor3@128x128_17
+  - first:
+      213: 21300036
+    second: DungeonColor3@128x128_18
+  - first:
+      213: 21300038
+    second: DungeonColor3@128x128_19
+  - first:
+      213: 21300040
+    second: DungeonColor3@128x128_20
+  - first:
+      213: 21300042
+    second: DungeonColor3@128x128_21
+  - first:
+      213: 21300044
+    second: DungeonColor3@128x128_22
+  - first:
+      213: 21300046
+    second: DungeonColor3@128x128_23
+  - first:
+      213: 21300048
+    second: DungeonColor3@128x128_24
+  - first:
+      213: 21300050
+    second: DungeonColor3@128x128_25
+  - first:
+      213: 21300052
+    second: DungeonColor3@128x128_26
+  - first:
+      213: 21300054
+    second: DungeonColor3@128x128_27
+  - first:
+      213: 21300056
+    second: DungeonColor3@128x128_28
+  - first:
+      213: 21300058
+    second: DungeonColor3@128x128_29
+  - first:
+      213: 21300060
+    second: DungeonColor3@128x128_30
+  - first:
+      213: 21300062
+    second: DungeonColor3@128x128_31
+  - first:
+      213: 21300064
+    second: DungeonColor3@128x128_32
+  - first:
+      213: 21300066
+    second: DungeonColor3@128x128_33
+  - first:
+      213: 21300068
+    second: DungeonColor3@128x128_34
+  - first:
+      213: 21300070
+    second: DungeonColor3@128x128_35
+  - first:
+      213: 21300072
+    second: DungeonColor3@128x128_36
+  - first:
+      213: 21300074
+    second: DungeonColor3@128x128_37
+  - first:
+      213: 21300076
+    second: DungeonColor3@128x128_38
+  - first:
+      213: 21300078
+    second: DungeonColor3@128x128_39
+  - first:
+      213: 21300080
+    second: DungeonColor3@128x128_40
+  - first:
+      213: 21300082
+    second: DungeonColor3@128x128_41
+  - first:
+      213: 21300084
+    second: DungeonColor3@128x128_42
+  - first:
+      213: 21300086
+    second: DungeonColor3@128x128_43
+  - first:
+      213: 21300088
+    second: DungeonColor3@128x128_44
+  - first:
+      213: 21300090
+    second: DungeonColor3@128x128_45
+  - first:
+      213: 21300092
+    second: DungeonColor3@128x128_46
+  - first:
+      213: 21300094
+    second: DungeonColor3@128x128_47
+  - first:
+      213: 21300096
+    second: DungeonColor3@128x128_48
+  - first:
+      213: 21300098
+    second: DungeonColor3@128x128_49
+  - first:
+      213: 21300100
+    second: DungeonColor3@128x128_50
+  - first:
+      213: 21300102
+    second: DungeonColor3@128x128_51
+  - first:
+      213: 21300104
+    second: DungeonColor3@128x128_52
+  - first:
+      213: 21300106
+    second: DungeonColor3@128x128_53
+  - first:
+      213: 21300108
+    second: DungeonColor3@128x128_54
+  - first:
+      213: 21300110
+    second: DungeonColor3@128x128_55
+  - first:
+      213: 21300112
+    second: DungeonColor3@128x128_56
+  - first:
+      213: 21300114
+    second: DungeonColor3@128x128_57
+  - first:
+      213: 21300116
+    second: DungeonColor3@128x128_58
+  - first:
+      213: 21300118
+    second: DungeonColor3@128x128_59
+  - first:
+      213: 21300120
+    second: DungeonColor3@128x128_60
+  - first:
+      213: 21300122
+    second: DungeonColor3@128x128_61
+  - first:
+      213: 21300124
+    second: DungeonColor3@128x128_62
+  - first:
+      213: 21300126
+    second: DungeonColor3@128x128_63
+  - first:
+      213: 21300128
+    second: DungeonColor3@128x128_64
+  - first:
+      213: 21300130
+    second: DungeonColor3@128x128_65
+  - first:
+      213: 21300132
+    second: DungeonColor3@128x128_66
+  - first:
+      213: 21300134
+    second: DungeonColor3@128x128_67
+  - first:
+      213: 21300136
+    second: DungeonColor3@128x128_68
+  - first:
+      213: 21300138
+    second: DungeonColor3@128x128_69
+  - first:
+      213: 21300140
+    second: DungeonColor3@128x128_70
+  - first:
+      213: 21300142
+    second: DungeonColor3@128x128_71
+  - first:
+      213: 21300144
+    second: DungeonColor3@128x128_72
+  - first:
+      213: 21300146
+    second: DungeonColor3@128x128_73
+  - first:
+      213: 21300148
+    second: DungeonColor3@128x128_74
+  - first:
+      213: 21300150
+    second: DungeonColor3@128x128_75
+  - first:
+      213: 21300152
+    second: DungeonColor3@128x128_76
+  - first:
+      213: 21300154
+    second: DungeonColor3@128x128_77
+  - first:
+      213: 21300156
+    second: DungeonColor3@128x128_78
+  - first:
+      213: 21300158
+    second: DungeonColor3@128x128_79
+  - first:
+      213: 21300160
+    second: DungeonColor3@128x128_80
+  - first:
+      213: 21300162
+    second: DungeonColor3@128x128_81
+  - first:
+      213: 21300164
+    second: DungeonColor3@128x128_82
+  - first:
+      213: 21300166
+    second: DungeonColor3@128x128_83
+  - first:
+      213: 21300168
+    second: DungeonColor3@128x128_84
+  - first:
+      213: 21300170
+    second: DungeonColor3@128x128_85
+  - first:
+      213: 21300172
+    second: DungeonColor3@128x128_86
+  - first:
+      213: 21300174
+    second: DungeonColor3@128x128_87
+  - first:
+      213: 21300176
+    second: DungeonColor3@128x128_88
+  - first:
+      213: 21300178
+    second: DungeonColor3@128x128_89
+  - first:
+      213: 21300180
+    second: DungeonColor3@128x128_90
+  - first:
+      213: 21300182
+    second: DungeonColor3@128x128_91
+  - first:
+      213: 21300184
+    second: DungeonColor3@128x128_92
+  - first:
+      213: 21300186
+    second: DungeonColor3@128x128_93
+  - first:
+      213: 21300188
+    second: DungeonColor3@128x128_94
+  - first:
+      213: 21300190
+    second: DungeonColor3@128x128_95
+  - first:
+      213: 21300192
+    second: DungeonColor3@128x128_96
+  - first:
+      213: 21300194
+    second: DungeonColor3@128x128_97
+  - first:
+      213: 21300196
+    second: DungeonColor3@128x128_98
+  - first:
+      213: 21300198
+    second: DungeonColor3@128x128_99
+  - first:
+      213: 21300200
+    second: DungeonColor3@128x128_100
+  - first:
+      213: 21300202
+    second: DungeonColor3@128x128_101
+  - first:
+      213: 21300204
+    second: DungeonColor3@128x128_102
+  - first:
+      213: 21300206
+    second: DungeonColor3@128x128_103
+  - first:
+      213: 21300208
+    second: DungeonColor3@128x128_104
+  - first:
+      213: 21300210
+    second: DungeonColor3@128x128_105
+  - first:
+      213: 21300212
+    second: DungeonColor3@128x128_106
+  - first:
+      213: 21300214
+    second: DungeonColor3@128x128_107
+  - first:
+      213: 21300216
+    second: DungeonColor3@128x128_108
+  - first:
+      213: 21300218
+    second: DungeonColor3@128x128_109
+  - first:
+      213: 21300220
+    second: DungeonColor3@128x128_110
+  - first:
+      213: 21300222
+    second: DungeonColor3@128x128_111
+  - first:
+      213: 21300224
+    second: DungeonColor3@128x128_112
+  - first:
+      213: 21300226
+    second: DungeonColor3@128x128_113
+  - first:
+      213: 21300228
+    second: DungeonColor3@128x128_114
+  - first:
+      213: 21300230
+    second: DungeonColor3@128x128_115
+  - first:
+      213: 21300232
+    second: DungeonColor3@128x128_116
+  - first:
+      213: 21300234
+    second: DungeonColor3@128x128_117
+  - first:
+      213: 21300236
+    second: DungeonColor3@128x128_118
+  - first:
+      213: 21300238
+    second: DungeonColor3@128x128_119
+  - first:
+      213: 21300240
+    second: DungeonColor3@128x128_120
+  - first:
+      213: 21300242
+    second: DungeonColor3@128x128_121
+  - first:
+      213: 21300244
+    second: DungeonColor3@128x128_122
+  - first:
+      213: 21300246
+    second: DungeonColor3@128x128_123
+  - first:
+      213: 21300248
+    second: DungeonColor3@128x128_124
+  - first:
+      213: 21300250
+    second: DungeonColor3@128x128_125
+  - first:
+      213: 21300252
+    second: DungeonColor3@128x128_126
+  - first:
+      213: 21300254
+    second: DungeonColor3@128x128_127
+  - first:
+      213: 21300256
+    second: DungeonColor3@128x128_128
+  - first:
+      213: 21300258
+    second: DungeonColor3@128x128_129
+  - first:
+      213: 21300260
+    second: DungeonColor3@128x128_130
+  - first:
+      213: 21300262
+    second: DungeonColor3@128x128_131
+  - first:
+      213: 21300264
+    second: DungeonColor3@128x128_132
+  - first:
+      213: 21300266
+    second: DungeonColor3@128x128_133
+  - first:
+      213: 21300268
+    second: DungeonColor3@128x128_134
+  - first:
+      213: 21300270
+    second: DungeonColor3@128x128_135
+  - first:
+      213: 21300272
+    second: DungeonColor3@128x128_136
+  - first:
+      213: 21300274
+    second: DungeonColor3@128x128_137
+  - first:
+      213: 21300276
+    second: DungeonColor3@128x128_138
+  - first:
+      213: 21300278
+    second: DungeonColor3@128x128_139
+  - first:
+      213: 21300280
+    second: DungeonColor3@128x128_140
+  - first:
+      213: 21300282
+    second: DungeonColor3@128x128_141
+  - first:
+      213: 21300284
+    second: DungeonColor3@128x128_142
+  - first:
+      213: 21300286
+    second: DungeonColor3@128x128_143
+  - first:
+      213: 21300288
+    second: DungeonColor3@128x128_144
+  - first:
+      213: 21300290
+    second: DungeonColor3@128x128_145
+  - first:
+      213: 21300292
+    second: DungeonColor3@128x128_146
+  - first:
+      213: 21300294
+    second: DungeonColor3@128x128_147
+  - first:
+      213: 21300296
+    second: DungeonColor3@128x128_148
+  - first:
+      213: 21300298
+    second: DungeonColor3@128x128_149
+  - first:
+      213: 21300300
+    second: DungeonColor3@128x128_150
+  - first:
+      213: 21300302
+    second: DungeonColor3@128x128_151
+  - first:
+      213: 21300304
+    second: DungeonColor3@128x128_152
+  - first:
+      213: 21300306
+    second: DungeonColor3@128x128_153
+  - first:
+      213: 21300308
+    second: DungeonColor3@128x128_154
+  - first:
+      213: 21300310
+    second: DungeonColor3@128x128_155
+  - first:
+      213: 21300312
+    second: DungeonColor3@128x128_156
+  - first:
+      213: 21300314
+    second: DungeonColor3@128x128_157
+  - first:
+      213: 21300316
+    second: DungeonColor3@128x128_158
+  - first:
+      213: 21300318
+    second: DungeonColor3@128x128_159
+  - first:
+      213: 21300320
+    second: DungeonColor3@128x128_160
+  - first:
+      213: 21300322
+    second: DungeonColor3@128x128_161
+  - first:
+      213: 21300324
+    second: DungeonColor3@128x128_162
+  - first:
+      213: 21300326
+    second: DungeonColor3@128x128_163
+  - first:
+      213: 21300328
+    second: DungeonColor3@128x128_164
+  - first:
+      213: 21300330
+    second: DungeonColor3@128x128_165
+  - first:
+      213: 21300332
+    second: DungeonColor3@128x128_166
+  - first:
+      213: 21300334
+    second: DungeonColor3@128x128_167
+  - first:
+      213: 21300336
+    second: DungeonColor3@128x128_168
+  - first:
+      213: 21300338
+    second: DungeonColor3@128x128_169
+  - first:
+      213: 21300340
+    second: DungeonColor3@128x128_170
+  - first:
+      213: 21300342
+    second: DungeonColor3@128x128_171
+  - first:
+      213: 21300344
+    second: DungeonColor3@128x128_172
+  - first:
+      213: 21300346
+    second: DungeonColor3@128x128_173
+  - first:
+      213: 21300348
+    second: DungeonColor3@128x128_174
+  - first:
+      213: 21300350
+    second: DungeonColor3@128x128_175
+  - first:
+      213: 21300352
+    second: DungeonColor3@128x128_176
+  - first:
+      213: 21300354
+    second: DungeonColor3@128x128_177
+  - first:
+      213: 21300356
+    second: DungeonColor3@128x128_178
+  - first:
+      213: 21300358
+    second: DungeonColor3@128x128_179
+  - first:
+      213: 21300360
+    second: DungeonColor3@128x128_180
+  - first:
+      213: 21300362
+    second: DungeonColor3@128x128_181
+  - first:
+      213: 21300364
+    second: DungeonColor3@128x128_182
+  - first:
+      213: 21300366
+    second: DungeonColor3@128x128_183
+  - first:
+      213: 21300368
+    second: DungeonColor3@128x128_184
+  - first:
+      213: 21300370
+    second: DungeonColor3@128x128_185
+  - first:
+      213: 21300372
+    second: DungeonColor3@128x128_186
+  - first:
+      213: 21300374
+    second: DungeonColor3@128x128_187
+  - first:
+      213: 21300376
+    second: DungeonColor3@128x128_188
+  - first:
+      213: 21300378
+    second: DungeonColor3@128x128_189
+  - first:
+      213: 21300380
+    second: DungeonColor3@128x128_190
+  - first:
+      213: 21300382
+    second: DungeonColor3@128x128_191
+  - first:
+      213: 21300384
+    second: DungeonColor3@128x128_192
+  - first:
+      213: 21300386
+    second: DungeonColor3@128x128_193
+  - first:
+      213: 21300388
+    second: DungeonColor3@128x128_194
+  - first:
+      213: 21300390
+    second: DungeonColor3@128x128_195
+  - first:
+      213: 21300392
+    second: DungeonColor3@128x128_196
+  - first:
+      213: 21300394
+    second: DungeonColor3@128x128_197
+  - first:
+      213: 21300396
+    second: DungeonColor3@128x128_198
+  - first:
+      213: 21300398
+    second: DungeonColor3@128x128_199
+  - first:
+      213: 21300400
+    second: DungeonColor3@128x128_200
+  - first:
+      213: 21300402
+    second: DungeonColor3@128x128_201
+  - first:
+      213: 21300404
+    second: DungeonColor3@128x128_202
+  - first:
+      213: 21300406
+    second: DungeonColor3@128x128_203
+  - first:
+      213: 21300408
+    second: DungeonColor3@128x128_204
+  - first:
+      213: 21300410
+    second: DungeonColor3@128x128_205
+  - first:
+      213: 21300412
+    second: DungeonColor3@128x128_206
+  - first:
+      213: 21300414
+    second: DungeonColor3@128x128_207
+  - first:
+      213: 21300416
+    second: DungeonColor3@128x128_208
+  - first:
+      213: 21300418
+    second: DungeonColor3@128x128_209
+  - first:
+      213: 21300420
+    second: DungeonColor3@128x128_210
+  - first:
+      213: 21300422
+    second: DungeonColor3@128x128_211
+  - first:
+      213: 21300424
+    second: DungeonColor3@128x128_212
+  - first:
+      213: 21300426
+    second: DungeonColor3@128x128_213
+  - first:
+      213: 21300428
+    second: DungeonColor3@128x128_214
+  - first:
+      213: 21300430
+    second: DungeonColor3@128x128_215
+  - first:
+      213: 21300432
+    second: DungeonColor3@128x128_216
+  - first:
+      213: 21300434
+    second: DungeonColor3@128x128_217
+  - first:
+      213: 21300436
+    second: DungeonColor3@128x128_218
+  - first:
+      213: 21300438
+    second: DungeonColor3@128x128_219
+  - first:
+      213: 21300440
+    second: DungeonColor3@128x128_220
+  - first:
+      213: 21300442
+    second: DungeonColor3@128x128_221
+  - first:
+      213: 21300444
+    second: DungeonColor3@128x128_222
+  - first:
+      213: 21300446
+    second: DungeonColor3@128x128_223
+  - first:
+      213: 21300448
+    second: DungeonColor3@128x128_224
+  - first:
+      213: 21300450
+    second: DungeonColor3@128x128_225
+  - first:
+      213: 21300452
+    second: DungeonColor3@128x128_226
+  - first:
+      213: 21300454
+    second: DungeonColor3@128x128_227
+  - first:
+      213: 21300456
+    second: DungeonColor3@128x128_228
+  - first:
+      213: 21300458
+    second: DungeonColor3@128x128_229
+  - first:
+      213: 21300460
+    second: DungeonColor3@128x128_230
+  - first:
+      213: 21300462
+    second: DungeonColor3@128x128_231
+  - first:
+      213: 21300464
+    second: DungeonColor3@128x128_232
+  - first:
+      213: 21300466
+    second: DungeonColor3@128x128_233
+  - first:
+      213: 21300468
+    second: DungeonColor3@128x128_234
+  - first:
+      213: 21300470
+    second: DungeonColor3@128x128_235
+  - first:
+      213: 21300472
+    second: DungeonColor3@128x128_236
+  - first:
+      213: 21300474
+    second: DungeonColor3@128x128_237
+  - first:
+      213: 21300476
+    second: DungeonColor3@128x128_238
+  - first:
+      213: 21300478
+    second: DungeonColor3@128x128_239
+  - first:
+      213: 21300480
+    second: DungeonColor3@128x128_240
+  - first:
+      213: 21300482
+    second: DungeonColor3@128x128_241
+  - first:
+      213: 21300484
+    second: DungeonColor3@128x128_242
+  - first:
+      213: 21300486
+    second: DungeonColor3@128x128_243
+  - first:
+      213: 21300488
+    second: DungeonColor3@128x128_244
+  - first:
+      213: 21300490
+    second: DungeonColor3@128x128_245
+  - first:
+      213: 21300492
+    second: DungeonColor3@128x128_246
+  - first:
+      213: 21300494
+    second: DungeonColor3@128x128_247
+  - first:
+      213: 21300496
+    second: DungeonColor3@128x128_248
+  - first:
+      213: 21300498
+    second: DungeonColor3@128x128_249
+  - first:
+      213: 21300500
+    second: DungeonColor3@128x128_250
+  - first:
+      213: 21300502
+    second: DungeonColor3@128x128_251
+  - first:
+      213: 21300504
+    second: DungeonColor3@128x128_252
+  - first:
+      213: -1961014243095757586
+    second: DungeonColor3@128x128_0
+  - first:
+      213: -3831206598328530109
+    second: DungeonColor3@128x128_1
+  - first:
+      213: 4680446425738868193
+    second: DungeonColor3@128x128_2
+  - first:
+      213: -4944722651227750898
+    second: DungeonColor3@128x128_3
+  - first:
+      213: -2921587074558829905
+    second: DungeonColor3@128x128_4
+  - first:
+      213: 4755194163959645066
+    second: DungeonColor3@128x128_5
+  - first:
+      213: -5229379093420136086
+    second: DungeonColor3@128x128_6
+  - first:
+      213: 4419955877388975837
+    second: DungeonColor3@128x128_7
+  - first:
+      213: 6117818283142071185
+    second: DungeonColor3@128x128_8
+  - first:
+      213: -1516923337141967558
+    second: DungeonColor3@128x128_9
+  - first:
+      213: 7407861979530447962
+    second: DungeonColor3@128x128_10
+  - first:
+      213: -6092474097106675877
+    second: DungeonColor3@128x128_11
+  - first:
+      213: -6116604237093024559
+    second: DungeonColor3@128x128_12
+  - first:
+      213: -906192683460513263
+    second: DungeonColor3@128x128_13
+  - first:
+      213: -2812399809613455522
+    second: DungeonColor3@128x128_14
+  - first:
+      213: -3743605740816454287
+    second: DungeonColor3@128x128_15
+  - first:
+      213: 4853387204075644750
+    second: DungeonColor3@128x128_16
+  - first:
+      213: -5054776004367965539
+    second: DungeonColor3@128x128_17
+  - first:
+      213: 7096988547873556029
+    second: DungeonColor3@128x128_18
+  - first:
+      213: 3326936713388680894
+    second: DungeonColor3@128x128_19
+  - first:
+      213: 3092271991614846359
+    second: DungeonColor3@128x128_20
+  - first:
+      213: 1255655228642758981
+    second: DungeonColor3@128x128_21
+  - first:
+      213: -5605156194506857745
+    second: DungeonColor3@128x128_22
+  - first:
+      213: 1849637140198093717
+    second: DungeonColor3@128x128_23
+  - first:
+      213: 8880404078116073769
+    second: DungeonColor3@128x128_24
+  - first:
+      213: -807000502047410080
+    second: DungeonColor3@128x128_25
+  - first:
+      213: -2591124088123124838
+    second: DungeonColor3@128x128_26
+  - first:
+      213: 7798276525318725801
+    second: DungeonColor3@128x128_27
+  - first:
+      213: -3799716568379971521
+    second: DungeonColor3@128x128_28
+  - first:
+      213: 491895185483960933
+    second: DungeonColor3@128x128_29
+  - first:
+      213: 7753625737474695957
+    second: DungeonColor3@128x128_30
+  - first:
+      213: -5637696251268874454
+    second: DungeonColor3@128x128_31
+  - first:
+      213: -7737315709407028763
+    second: DungeonColor3@128x128_32
+  - first:
+      213: 7568944679618305415
+    second: DungeonColor3@128x128_33
+  - first:
+      213: -1355446676443416185
+    second: DungeonColor3@128x128_34
+  - first:
+      213: -1939726457564124328
+    second: DungeonColor3@128x128_35
+  - first:
+      213: 1309295539706099223
+    second: DungeonColor3@128x128_36
+  - first:
+      213: 2592718499153484953
+    second: DungeonColor3@128x128_37
+  - first:
+      213: -6072377085421559637
+    second: DungeonColor3@128x128_38
+  - first:
+      213: 8010194339424527411
+    second: DungeonColor3@128x128_39
+  - first:
+      213: 1639678220731862868
+    second: DungeonColor3@128x128_40
+  - first:
+      213: -4651445102973159498
+    second: DungeonColor3@128x128_41
+  - first:
+      213: -461200868862172050
+    second: DungeonColor3@128x128_42
+  - first:
+      213: -6773773714765294982
+    second: DungeonColor3@128x128_43
+  - first:
+      213: 7780588158543942584
+    second: DungeonColor3@128x128_44
+  - first:
+      213: -6887037765769975811
+    second: DungeonColor3@128x128_45
+  - first:
+      213: -3205040643031284017
+    second: DungeonColor3@128x128_46
+  - first:
+      213: 7804237296788541065
+    second: DungeonColor3@128x128_47
+  - first:
+      213: 1993012477478742953
+    second: DungeonColor3@128x128_48
+  - first:
+      213: 4958095522148086950
+    second: DungeonColor3@128x128_49
+  - first:
+      213: 9072422484089758627
+    second: DungeonColor3@128x128_50
+  - first:
+      213: 4757868350107739307
+    second: DungeonColor3@128x128_51
+  - first:
+      213: -3963134941271673159
+    second: DungeonColor3@128x128_52
+  - first:
+      213: 8613923157230729725
+    second: DungeonColor3@128x128_53
+  - first:
+      213: -4181077762268316012
+    second: DungeonColor3@128x128_54
+  - first:
+      213: -4541424679098275914
+    second: DungeonColor3@128x128_55
+  - first:
+      213: -3460792578550569992
+    second: DungeonColor3@128x128_56
+  - first:
+      213: -6488043425551313226
+    second: DungeonColor3@128x128_57
+  - first:
+      213: -6409922955464538222
+    second: DungeonColor3@128x128_58
+  - first:
+      213: 6009095214345935003
+    second: DungeonColor3@128x128_59
+  - first:
+      213: -8655616243076529524
+    second: DungeonColor3@128x128_60
+  - first:
+      213: 84374493482515777
+    second: DungeonColor3@128x128_61
+  - first:
+      213: -6556129816748492880
+    second: DungeonColor3@128x128_62
+  - first:
+      213: -75175884998230594
+    second: DungeonColor3@128x128_63
+  - first:
+      213: 5936194725104955666
+    second: DungeonColor3@128x128_64
+  - first:
+      213: 8121379119091370078
+    second: DungeonColor3@128x128_65
+  - first:
+      213: -951159078896550729
+    second: DungeonColor3@128x128_66
+  - first:
+      213: 6989384322175316013
+    second: DungeonColor3@128x128_67
+  - first:
+      213: 8424265017232634848
+    second: DungeonColor3@128x128_68
+  - first:
+      213: 7076660627484660489
+    second: DungeonColor3@128x128_69
+  - first:
+      213: -2029493171018606622
+    second: DungeonColor3@128x128_70
+  - first:
+      213: -7416843224175062686
+    second: DungeonColor3@128x128_71
+  - first:
+      213: 9066395920364204865
+    second: DungeonColor3@128x128_72
+  - first:
+      213: 8883494928017050583
+    second: DungeonColor3@128x128_73
+  - first:
+      213: 5640036736574583234
+    second: DungeonColor3@128x128_74
+  - first:
+      213: 8745212754284559153
+    second: DungeonColor3@128x128_75
+  - first:
+      213: 8974324435165140691
+    second: DungeonColor3@128x128_76
+  - first:
+      213: 2563876390583502132
+    second: DungeonColor3@128x128_77
+  - first:
+      213: 117696230005207603
+    second: DungeonColor3@128x128_78
+  - first:
+      213: 4542356777545778636
+    second: DungeonColor3@128x128_79
+  - first:
+      213: -2186258933632599300
+    second: DungeonColor3@128x128_80
+  - first:
+      213: 4967032403053036437
+    second: DungeonColor3@128x128_81
+  - first:
+      213: 8439007480541551333
+    second: DungeonColor3@128x128_82
+  - first:
+      213: 3849877109592348211
+    second: DungeonColor3@128x128_83
+  - first:
+      213: -8433551703568022486
+    second: DungeonColor3@128x128_84
+  - first:
+      213: 1028202104430274228
+    second: DungeonColor3@128x128_85
+  - first:
+      213: 75831082343794728
+    second: DungeonColor3@128x128_86
+  - first:
+      213: -4740227968243086425
+    second: DungeonColor3@128x128_87
+  - first:
+      213: 3266922113110108019
+    second: DungeonColor3@128x128_88
+  - first:
+      213: -6731089499631903927
+    second: DungeonColor3@128x128_89
+  - first:
+      213: -4707903195358139971
+    second: DungeonColor3@128x128_90
+  - first:
+      213: -4202801400946548503
+    second: DungeonColor3@128x128_91
+  - first:
+      213: 4046011725722434416
+    second: DungeonColor3@128x128_92
+  - first:
+      213: 7627905769426489731
+    second: DungeonColor3@128x128_93
+  - first:
+      213: -2515984563315768863
+    second: DungeonColor3@128x128_94
+  - first:
+      213: 6736656287843607433
+    second: DungeonColor3@128x128_95
+  - first:
+      213: 2135438820431376794
+    second: DungeonColor3@128x128_96
+  - first:
+      213: 5881629502545701349
+    second: DungeonColor3@128x128_97
+  - first:
+      213: 7261785953399497490
+    second: DungeonColor3@128x128_98
+  - first:
+      213: -5815673283552892817
+    second: DungeonColor3@128x128_99
+  - first:
+      213: -2747542143151057398
+    second: DungeonColor3@128x128_100
+  - first:
+      213: 5190369115753122227
+    second: DungeonColor3@128x128_101
+  - first:
+      213: 8262676799180017456
+    second: DungeonColor3@128x128_102
+  - first:
+      213: 4796096210796683864
+    second: DungeonColor3@128x128_103
+  - first:
+      213: 3117601821059930594
+    second: DungeonColor3@128x128_104
+  - first:
+      213: -6629674469324506518
+    second: DungeonColor3@128x128_105
+  - first:
+      213: -8673251659660591802
+    second: DungeonColor3@128x128_106
+  - first:
+      213: -6311461018144156526
+    second: DungeonColor3@128x128_107
+  - first:
+      213: -3805759004158713404
+    second: DungeonColor3@128x128_108
+  - first:
+      213: -7715834941318723650
+    second: DungeonColor3@128x128_109
+  - first:
+      213: 496909080206992043
+    second: DungeonColor3@128x128_110
+  - first:
+      213: 2841348590627979778
+    second: DungeonColor3@128x128_111
+  - first:
+      213: -356409628685177573
+    second: DungeonColor3@128x128_112
+  - first:
+      213: -3508968644716188795
+    second: DungeonColor3@128x128_113
+  - first:
+      213: -4879671453591598377
+    second: DungeonColor3@128x128_114
+  - first:
+      213: 7716422464804188441
+    second: DungeonColor3@128x128_115
+  - first:
+      213: 6303885143750045877
+    second: DungeonColor3@128x128_116
+  - first:
+      213: -9222081793977152356
+    second: DungeonColor3@128x128_117
+  - first:
+      213: 2208913797337234819
+    second: DungeonColor3@128x128_118
+  - first:
+      213: 8195996452032640035
+    second: DungeonColor3@128x128_119
+  - first:
+      213: -4706198597744798131
+    second: DungeonColor3@128x128_120
+  - first:
+      213: 6508740116123890886
+    second: DungeonColor3@128x128_121
+  - first:
+      213: 3463990152969396237
+    second: DungeonColor3@128x128_122
+  - first:
+      213: -3041355536391166978
+    second: DungeonColor3@128x128_123
+  - first:
+      213: -7687090256444051869
+    second: DungeonColor3@128x128_124
+  - first:
+      213: 7408687690704209686
+    second: DungeonColor3@128x128_125
+  - first:
+      213: 386883520122196562
+    second: DungeonColor3@128x128_126
+  - first:
+      213: -1999532058926316529
+    second: DungeonColor3@128x128_127
+  - first:
+      213: -8016466845165632398
+    second: DungeonColor3@128x128_128
+  - first:
+      213: -5189658155193375001
+    second: DungeonColor3@128x128_129
+  - first:
+      213: -4142310040331914852
+    second: DungeonColor3@128x128_130
+  - first:
+      213: 344753916487575196
+    second: DungeonColor3@128x128_131
+  - first:
+      213: -8219502804374154508
+    second: DungeonColor3@128x128_132
+  - first:
+      213: -7035124268843168869
+    second: DungeonColor3@128x128_133
+  - first:
+      213: -4085508382181356978
+    second: DungeonColor3@128x128_134
+  - first:
+      213: 5073749214623422725
+    second: DungeonColor3@128x128_135
+  - first:
+      213: -8799637605039808189
+    second: DungeonColor3@128x128_136
+  - first:
+      213: -3536112274685601491
+    second: DungeonColor3@128x128_137
+  - first:
+      213: 1615446813410869509
+    second: DungeonColor3@128x128_138
+  - first:
+      213: 8004187670921337579
+    second: DungeonColor3@128x128_139
+  - first:
+      213: -9128036994174201631
+    second: DungeonColor3@128x128_140
+  - first:
+      213: -1309431759738742464
+    second: DungeonColor3@128x128_141
+  - first:
+      213: 403493213156835040
+    second: DungeonColor3@128x128_142
+  - first:
+      213: 3432323678904110420
+    second: DungeonColor3@128x128_143
+  - first:
+      213: -6438130014869194900
+    second: DungeonColor3@128x128_144
+  - first:
+      213: 3957969308304361328
+    second: DungeonColor3@128x128_145
+  - first:
+      213: -1358651820658094139
+    second: DungeonColor3@128x128_146
+  - first:
+      213: 7063208905641811084
+    second: DungeonColor3@128x128_147
+  - first:
+      213: 9141092863407661434
+    second: DungeonColor3@128x128_148
+  - first:
+      213: 3478276322740157715
+    second: DungeonColor3@128x128_149
+  - first:
+      213: 8200305258118792902
+    second: DungeonColor3@128x128_150
+  - first:
+      213: -4227628035718594856
+    second: DungeonColor3@128x128_151
+  - first:
+      213: -3439070303814785337
+    second: DungeonColor3@128x128_152
+  - first:
+      213: 9151428708392252415
+    second: DungeonColor3@128x128_153
+  - first:
+      213: 8436439975656390623
+    second: DungeonColor3@128x128_154
+  - first:
+      213: -3071976366871780048
+    second: DungeonColor3@128x128_155
+  - first:
+      213: 1100106178526146347
+    second: DungeonColor3@128x128_156
+  - first:
+      213: 5346407364973074834
+    second: DungeonColor3@128x128_157
+  - first:
+      213: -2589879541607136208
+    second: DungeonColor3@128x128_158
+  - first:
+      213: -5582802046103820528
+    second: DungeonColor3@128x128_159
+  - first:
+      213: -4843285580451339428
+    second: DungeonColor3@128x128_160
+  - first:
+      213: 1842809597350375411
+    second: DungeonColor3@128x128_161
+  - first:
+      213: 4283502368415601074
+    second: DungeonColor3@128x128_162
+  - first:
+      213: -2458096464450171626
+    second: DungeonColor3@128x128_163
+  - first:
+      213: -1076205233312705740
+    second: DungeonColor3@128x128_164
+  - first:
+      213: -7702950766149701481
+    second: DungeonColor3@128x128_165
+  - first:
+      213: 4394024484979918173
+    second: DungeonColor3@128x128_166
+  - first:
+      213: 3562882034350301649
+    second: DungeonColor3@128x128_167
+  - first:
+      213: -8224174075355375724
+    second: DungeonColor3@128x128_168
+  - first:
+      213: 2872230816597562909
+    second: DungeonColor3@128x128_169
+  - first:
+      213: 3521136505881561842
+    second: DungeonColor3@128x128_170
+  - first:
+      213: 8866394339262272842
+    second: DungeonColor3@128x128_171
+  - first:
+      213: 5917247817142375199
+    second: DungeonColor3@128x128_172
+  - first:
+      213: -48972963431401295
+    second: DungeonColor3@128x128_173
+  - first:
+      213: -3403727229990108536
+    second: DungeonColor3@128x128_174
+  - first:
+      213: 4016816816891021594
+    second: DungeonColor3@128x128_175
+  - first:
+      213: -885474676784436942
+    second: DungeonColor3@128x128_176
+  - first:
+      213: -7139584549872534737
+    second: DungeonColor3@128x128_177
+  - first:
+      213: 6246099288519871014
+    second: DungeonColor3@128x128_178
+  - first:
+      213: -2355249841551270310
+    second: DungeonColor3@128x128_179
+  - first:
+      213: 7298964905285462342
+    second: DungeonColor3@128x128_180
+  - first:
+      213: -118830104350013190
+    second: DungeonColor3@128x128_181
+  - first:
+      213: 2533091416926494290
+    second: DungeonColor3@128x128_182
+  - first:
+      213: -3409644438395801566
+    second: DungeonColor3@128x128_183
+  - first:
+      213: 8777389363076091056
+    second: DungeonColor3@128x128_184
+  - first:
+      213: 8133409677838653217
+    second: DungeonColor3@128x128_185
+  - first:
+      213: 5368372476028897029
+    second: DungeonColor3@128x128_186
+  - first:
+      213: 5677590515829338756
+    second: DungeonColor3@128x128_187
+  - first:
+      213: 2562080325526827650
+    second: DungeonColor3@128x128_188
+  - first:
+      213: 4797692784750312363
+    second: DungeonColor3@128x128_189
+  - first:
+      213: -5751910538399883170
+    second: DungeonColor3@128x128_190
+  - first:
+      213: 6301723929695187371
+    second: DungeonColor3@128x128_191
+  - first:
+      213: -8837761579859155784
+    second: DungeonColor3@128x128_192
+  - first:
+      213: -710422064591751843
+    second: DungeonColor3@128x128_193
+  - first:
+      213: -8034986620345000070
+    second: DungeonColor3@128x128_194
+  - first:
+      213: 4119086919769025250
+    second: DungeonColor3@128x128_195
+  - first:
+      213: 2144477322740212314
+    second: DungeonColor3@128x128_196
+  - first:
+      213: 6632892986912086609
+    second: DungeonColor3@128x128_197
+  - first:
+      213: -8764006950149596780
+    second: DungeonColor3@128x128_198
+  - first:
+      213: 4794719459498255897
+    second: DungeonColor3@128x128_199
+  - first:
+      213: -2316577666384973960
+    second: DungeonColor3@128x128_200
+  - first:
+      213: 5876918676835313220
+    second: DungeonColor3@128x128_201
+  - first:
+      213: 7908654385281161048
+    second: DungeonColor3@128x128_202
+  - first:
+      213: 7327073632080039953
+    second: DungeonColor3@128x128_203
+  - first:
+      213: -7581650939578030761
+    second: DungeonColor3@128x128_204
+  - first:
+      213: -2484565267414595852
+    second: DungeonColor3@128x128_205
+  - first:
+      213: -5501890850804527001
+    second: DungeonColor3@128x128_206
+  - first:
+      213: 5237478713404891202
+    second: DungeonColor3@128x128_207
+  - first:
+      213: 313927062334864707
+    second: DungeonColor3@128x128_208
+  - first:
+      213: 4690796584626511956
+    second: DungeonColor3@128x128_209
+  - first:
+      213: -1724141815687521842
+    second: DungeonColor3@128x128_210
+  - first:
+      213: -3205339188067221225
+    second: DungeonColor3@128x128_211
+  - first:
+      213: 3207317047214779181
+    second: DungeonColor3@128x128_212
+  - first:
+      213: -1480324481993779109
+    second: DungeonColor3@128x128_213
+  - first:
+      213: -7429434582202606508
+    second: DungeonColor3@128x128_214
+  - first:
+      213: 7386873172537915661
+    second: DungeonColor3@128x128_215
+  - first:
+      213: 1237330805900404981
+    second: DungeonColor3@128x128_216
+  - first:
+      213: 7350916392650667644
+    second: DungeonColor3@128x128_217
+  - first:
+      213: 6603224033362544539
+    second: DungeonColor3@128x128_218
+  - first:
+      213: -7063221487019812623
+    second: DungeonColor3@128x128_219
+  - first:
+      213: -6985524585764322322
+    second: DungeonColor3@128x128_220
+  - first:
+      213: -784440904071589637
+    second: DungeonColor3@128x128_221
+  - first:
+      213: -5986020514726228068
+    second: DungeonColor3@128x128_222
+  - first:
+      213: -8067584364691837674
+    second: DungeonColor3@128x128_223
+  - first:
+      213: -2202579688453400273
+    second: DungeonColor3@128x128_224
+  - first:
+      213: 6137047183542962828
+    second: DungeonColor3@128x128_225
+  - first:
+      213: -3578403330021875805
+    second: DungeonColor3@128x128_226
+  - first:
+      213: 6816926802280381955
+    second: DungeonColor3@128x128_227
+  - first:
+      213: -6622935577295929064
+    second: DungeonColor3@128x128_228
+  - first:
+      213: -5763385728126523803
+    second: DungeonColor3@128x128_229
+  - first:
+      213: 1607265677076786208
+    second: DungeonColor3@128x128_230
+  - first:
+      213: -5618268494972939009
+    second: DungeonColor3@128x128_231
+  - first:
+      213: -1886882627826300119
+    second: DungeonColor3@128x128_232
+  - first:
+      213: 6911065010210298200
+    second: DungeonColor3@128x128_233
+  - first:
+      213: 7950219314484165935
+    second: DungeonColor3@128x128_234
+  - first:
+      213: 3055078962666904232
+    second: DungeonColor3@128x128_235
+  - first:
+      213: -5117497727676161156
+    second: DungeonColor3@128x128_236
+  - first:
+      213: -1905322271288093771
+    second: DungeonColor3@128x128_237
+  - first:
+      213: 5611378173643976026
+    second: DungeonColor3@128x128_238
+  - first:
+      213: -7073589331249783967
+    second: DungeonColor3@128x128_239
+  - first:
+      213: -8186023641547313680
+    second: DungeonColor3@128x128_240
+  - first:
+      213: 7845561348765382543
+    second: DungeonColor3@128x128_241
+  - first:
+      213: -5113008012726359057
+    second: DungeonColor3@128x128_242
+  - first:
+      213: -1199351385177346535
+    second: DungeonColor3@128x128_243
+  - first:
+      213: 5404187199615879325
+    second: DungeonColor3@128x128_244
+  - first:
+      213: 7390242448800736934
+    second: DungeonColor3@128x128_245
+  - first:
+      213: -5873798156755906133
+    second: DungeonColor3@128x128_246
+  - first:
+      213: -2718927371122685646
+    second: DungeonColor3@128x128_247
+  - first:
+      213: -7241998687145774940
+    second: DungeonColor3@128x128_248
+  - first:
+      213: 1717003870356231748
+    second: DungeonColor3@128x128_249
+  - first:
+      213: 705486202741961783
+    second: DungeonColor3@128x128_250
+  - first:
+      213: 803259024548593053
+    second: DungeonColor3@128x128_251
+  - first:
+      213: 8235744080262341403
+    second: DungeonColor3@128x128_252
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 16
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecbbc09fe319c4e0800000000000000
+      internalID: -1961014243095757586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34bce7db5e1d4dac0800000000000000
+      internalID: -3831206598328530109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e57964e93944f040800000000000000
+      internalID: 4680446425738868193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0efdbc62f0d06bb0800000000000000
+      internalID: -4944722651227750898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa5c80f8007477d0800000000000000
+      internalID: -2921587074558829905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8343d4e5e7ddf140800000000000000
+      internalID: 4755194163959645066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69a6d4cb638d67b0800000000000000
+      internalID: -5229379093420136086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde7baad376d65d30800000000000000
+      internalID: 4419955877388975837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 193c21f905bd6e450800000000000000
+      internalID: 6117818283142071185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35272a034ec2fae0800000000000000
+      internalID: -1516923337141967558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5cc80bc8330ec660800000000000000
+      internalID: 7407861979530447962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5710b6861f237ba0800000000000000
+      internalID: -6092474097106675877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dccb608ad47d1ba0800000000000000
+      internalID: -6116604237093024559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_13
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112374c3e8e8c63f0800000000000000
+      internalID: -906192683460513263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f1d9d164958f8d0800000000000000
+      internalID: -2812399809613455522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_15
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17da587c96a0c0cc0800000000000000
+      internalID: -3743605740816454287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47ea50a2f1ba5340800000000000000
+      internalID: 4853387204075644750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92aa706104d9d9b0800000000000000
+      internalID: -5054776004367965539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36c40b9b719d7260800000000000000
+      internalID: 7096988547873556029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6ecbf5057ab2e20800000000000000
+      internalID: 3326936713388680894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795b7192ef4f9ea20800000000000000
+      internalID: 3092271991614846359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_21
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5411d9717cbfc6110800000000000000
+      internalID: 1255655228642758981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_22
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2a6d3732c7632b0800000000000000
+      internalID: -5605156194506857745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_23
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59370e0ed2b3ba910800000000000000
+      internalID: 1849637140198093717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_24
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921f90a65788d3b70800000000000000
+      internalID: 8880404078116073769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_25
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 068f6eda155fcc4f0800000000000000
+      internalID: -807000502047410080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_26
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a939676ce5a7a0cd0800000000000000
+      internalID: -2591124088123124838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_27
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0e3e7ce2b093c60800000000000000
+      internalID: 7798276525318725801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_28
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38ab8ea9e1b44bc0800000000000000
+      internalID: -3799716568379971521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_29
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5621f75a01093d600800000000000000
+      internalID: 491895185483960933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_30
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 513618b17896a9b60800000000000000
+      internalID: 7753625737474695957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_31
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f31971121e2c1b0800000000000000
+      internalID: -5637696251268874454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e99eb93b588f9490800000000000000
+      internalID: -7737315709407028763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_33
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d5b39851b4a0960800000000000000
+      internalID: 7568944679618305415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_34
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7893b92ed6c703de0800000000000000
+      internalID: -1355446676443416185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_35
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ba67f5015b415e0800000000000000
+      internalID: -1939726457564124328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_36
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7167f2e3b5d8b2210800000000000000
+      internalID: 1309295539706099223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_37
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c90a8fcbf2bf320800000000000000
+      internalID: 2592718499153484953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_38
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0e931b6359abba0800000000000000
+      internalID: -6072377085421559637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_39
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3346e37df4de92f60800000000000000
+      internalID: 8010194339424527411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_40
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45fcaa487ae41c610800000000000000
+      internalID: 1639678220731862868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_41
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7fd01c25fb27fb0800000000000000
+      internalID: -4651445102973159498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_42
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e646e59d04c7999f0800000000000000
+      internalID: -461200868862172050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_43
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72598602b8bef1a0800000000000000
+      internalID: -6773773714765294982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_44
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b35f95f4b33afb60800000000000000
+      internalID: 7780588158543942584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_45
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7a49024a35c60a0800000000000000
+      internalID: -6887037765769975811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_46
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc64e6524886583d0800000000000000
+      internalID: -3205040643031284017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_47
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e8fe909783e4c60800000000000000
+      internalID: 7804237296788541065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9abaa01f94a98ab10800000000000000
+      internalID: 1993012477478742953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_49
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a47718bb91bec440800000000000000
+      internalID: 4958095522148086950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_50
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3ef687e28b7ed70800000000000000
+      internalID: 9072422484089758627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_51
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4ee306e08570240800000000000000
+      internalID: 4757868350107739307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_52
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6309cb4cd1009c0800000000000000
+      internalID: -3963134941271673159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_53
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9bf35197dca8770800000000000000
+      internalID: 8613923157230729725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_54
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e36b17de3d9f5c0800000000000000
+      internalID: -4181077762268316012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_55
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7a72cd05e99f0c0800000000000000
+      internalID: -4541424679098275914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_56
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f36f226c7bc8ffc0800000000000000
+      internalID: -3460792578550569992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_57
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b694bc21e6d5f5a0800000000000000
+      internalID: -6488043425551313226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_58
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2970ae188016b07a0800000000000000
+      internalID: -6409922955464538222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_59
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b98d6988248946350800000000000000
+      internalID: 6009095214345935003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_60
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c828257e2e211e780800000000000000
+      internalID: -8655616243076529524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_61
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14df020a722cb2100800000000000000
+      internalID: 84374493482515777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_62
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7fb53eaa2f305a0800000000000000
+      internalID: -6556129816748492880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_63
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1536
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd310f4eebe4fef0800000000000000
+      internalID: -75175884998230594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211bd63b6a9916250800000000000000
+      internalID: 5936194725104955666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_65
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5847b7a74fe4b070800000000000000
+      internalID: 8121379119091370078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_66
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bcbb717bddccc2f0800000000000000
+      internalID: -951159078896550729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_67
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20b1f972084ff060800000000000000
+      internalID: 6989384322175316013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_68
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3b6e5466009e470800000000000000
+      internalID: 8424265017232634848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_69
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9035731d859553260800000000000000
+      internalID: 7076660627484660489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_70
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7da53b6bac5d3e0800000000000000
+      internalID: -2029493171018606622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_71
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261584c3264121990800000000000000
+      internalID: -7416843224175062686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_72
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143fb52cd0f42dd70800000000000000
+      internalID: 9066395920364204865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_73
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbc07cf193884b70800000000000000
+      internalID: 8883494928017050583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_74
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c17eab978f654e40800000000000000
+      internalID: 5640036736574583234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_75
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13bb8587aac3d5970800000000000000
+      internalID: 8745212754284559153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_76
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d6502996843b8c70800000000000000
+      internalID: 8974324435165140691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_77
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4358db44ef7b49320800000000000000
+      internalID: 2563876390583502132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_78
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332fcdcf81422a100800000000000000
+      internalID: 117696230005207603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_79
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1408
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc544b83c61b90f30800000000000000
+      internalID: 4542356777545778636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfafdc94519d8a1e0800000000000000
+      internalID: -2186258933632599300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_81
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1280
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593c4d377a17ee440800000000000000
+      internalID: 4967032403053036437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_82
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1280
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea1b8e77906d1570800000000000000
+      internalID: 8439007480541551333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_83
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1280
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336d82a65d28d6530800000000000000
+      internalID: 3849877109592348211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_84
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1280
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2400f1986106fa80800000000000000
+      internalID: -8433551703568022486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_85
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1280
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b620e7cd58e44e00800000000000000
+      internalID: 1028202104430274228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_86
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1280
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8280906b7f76d0100800000000000000
+      internalID: 75831082343794728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_87
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1280
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7abcf7617c3573eb0800000000000000
+      internalID: -4740227968243086425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_88
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1280
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377ebcc5a50765d20800000000000000
+      internalID: 3266922113110108019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_89
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1280
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b141f43cd5692a0800000000000000
+      internalID: -6731089499631903927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_90
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1280
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db960c3ccfa2aaeb0800000000000000
+      internalID: -4707903195358139971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_91
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1280
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0211ba466aca5c0800000000000000
+      internalID: -4202801400946548503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_92
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1280
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b30c45a32562830800000000000000
+      internalID: 4046011725722434416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_93
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1280
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38191d602e3cbd960800000000000000
+      internalID: 7627905769426489731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_94
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1280
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e18233be5d651dd0800000000000000
+      internalID: -2515984563315768863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983e1d293396d7d50800000000000000
+      internalID: 6736656287843607433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_96
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91346b0b4a92ad10800000000000000
+      internalID: 2135438820431376794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_97
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9a1bfcedebf9150800000000000000
+      internalID: 5881629502545701349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_98
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2136c4b99db07c460800000000000000
+      internalID: 7261785953399497490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_99
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68a91c16f39a4fa0800000000000000
+      internalID: -5815673283552892817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_100
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06d0185af4ced9d0800000000000000
+      internalID: -2747542143151057398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_101
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b98f950635e70840800000000000000
+      internalID: 5190369115753122227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_102
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f8cf475cceaa270800000000000000
+      internalID: 8262676799180017456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_103
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8522229c7182f8240800000000000000
+      internalID: 4796096210796683864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_104
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e95367a652f34b20800000000000000
+      internalID: 3117601821059930594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_105
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6abf67123aaef3a0800000000000000
+      internalID: -6629674469324506518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_106
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64dfc52819b62a780800000000000000
+      internalID: -8673251659660591802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_107
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294dacfb4af2968a0800000000000000
+      internalID: -6311461018144156526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_108
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c12068795a3f2bc0800000000000000
+      internalID: -3805759004158713404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_109
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb786294009dbe490800000000000000
+      internalID: -7715834941318723650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_110
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba2676bfc2065e600800000000000000
+      internalID: 496909080206992043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_111
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20200733d7f7e6720800000000000000
+      internalID: 2841348590627979778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_112
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1de0bfb457cd0bf0800000000000000
+      internalID: -356409628685177573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_113
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b25b3eb93ad4fc0800000000000000
+      internalID: -3508968644716188795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_114
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da0f04aaace74cb0800000000000000
+      internalID: -4879671453591598377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_115
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9117f7f295d361b60800000000000000
+      internalID: 7716422464804188441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_116
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0751a8326eb7750800000000000000
+      internalID: 6303885143750045877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_117
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c05641875940080800000000000000
+      internalID: -9222081793977152356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_118
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38dbeb53563a7ae10800000000000000
+      internalID: 2208913797337234819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_119
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32474cf49570eb170800000000000000
+      internalID: 8195996452032640035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_120
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46daf25f4930beb0800000000000000
+      internalID: -4706198597744798131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_121
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c436ec96a0b35a50800000000000000
+      internalID: 6508740116123890886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_122
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00213de0b0921030800000000000000
+      internalID: 3463990152969396237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_123
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3acb1e04feac5d0800000000000000
+      internalID: -3041355536391166978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_124
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e2944c328f15590800000000000000
+      internalID: -7687090256444051869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_125
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617cb38a332f0d660800000000000000
+      internalID: 7408687690704209686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_126
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2521652038c7e5500800000000000000
+      internalID: 386883520122196562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_127
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0401b6bf2c3044e0800000000000000
+      internalID: -1999532058926316529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_128
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274c43c90e9cfb090800000000000000
+      internalID: -8016466845165632398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_129
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e66df16761aaf7b0800000000000000
+      internalID: -5189658155193375001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_130
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c917b7817fe8386c0800000000000000
+      internalID: -4142310040331914852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_131
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96aa274cdfc8c400800000000000000
+      internalID: 344753916487575196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_132
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f293fa8fb57eed80800000000000000
+      internalID: -8219502804374154508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_133
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b8fdc40c73e5e90800000000000000
+      internalID: -7035124268843168869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_134
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a0339b5cb5d47c0800000000000000
+      internalID: -4085508382181356978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_135
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509db016704996640800000000000000
+      internalID: 5073749214623422725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_136
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341ee6f783861e580800000000000000
+      internalID: -8799637605039808189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_137
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29577d0f943deec0800000000000000
+      internalID: -3536112274685601491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_138
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50144ea51583b6610800000000000000
+      internalID: 1615446813410869509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_139
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bead3d85746941f60800000000000000
+      internalID: 8004187670921337579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_140
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e05f9957b2b25180800000000000000
+      internalID: -9128036994174201631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_141
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049582f80c6f3dde0800000000000000
+      internalID: -1309431759738742464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_142
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee7e7780fe799500800000000000000
+      internalID: 403493213156835040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_143
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45dcd33633012af20800000000000000
+      internalID: 3432323678904110420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_144
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67f0f5bcda27a6a0800000000000000
+      internalID: -6438130014869194900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_145
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 077416d9d188de630800000000000000
+      internalID: 3957969308304361328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_146
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf8c381e59152de0800000000000000
+      internalID: -1358651820658094139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_147
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8cd723c31f850260800000000000000
+      internalID: 7063208905641811084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_148
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71a546178fabde70800000000000000
+      internalID: 9141092863407661434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_149
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d349703e1554030800000000000000
+      internalID: 3478276322740157715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_150
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c640f76f265dc170800000000000000
+      internalID: 8200305258118792902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_151
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8deb28053b27455c0800000000000000
+      internalID: -4227628035718594856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_152
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6668797c7f540d0800000000000000
+      internalID: -3439070303814785337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_153
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff338078ce7600f70800000000000000
+      internalID: 9151428708392252415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_154
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf77eda571441570800000000000000
+      internalID: 8436439975656390623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_155
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035663635c52e55d0800000000000000
+      internalID: -3071976366871780048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_156
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f6342adbc544f00800000000000000
+      internalID: 1100106178526146347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_157
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29990c50c21423a40800000000000000
+      internalID: 5346407364973074834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_158
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03484775746ee0cd0800000000000000
+      internalID: -2589879541607136208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_159
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01768a63e17e582b0800000000000000
+      internalID: -5582802046103820528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_160
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c532d67ec6139ccb0800000000000000
+      internalID: -4843285580451339428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_161
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ffefbea099f29910800000000000000
+      internalID: 1842809597350375411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_162
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1d4f785be027b30800000000000000
+      internalID: 4283502368415601074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_163
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61dcdc40a4613edd0800000000000000
+      internalID: -2458096464450171626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_164
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433daf2da0d8011f0800000000000000
+      internalID: -1076205233312705740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_165
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790f255171f991590800000000000000
+      internalID: -7702950766149701481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_166
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55c8911df5bafc30800000000000000
+      internalID: 4394024484979918173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_167
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d122125556e17130800000000000000
+      internalID: 3562882034350301649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_168
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4975773804ddddd80800000000000000
+      internalID: -8224174075355375724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_169
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d165a30c5b63cd720800000000000000
+      internalID: 2872230816597562909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_170
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa0bbe0ff69dd030800000000000000
+      internalID: 3521136505881561842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_171
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a451346eca2cb0b70800000000000000
+      internalID: 8866394339262272842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_172
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f131abce9894e1250800000000000000
+      internalID: 5917247817142375199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_173
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8b2176953025ff0800000000000000
+      internalID: -48972963431401295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_174
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8828d183e1883c0d0800000000000000
+      internalID: -3403727229990108536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_175
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19ca9aec999eb730800000000000000
+      internalID: 4016816816891021594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_176
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239e8a0197926b3f0800000000000000
+      internalID: -885474676784436942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_177
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bfaf4dda91bec90800000000000000
+      internalID: -7139584549872534737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_178
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a0c0ca53a9ea650800000000000000
+      internalID: 6246099288519871014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_179
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e9a0d6fb8705fd0800000000000000
+      internalID: -2355249841551270310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_180
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6492597e8e12b4560800000000000000
+      internalID: 7298964905285462342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_181
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8489156a4d95ef0800000000000000
+      internalID: -118830104350013190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_182
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e9e790939572320800000000000000
+      internalID: 2533091416926494290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_183
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2203807c2728ea0d0800000000000000
+      internalID: -3409644438395801566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_184
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc41710f1d8fc970800000000000000
+      internalID: 8777389363076091056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_185
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1271c44620dafd070800000000000000
+      internalID: 8133409677838653217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_186
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507cfa7f25a408a40800000000000000
+      internalID: 5368372476028897029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_187
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48272243e7adace40800000000000000
+      internalID: 5677590515829338756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_188
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2823b094b765e8320800000000000000
+      internalID: 2562080325526827650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_189
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab3f702b24d49240800000000000000
+      internalID: 4797692784750312363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_190
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5069da17db1d20b0800000000000000
+      internalID: -5751910538399883170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_191
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba17f0ea688347750800000000000000
+      internalID: 6301723929695187371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_192
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b466e6eaa6f95580800000000000000
+      internalID: -8837761579859155784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_193
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55b86f65e21426f0800000000000000
+      internalID: -710422064591751843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_194
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7fd15f6d3efd7090800000000000000
+      internalID: -8034986620345000070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_195
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea6acbcabfe92930800000000000000
+      internalID: 4119086919769025250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_196
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52afca53c6b2cd10800000000000000
+      internalID: 2144477322740212314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_197
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a131e6705cc0c50800000000000000
+      internalID: 6632892986912086609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_198
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499574fcc1eff5680800000000000000
+      internalID: -8764006950149596780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_199
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916eb05e1f34a8240800000000000000
+      internalID: 4794719459498255897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_200
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f258cd2ecd9dfd0800000000000000
+      internalID: -2316577666384973960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_201
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446a0aa36620f8150800000000000000
+      internalID: 5876918676835313220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_202
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857d406f24f21cd60800000000000000
+      internalID: 7908654385281161048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_203
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110134bd5aefea560800000000000000
+      internalID: 7327073632080039953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_204
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755e177c3a098c690800000000000000
+      internalID: -7581650939578030761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_205
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6ca769d0d058dd0800000000000000
+      internalID: -2484565267414595852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_206
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76013d4eb6b55a3b0800000000000000
+      internalID: -5501890850804527001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_207
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2402b27f3234fa840800000000000000
+      internalID: 5237478713404891202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_208
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34df9dbfffa4b5400800000000000000
+      internalID: 313927062334864707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_209
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450674c04ae091140800000000000000
+      internalID: 4690796584626511956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_210
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec95c8d472e9218e0800000000000000
+      internalID: -1724141815687521842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_211
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7114d96bdf85483d0800000000000000
+      internalID: -3205339188067221225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_212
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2baa418cdda28c20800000000000000
+      internalID: 3207317047214779181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_213
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58527a0ab4d47be0800000000000000
+      internalID: -1480324481993779109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_214
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c9fcd3c9855e890800000000000000
+      internalID: -7429434582202606508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_215
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d093cf95302738660800000000000000
+      internalID: 7386873172537915661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_216
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f86753ffc1eb2110800000000000000
+      internalID: 1237330805900404981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_217
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76f9852383b30660800000000000000
+      internalID: 7350916392650667644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_218
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9785e0e54d53ab50800000000000000
+      internalID: 6603224033362544539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_219
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f81748ea756afd90800000000000000
+      internalID: -7063221487019812623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_220
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee382cf666e6e0f90800000000000000
+      internalID: -6985524585764322322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_221
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0d685672b1d15f0800000000000000
+      internalID: -784440904071589637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_222
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fca81ae026deca0800000000000000
+      internalID: -5986020514726228068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_223
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d2c03a3ce2a0090800000000000000
+      internalID: -8067584364691837674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_224
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f299e30717dde61e0800000000000000
+      internalID: -2202579688453400273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_225
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ac3e0e5eb2b2550800000000000000
+      internalID: 6137047183542962828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_226
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af98fa6125f65ec0800000000000000
+      internalID: -3578403330021875805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_227
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ef2cd1fc69a9e50800000000000000
+      internalID: 6816926802280381955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_228
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811caf8ae2b9614a0800000000000000
+      internalID: -6622935577295929064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_229
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566667b47375400b0800000000000000
+      internalID: -5763385728126523803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_230
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ce6dd1e972e4610800000000000000
+      internalID: 1607265677076786208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_231
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff49e581296e702b0800000000000000
+      internalID: -5618268494972939009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_232
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92bce834f3270d5e0800000000000000
+      internalID: -1886882627826300119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_233
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8595739a20909ef50800000000000000
+      internalID: 6911065010210298200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_234
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d374e285ad45e60800000000000000
+      internalID: 7950219314484165935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_235
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa978a4122d56a20800000000000000
+      internalID: 3055078962666904232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_236
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c736efa2eeefaf8b0800000000000000
+      internalID: -5117497727676161156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_237
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b39b353d7fee85e0800000000000000
+      internalID: -1905322271288093771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_238
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ded64f7be9fdd40800000000000000
+      internalID: 5611378173643976026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_239
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b1ddf0bff85dd90800000000000000
+      internalID: -7073589331249783967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_240
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd6f929ed6656e80800000000000000
+      internalID: -8186023641547313680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_241
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f87f1b8aa7801ec60800000000000000
+      internalID: 7845561348765382543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_242
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb28b36d42fa09b0800000000000000
+      internalID: -5113008012726359057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_243
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ea1a5054c0b5fe0800000000000000
+      internalID: -1199351385177346535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_244
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9841dc10a78ffa40800000000000000
+      internalID: 5404187199615879325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_245
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6e7cc1a5a6f8660800000000000000
+      internalID: 7390242448800736934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_246
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba1583872b31c7ea0800000000000000
+      internalID: -5873798156755906133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_247
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239452226fd644ad0800000000000000
+      internalID: -2718927371122685646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_248
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0b4d450904f7b90800000000000000
+      internalID: -7241998687145774940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_249
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446dd8a4ce504d710800000000000000
+      internalID: 1717003870356231748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_250
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734bf5ca6f36ac900800000000000000
+      internalID: 705486202741961783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_251
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d78d4b3dfb52b00800000000000000
+      internalID: 803259024548593053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DungeonColor3@128x128_252
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13201d2b9d3b4270800000000000000
+      internalID: 8235744080262341403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 0bac57cb6882afd41aeda686150d6b02
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

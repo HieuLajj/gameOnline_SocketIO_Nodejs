@@ -17,8 +17,8 @@ public class NetworkManager : MonoBehaviour
     public GameObject player;
     public GameObject enemy;
     public SocketManager socketManager;
-    public string textName;
-    public string stringname;
+    //public string textName;
+    //public string stringname;
     //public string stringphong;
     public GameObject managerPlayer;
     public GameObject managerItems;
@@ -113,10 +113,6 @@ public class NetworkManager : MonoBehaviour
     public void ComandChangeTeam(){
         socketManager.Socket.Emit("changeTeam");
     }
-    public void OnStatusLobby(String data){
-        Lobby lobby = JsonUtility.FromJson<Lobby>(data);
-        statusRoom = lobby.currentState;
-    }
     public void OnPositionPlayerInMap(String data){
         PositionJSON2 positionJSON = JsonUtility.FromJson<PositionJSON2>(data);
         Vector3 position = new Vector3(positionJSON.position[0], positionJSON.position[1], positionJSON.position[2]);
@@ -165,7 +161,11 @@ public class NetworkManager : MonoBehaviour
         Lobby lobby = JsonUtility.FromJson<Lobby>(data);
         LobbyUIManager.instance.XoaLobby(lobby);
     }
-
+    public void OnStatusLobby(String data){
+        Lobby lobby = JsonUtility.FromJson<Lobby>(data);
+        LobbyUIManager.instance.LobbyStatus(lobby);
+        NetworkManager.instance.statusRoom = lobby.currentState;
+    }
     public void OnOtherPlayerDisconnect (String data){
         UserJSON userJSON = JsonUtility.FromJson<UserJSON>(data);
         Destroy(GameObject.Find(userJSON.name));
@@ -175,7 +175,11 @@ public class NetworkManager : MonoBehaviour
         UserJSON userJSON = JsonUtility.FromJson<UserJSON>(data);
         Vector3 position = new Vector3(userJSON.position[0], userJSON.position[1], userJSON.position[2]);
 		// if it is the current player exit
-		if (userJSON.name == textName)
+		// if (userJSON.name == textName)
+		// {
+		// 	return;
+		// }
+        if (userJSON.name == ProfilePlayer.Instance.name)
 		{
 			return;
 		}
@@ -223,7 +227,11 @@ public class NetworkManager : MonoBehaviour
         Vector3 rotationWeVec3 = new Vector3(userJSON.rotationWeapon[0], userJSON.rotationWeapon[1], userJSON.rotationWeapon[2]);
         Quaternion rotationWe = Quaternion.Euler(rotationWeVec3);
 		// if it is the current player exit
-		if (userJSON.name == textName)
+		// if (userJSON.name == textName)
+		// {
+		// 	return;
+		// }
+        if (userJSON.name == ProfilePlayer.Instance.name)
 		{
 			return;
 		}
@@ -310,7 +318,7 @@ public class NetworkManager : MonoBehaviour
         pc.name.text = playerinfomation.name;
         g.name = playerinfomation.name;
         
-        textName = playerinfomation.name;
+        //textName = playerinfomation.name;
         pc.isLocalPlayer = true;
         
         pc.ChangeTeam(playerinfomation.team);
@@ -354,7 +362,8 @@ public class NetworkManager : MonoBehaviour
     }
 
     public void JoinGame(String stringphong){
-        StartCoroutine(ConnectToServer(stringname, stringphong));
+        //StartCoroutine(ConnectToServer(stringname, stringphong));
+         StartCoroutine(ConnectToServer(ProfilePlayer.Instance.name, stringphong));
     }
     IEnumerator ConnectToServer(String playerName, String lobbyName){
         yield return new WaitForSeconds(0.5f);

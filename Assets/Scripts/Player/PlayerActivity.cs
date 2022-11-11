@@ -43,11 +43,7 @@ public class PlayerActivity : MonoBehaviour
         gun.SwitchGunWeapon(selectedGun);
     }
     public void Shoot(int team){
-        // for(var i = panelLobby.childCount-1; i>=0; i--){
-        //         Destroy(panelLobby.GetChild(i).gameObject);
-        // }
         for(var i = 0; i<=this.selectedGun; i++){
-            //var bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation) as GameObject;
             var bullet = Instantiate(bulletPrefab, bulletSpawn.GetChild(i).position, bulletSpawn.GetChild(i).rotation) as GameObject;
             Bullet b = bullet.GetComponent<Bullet>();
             b.a = selectedGun;

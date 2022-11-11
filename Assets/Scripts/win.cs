@@ -11,23 +11,47 @@ public class win : MonoBehaviour
     [SerializeField]
     private int team;
     public SpriteRenderer spriteRenderer;
+    [SerializeField]
+    private Image image;
+    [SerializeField]
+    private Image imageFill;
+    private float progress = 0f;
     private void Start() {
         if(team == 0){
+            imageFill.color = Color.red;
+            image.color = Color.blue;
             spriteRenderer.color = Color.blue;
         }else if(team == 1){
+            imageFill.color = Color.blue;
+            image.color = Color.red;
             spriteRenderer.color = Color.red;
         }
+        imageFill.fillAmount = 0;
     }
     
     void Update()
     {
         if(isTiming){
-            timeTillKeyIsPressed += Time.deltaTime;
+            if(imageFill.fillAmount == 1){ Win(); return;}
+            StartCoroutine(Up(0.01f));
+        }else{
+            if(progress>0f){
+                StartCoroutine(Down(0.01f));
+            }
         }
-        if( timeTillKeyIsPressed > 5f){
-            Win();
-        }
-        
+        imageFill.fillAmount = progress;
+    }
+    private IEnumerator Up(float waitTime)
+    {
+        Debug.Log("co chay");
+            yield return new WaitForSeconds(waitTime);
+            progress +=0.01f;
+    }
+    private IEnumerator Down(float waitTime)
+    {
+        Debug.Log("co chay");
+            yield return new WaitForSeconds(waitTime);
+            progress -=0.01f;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
