@@ -2,19 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProfilePlayer : Singleton<ProfilePlayer>
+public class ProfilePlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static ProfilePlayer Instance;
+    private void Awake() {
+        if(Instance == null){
+            Instance = this;
+        }
+        else if (Instance != this){
+            Destroy(gameObject);
+        }
+    }
     public string id;
-    public string name;
+    public string nameplayer;
     public string email;
     public int win;
     public int lose;
-    public void ChangeProfile(string _id, string _name, string _email, int _win, int _lose){
+    public int team;
+    public string token;
+    public void ChangeProfile(string _id, string _name, string _email, int _win, int _lose, string _token){
         id = _id;
-        name = _name;
+        nameplayer = _name;
         email = _email;
         win = _win;
         lose = _lose;
+        token = _token;
+    }
+    public void TangWin(){
+        this.win +=1;
+    }
+    public void TangLose(){
+        this.lose +=1;
     }
 }

@@ -30,18 +30,16 @@ public class Health : MonoBehaviour
     }
 
     public void OnChangeHealth( int currentHealth){
-        Debug.Log(currentHealth+"fahfiuawehfuajwhef");
         this.currentHealth = currentHealth;
         healthBar.SetHealth((currentHealth));
         if(currentHealth <= 0){
-            
-            //gameObject.SetActive(false);
-            // if(destroyOnDeath){
-            //     Destroy(gameObject);
-            // }else{
-            //     currentHealth = maxHealth;
-            //     Respawn();
-            // }
+            gameObject.SetActive(false);
+            if(destroyOnDeath){
+                Destroy(gameObject);
+            }else{
+                currentHealth = maxHealth;
+                Respawn();
+            }
             pc.setAvtivePlayer = false;
         }
     }

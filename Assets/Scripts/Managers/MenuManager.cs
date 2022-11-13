@@ -9,7 +9,9 @@ using TMPro;
     public class MenuManager : MonoBehaviour {
 
         [SerializeField]
-        private Button queueButton;
+        private Button signInBtn;
+        [SerializeField]
+        private Button signUpBtn;
         public TMP_InputField emailText;
         public TMP_InputField passwordText;
         [SerializeField]
@@ -21,15 +23,22 @@ using TMPro;
         private GameObject LoginCanvas;
         [SerializeField]
         private GameObject SignupCanvas;
+
+        [SerializeField] private TMP_InputField nameIFSignUp;
+        [SerializeField] private TMP_InputField passwordIFSignUp;
+        [SerializeField] private TMP_InputField emailIFSignUp;
         
         public void Start() {
             chuyendoi();
-
-            queueButton.onClick.AddListener(()=>{
+            signInBtn.onClick.AddListener(()=>{
                 // NetworkManager.instance.stringname = namePlayerText.text;
                 // NetworkManager.instance.ConnectSocket();
                 StartCoroutine(PostDataSignIn());
             });
+            signUpBtn.onClick.AddListener(()=>{
+                StartCoroutine(PostSignup());
+            });
+
             chuyendoiBtn.onClick.AddListener(()=>{
                 flagChuyendoi = !flagChuyendoi;
                 chuyendoi();
@@ -55,18 +64,47 @@ using TMPro;
             form.AddField("password",passwordText.text);
             using(UnityWebRequest request = UnityWebRequest.Post(uri,form)){
                 yield return request.SendWebRequest();
-                if(request.isNetworkError || request.isHttpError){
-                    Debug.Log("Co loi xay ra");
+                if(request.result == UnityWebRequest.Result.ProtocolError){
+                    ConfirmationCanvas.instance.Thongbao("Khong ket noi duoc may chu");
                 }else{
-                    Debug.Log("ok"+request.downloadHandler.text);
-                    ProfileJSON profilejson = JsonUtility.FromJson<ProfileJSON>(request.downloadHandler.text);
-                    if(profilejson.name != null){
-                        ProfilePlayer.Instance.ChangeProfile(profilejson.id, profilejson.name, profilejson.email, profilejson.win, profilejson.lose);
-                        SceneManagementManager.Instance.LoadLevel(SceneList.PROFILE_SCENE);
+                    try{
+                        ProfileJSON profilejson = JsonUtility.FromJson<ProfileJSON>(request.downloadHandler.text);
+                        if(profilejson.name != null){
+                            ProfilePlayer.Instance.ChangeProfile(profilejson.id, profilejson.name, profilejson.email, profilejson.win, profilejson.lose, profilejson.token);
+                            SceneManagementManager.LoadLevel(SceneList.PROFILE_SCENE);
+                            ConfirmationCanvas.instance.Thongbao("Dang nhap thanh cong");
+                        }else{
+                            ConfirmationCanvas.instance.Thongbao("Dang nhap that bai");
+                        }
+                    }
+                    catch(Exception exp){
+                        ConfirmationCanvas.instance.Thongbao("Co loi xay ra");
+                        //Debug.Log("co loi xay ra khong ket noi duoc voi may chu");
                     }
                 }
             }
         }
+
+        IEnumerator PostSignup(){
+            string uri = "http://localhost:3000/laihieu/user/add_user";
+            WWWForm form = new WWWForm();
+            form.AddField("name",nameIFSignUp.text);
+            form.AddField("email",emailIFSignUp.text);
+            form.AddField("password",passwordIFSignUp.text);
+            using(UnityWebRequest request = UnityWebRequest.Post(uri,form)){
+                yield return request.SendWebRequest();
+                if(request.result == UnityWebRequest.Result.ProtocolError){
+                    ConfirmationCanvas.instance.Thongbao("Dang ki that bai");
+                }else{
+                    try{
+                        ConfirmationCanvas.instance.Thongbao("Dang ki thanh cong");
+                    }catch(Exception exp){
+                        ConfirmationCanvas.instance.Thongbao("Co loi xay ra");
+                    }
+                }
+            }
+        }
+
         [Serializable]
         public class ProfileJSON{
             public string id;
@@ -74,6 +112,7 @@ using TMPro;
             public string email;
             public int win;
             public int lose;
+            public string token;
             public static ProfileJSON CreateFromJSON(string data){
                 return JsonUtility.FromJson<ProfileJSON>(data);
             }

@@ -83,39 +83,6 @@ public class PlayerController : MonoBehaviour
         playerAnimation.UpdateAnimation(isWalking); 
     }
 
-    // private void SwitchWeapon(){
-    //     if(Input.GetAxisRaw("Mouse ScrollWheel") > 0f){
-    //         ++selectedGun;
-    //         if(selectedGun >= allGuns.Length){
-    //             selectedGun = 0;
-    //         }
-    //         SwitchGun();
-    //     }else if( Input.GetAxisRaw("Mouse ScrollWheel") < 0f){
-    //         --selectedGun;
-    //         if(selectedGun <0){
-    //             selectedGun = allGuns.Length -1;
-    //         }
-    //         SwitchGun();
-    //     }
-    // }
-    // private void SwitchGun(){
-    //     gun.SwitchGunWeapon(selectedGun);
-    //     NetworkManager.instance.GetComponent<NetworkManager>().ComandSelectedGuns(selectedGun);
-    // }
-    // public void ChangeWeapon(int selectedGun){
-    //     this.selectedGun = selectedGun;
-    //     gun.SwitchGunWeapon(selectedGun);
-    // }
-
-    // public void CmdFire(){
-    //    var bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation) as GameObject;
-    //    Bullet b = bullet.GetComponent<Bullet>();
-    //    b.a = selectedGun;
-    //    b.playerFrom = gameObject;
-    //    b.teamPlayerFrom = this.team;
-    //    b.GetComponent<Rigidbody2D>().velocity = (bulletSpawn.position - centerGun.position) * 6;
-    //    Destroy(bullet, 5.0f);
-    // }
     private void FixedUpdate() {
         playerMovement.Movement(rb,movementHorizontal,movementVertical);
     }
@@ -123,29 +90,12 @@ public class PlayerController : MonoBehaviour
         movementHorizontal = Input.GetAxisRaw("Horizontal");
         movementVertical = Input.GetAxisRaw("Vertical");
     }
-    // private void Movement(){      
-    //     direction = new Vector2(movementHorizontal,movementVertical);
-    //     rb.velocity = direction.normalized*speed;
-    // }
-    
-    // private void Check(){
-    //     if(isFacingRightl && indexFlip < 0){
-    //         Flip();
-    //     }else if(!isFacingRightl && indexFlip > 0){
-    //         Flip();
-    //     }
-    // }
-    // private void Flip(){
-    //     isFacingRightl =! isFacingRightl;
-    //     body.Rotate(0.0f,180.0f,0.0f);
-    // }
-    // private void UpdateAnimation(){
-    //     anim.SetBool("isWalking",isWalking);
-    // }
-
     // doi phong
     public void ChangeTeam(int team){
         this.team = team;
+        if(isLocalPlayer){
+            ProfilePlayer.Instance.team = team;
+        }
         if (team == 0){
             this.bodyPlayer.color = Color.blue; 
         }else if(team == 1){

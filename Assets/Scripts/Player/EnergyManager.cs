@@ -9,8 +9,14 @@ public class EnergyManager : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField]
     private Slider energySlider;
-     private bool isLocalPlayer;
+    private bool isLocalPlayer;
     private PlayerController pc;
+    public static EnergyManager instance;
+    private void Awake() {
+        if(instance == null){
+            instance = this;
+        }
+    }
     void Start()
     {
         pc = GetComponent<PlayerController>();
@@ -28,6 +34,11 @@ public class EnergyManager : MonoBehaviour
             currentEnergy=0;
             NetworkManager.instance.ComandSelectedGuns(0);
         }
+        energySlider.value = currentEnergy;
+    }
+
+    public void ResetEnergy(){
+        currentEnergy = 0;
         energySlider.value = currentEnergy;
     }
 }

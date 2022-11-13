@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Web;
+using UnityEngine.Networking;
 using Cinemachine;
 using TMPro;
 
@@ -17,42 +18,81 @@ public class NetworkManager : MonoBehaviour
     public GameObject player;
     public GameObject enemy;
     public SocketManager socketManager;
-    //public string textName;
-    //public string stringname;
-    //public string stringphong;
     public GameObject managerPlayer;
     public GameObject managerItems;
     public int isRoommaster = 0;
-    public string statusRoom;
+    public string statusRoom = "Lobby";
     private void Awake() {
-        
         if(instance == null){
             instance = this;
         }
         else if (instance != this){
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
+        statusRoom = "Lobby";
+        // DontDestroyOnLoad(gameObject);
+    }
+    public void Disconnect(){
+        socketManager.Socket.Disconnect();
+        isRoommaster = 0;
+        statusRoom = "Lobby";
     }
 
     public void StartGame(String data){
         socketManager.Socket.Emit("start game", data);
     }
     public void OnStartGame(String data){
-        SceneManagementManager.Instance.LoadAddScene(data);
+        //SceneManager.LoadScene(data, LoadSceneMode.Additive);
+        SceneManagementManager.LoadAddScene(data);
         LobbyUIManager.instance.playerUI.SetActive(false);
     }
 
-    public void BackLobby(){
-        socketManager.Socket.Emit("back lobby");
+    public void BackLobby(int data){
+        socketManager.Socket.Emit("back lobby", data);
     }
 
     public void OnBackLobby(String data){
-        SceneManagementManager.Instance.UnLoadScene(data);
+        BackGameJson backGameJson = JsonUtility.FromJson<BackGameJson>(data);
+        SceneManagementManager.UnLoadScene(backGameJson.map);
         LobbyUIManager.instance.playerUI.SetActive(true);
+        EnergyManager.instance.ResetEnergy();
+        if(backGameJson.teamlose != ProfilePlayer.Instance.team){
+            ConfirmationCanvas.instance.Thongbao("Chien thang !!!");
+            StartCoroutine(RaiseWin());
+        }else{
+            ConfirmationCanvas.instance.Thongbao("That bai :<<");
+            StartCoroutine(RaiseLose());
+        }
         this.DeleteAllItemServer();
     }
+    IEnumerator RaiseWin(){
+        string uri = "http://localhost:3000/laihieu/user/increasewin";
+        WWWForm form = new WWWForm();
+        using(UnityWebRequest request = UnityWebRequest.Post(uri,form)){
+            request.SetRequestHeader("Authorization",$"jwt {ProfilePlayer.Instance.token}");
+            yield return request.SendWebRequest();
+            if(request.result == UnityWebRequest.Result.ProtocolError){
+                ConfirmationCanvas.instance.Thongbao("Khong ket noi duoc may chu");
+            }else{    
+                Debug.Log("hahaha"+request.downloadHandler.text);
+                ProfilePlayer.Instance.TangWin();
+            }
+        }    
+    }
 
+    IEnumerator RaiseLose(){
+        string uri = "http://localhost:3000/laihieu/user/increaselose";
+        using(UnityWebRequest request = UnityWebRequest.Get(uri)){
+            request.SetRequestHeader("Authorization",$"jwt {ProfilePlayer.Instance.token}");
+            yield return request.SendWebRequest();
+            if(request.result == UnityWebRequest.Result.ProtocolError){
+                ConfirmationCanvas.instance.Thongbao("Khong ket noi duoc may chu");
+            }else{    
+                Debug.Log("hahaha"+request.downloadHandler.text);
+                ProfilePlayer.Instance.TangLose();
+            }
+        }    
+    }
     public void OnPointTeamInMap(List<SpawnPoint> bluePoints, List<SpawnPoint> redPoints){
         if(isRoommaster ==1){
             MapJSON mapJSON = new MapJSON(bluePoints, redPoints);
@@ -179,7 +219,7 @@ public class NetworkManager : MonoBehaviour
 		// {
 		// 	return;
 		// }
-        if (userJSON.name == ProfilePlayer.Instance.name)
+        if (userJSON.name == ProfilePlayer.Instance.nameplayer)
 		{
 			return;
 		}
@@ -231,7 +271,7 @@ public class NetworkManager : MonoBehaviour
 		// {
 		// 	return;
 		// }
-        if (userJSON.name == ProfilePlayer.Instance.name)
+        if (userJSON.name == ProfilePlayer.Instance.nameplayer)
 		{
 			return;
 		}
@@ -320,7 +360,6 @@ public class NetworkManager : MonoBehaviour
         
         //textName = playerinfomation.name;
         pc.isLocalPlayer = true;
-        
         pc.ChangeTeam(playerinfomation.team);
 
         vCam.Follow = g.transform;
@@ -363,7 +402,7 @@ public class NetworkManager : MonoBehaviour
 
     public void JoinGame(String stringphong){
         //StartCoroutine(ConnectToServer(stringname, stringphong));
-         StartCoroutine(ConnectToServer(ProfilePlayer.Instance.name, stringphong));
+        StartCoroutine(ConnectToServer(ProfilePlayer.Instance.nameplayer, stringphong));
     }
     IEnumerator ConnectToServer(String playerName, String lobbyName){
         yield return new WaitForSeconds(0.5f);
@@ -372,7 +411,7 @@ public class NetworkManager : MonoBehaviour
             socketManager.Socket.Emit("player connect");
             PlayerJSON playerJSON = new PlayerJSON(playerName);
             string data = JsonUtility.ToJson(playerJSON);
-            socketManager.Socket.Emit("play", data);      
+            socketManager.Socket.Emit("play", data);     
         }
     }
 
@@ -519,6 +558,15 @@ public class NetworkManager : MonoBehaviour
 
         public static ItemJSON CreateFromJSON(string data){
             return JsonUtility.FromJson<ItemJSON>(data);
+        }
+    }
+
+    [SerializeField]
+    public class BackGameJson{
+        public string map;
+        public int teamlose;
+        public static BackGameJson CreateFromJSON(string data){
+            return JsonUtility.FromJson<BackGameJson>(data);
         }
     }
 }

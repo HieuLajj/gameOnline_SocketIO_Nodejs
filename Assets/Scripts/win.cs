@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class win : MonoBehaviour
 {
-    //public int flag = 0;
     private bool isTiming = false;
     public float timeTillKeyIsPressed = 0;
     [SerializeField]
@@ -43,17 +42,14 @@ public class win : MonoBehaviour
     }
     private IEnumerator Up(float waitTime)
     {
-        Debug.Log("co chay");
-            yield return new WaitForSeconds(waitTime);
-            progress +=0.01f;
+        yield return new WaitForSeconds(waitTime);
+        progress +=0.001f;
     }
     private IEnumerator Down(float waitTime)
     {
-        Debug.Log("co chay");
-            yield return new WaitForSeconds(waitTime);
-            progress -=0.01f;
+        yield return new WaitForSeconds(waitTime);
+        progress -=0.001f;
     }
-
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Player"){
             int teamOther = other.gameObject.GetComponent<PlayerController>().team;
@@ -68,8 +64,7 @@ public class win : MonoBehaviour
         timeTillKeyIsPressed = 0;
     }
     private void Win(){
-        Debug.Log("Ban da chien thang");
-        NetworkManager.instance.BackLobby();
+        NetworkManager.instance.BackLobby(team);
         Destroy(gameObject);
     }
     

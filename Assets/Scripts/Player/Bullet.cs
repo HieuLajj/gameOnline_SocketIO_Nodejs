@@ -38,6 +38,7 @@ public class Bullet : MonoBehaviour
 
     public GameObject playerFrom;
     private void OnTriggerEnter2D(Collider2D other){
+        if(other.tag=="Static"){Destroy(this.gameObject);}
         if (other.tag != "Player") return; 
         var hit = other.gameObject;
         PlayerController playerHit = hit.GetComponent<PlayerController>();

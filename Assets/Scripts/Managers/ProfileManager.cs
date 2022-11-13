@@ -16,10 +16,10 @@ public class ProfileManager : MonoBehaviour
     void Start()
     {
         playGameButton.onClick.AddListener(()=>{
-            SceneManagementManager.Instance.LoadLevel(SceneList.LOBBY_SCENE);
+            SceneManagementManager.LoadLevel(SceneList.LOBBY_SCENE);
             NetworkManager.instance.ConnectSocket();
         });
-        usernameTMP.text = ProfilePlayer.Instance.name;
+        usernameTMP.text = ProfilePlayer.Instance.nameplayer;
         winTMP.text = ProfilePlayer.Instance.win.ToString();
         loseTMP.text = ProfilePlayer.Instance.lose.ToString();
     }
