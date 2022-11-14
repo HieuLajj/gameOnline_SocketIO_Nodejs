@@ -25,7 +25,7 @@ public class SceneManagementManager : MonoBehaviour
         public const string MENU_SCENE = "MenuScene";
         public const string PROFILE_SCENE = "ProfileScene";
 
-        public const string GAME = "Game";
-        public const string GAME1 = "Game1";
-        public const string GAME2= "Game2";
+        public const string Map1_Delta = "Map1_Delta";
+        public const string Map2_Plateau = "Map2_Plateau";
+        public const string Map3_Dungeon= "Map3_Dungeon";
     }

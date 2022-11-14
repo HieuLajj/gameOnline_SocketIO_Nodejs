@@ -9,4 +9,7 @@ public class PlayerAnimation : MonoBehaviour
     public void UpdateAnimation(bool isWalking){
         anim.SetBool("isWalking",isWalking);
     }
+    public void updatehealthAnim(int health){
+        anim.SetInteger("healthPlayer",health);
+    }
 }

@@ -15,6 +15,7 @@ public class win : MonoBehaviour
     [SerializeField]
     private Image imageFill;
     private float progress = 0f;
+    [SerializeField] private GameObject effect;
     private void Start() {
         if(team == 0){
             imageFill.color = Color.red;
@@ -26,14 +27,17 @@ public class win : MonoBehaviour
             spriteRenderer.color = Color.red;
         }
         imageFill.fillAmount = 0;
+        effect.SetActive(false);
     }
     
     void Update()
     {
         if(isTiming){
+            effect.SetActive(true);
             if(imageFill.fillAmount == 1){ Win(); return;}
             StartCoroutine(Up(0.01f));
         }else{
+            effect.SetActive(false);
             if(progress>0f){
                 StartCoroutine(Down(0.01f));
             }

@@ -22,6 +22,7 @@ public class ProfileManager : MonoBehaviour
         usernameTMP.text = ProfilePlayer.Instance.nameplayer;
         winTMP.text = ProfilePlayer.Instance.win.ToString();
         loseTMP.text = ProfilePlayer.Instance.lose.ToString();
+        AudioManager.Instance.Pause();
     }
 
     void Update()

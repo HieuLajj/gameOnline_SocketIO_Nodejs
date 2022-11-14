@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Bullet : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class Bullet : MonoBehaviour
     public int a;
     public SpriteRenderer spriteRenderer;
     public IBullet bulletSprite;
+    public GameObject playerFrom;
+    public UnityEvent OnHit = new UnityEvent();
+    public UnityEvent OnHit2 = new UnityEvent();
     public void Bung(){
         spriteRenderer = GetComponent<SpriteRenderer>();
         switch(a){
@@ -36,9 +40,11 @@ public class Bullet : MonoBehaviour
         spriteRenderer.sprite = bulletSprite.ShowSprite();
     }
 
-    public GameObject playerFrom;
     private void OnTriggerEnter2D(Collider2D other){
-        if(other.tag=="Static"){Destroy(this.gameObject);}
+        if(other.tag=="Static"){
+            OnHit?.Invoke();
+            Destroy(this.gameObject);
+        }
         if (other.tag != "Player") return; 
         var hit = other.gameObject;
         PlayerController playerHit = hit.GetComponent<PlayerController>();
@@ -48,6 +54,7 @@ public class Bullet : MonoBehaviour
             if(health != null){
                 health.TakeDamage(playerFrom,10);
             }
+            OnHit2?.Invoke();
             Destroy(gameObject);
         }
     }

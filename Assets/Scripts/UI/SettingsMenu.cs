@@ -36,6 +36,8 @@ public class SettingsMenu : MonoBehaviour
 
         mainButtonPosition = mainButton.transform.position;
         ResetPositions();
+        LoadValues();
+        VolumnSlider(sliderMusic.value);
     }
 
     void VolumnFunction(){
@@ -99,22 +101,20 @@ public class SettingsMenu : MonoBehaviour
         mainButton?.onClick.RemoveListener(ToggleMenu);
     }
 
-    // IEnumerator PostDataSignIn(){
-    //     string uri = "http://localhost:3000/laihieu/user/increasewin";
-    //     WWWForm form = new WWWForm();
-    //     //form.headers.Add("Authorization","jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzZjOWY1NmYxMjJmNTkwODJjOWIzZjAiLCJpYXQiOjE2NjgzMDU5NTAsImV4cCI6MTY5OTg2MzU1MH0.Aj8a7-X6VD39oezL1ZkE3vCXXuyxfkG3DevyYhe4NTU");
-    //     //headers["Authorization"] = "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzZjOWY1NmYxMjJmNTkwODJjOWIzZjAiLCJpYXQiOjE2NjgzMDU5NTAsImV4cCI6MTY5OTg2MzU1MH0.Aj8a7-X6VD39oezL1ZkE3vCXXuyxfkG3DevyYhe4NTU";
-    //     using(UnityWebRequest request = UnityWebRequest.Post(uri,form)){
-    //         request.SetRequestHeader("Authorization","jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzZjOWY1NmYxMjJmNTkwODJjOWIzZjAiLCJpYXQiOjE2NjgzMDU5NTAsImV4cCI6MTY5OTg2MzU1MH0.Aj8a7-X6VD39oezL1ZkE3vCXXuyxfkG3DevyYhe4NTU");
-    //         yield return request.SendWebRequest();
-    //     if(request.result == UnityWebRequest.Result.ProtocolError){
-    //         ConfirmationCanvas.instance.Thongbao("Khong ket noi duoc may chu");
-    //     }else{
-            
-    //         Debug.Log("hahaha"+request.downloadHandler.text);
-    //     }
-    //     }    
-    // }
+    public void VolumnSlider(float volume){
+        AudioManager.Instance.ChangeVolume(volume);
+        SaveVolumeButton();
+    }
+
+    void SaveVolumeButton(){
+        float volumeValue = sliderMusic.value;
+        PlayerPrefs.SetFloat("VolumeValue", volumeValue);
+    }
+
+    void LoadValues(){
+        float volumeValue = PlayerPrefs.GetFloat("VolumeValue");
+        sliderMusic.value = volumeValue;
+    }
 
 }
 

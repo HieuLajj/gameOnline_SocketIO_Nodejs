@@ -12,6 +12,8 @@ public class Health : MonoBehaviour
     //public RectTransform healthBar;
     private bool isLocalPlayer;
     private PlayerController pc;
+    [SerializeField]
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class Health : MonoBehaviour
         isLocalPlayer = pc.isLocalPlayer;
         if(isLocalPlayer){
             healthBar.SetMaxHealth(maxHealth);
+           // pc.playerAnimation.updatehealthAnim(maxHealth);
         }
     }
 
@@ -32,14 +35,15 @@ public class Health : MonoBehaviour
     public void OnChangeHealth( int currentHealth){
         this.currentHealth = currentHealth;
         healthBar.SetHealth((currentHealth));
+        anim.SetInteger("healthPlayer",currentHealth);
         if(currentHealth <= 0){
-            gameObject.SetActive(false);
-            if(destroyOnDeath){
-                Destroy(gameObject);
-            }else{
-                currentHealth = maxHealth;
-                Respawn();
-            }
+            // gameObject.SetActive(false);
+            // if(destroyOnDeath){
+            //     Destroy(gameObject);
+            // }else{
+            //     currentHealth = maxHealth;
+            //     Respawn();
+            // }
             pc.setAvtivePlayer = false;
         }
     }

@@ -31,7 +31,6 @@ public class Energy : IItem{
         return spriteItem;
     }
     public void Effect(GameObject player){
-        Debug.Log(player.name);
         EnergyManager energyManager = player.GetComponent<EnergyManager>();
         energyManager.ChangeEnergy(20);
     }

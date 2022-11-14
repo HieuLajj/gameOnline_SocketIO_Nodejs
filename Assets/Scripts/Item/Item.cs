@@ -7,6 +7,7 @@ public class Item : MonoBehaviour
     public IItem item;
     public string id;
     public SpriteRenderer spriteRenderer;
+    public AudioClip audioClip;
     public void SwitchItem(int h){
         spriteRenderer = GetComponent<SpriteRenderer>();
         switch(h){
@@ -26,10 +27,9 @@ public class Item : MonoBehaviour
     {
         id = gameObject.name;
     }
-    // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D other) {
-        if (!other.gameObject.CompareTag("Player")) return;
-        
+        if (!other.gameObject.CompareTag("Player")) return;  
+        AudioManager.Instance.PlaySFX(audioClip);  
         item.Effect(other.gameObject);
         NetworkManager.instance.CommandItemServer(gameObject.name);
     }

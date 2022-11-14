@@ -28,13 +28,12 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private SpriteRenderer bodyPlayer;
-
     public int team;
 
     [SerializeField]
     private PlayerMovement playerMovement;
-    [SerializeField]
-    private PlayerAnimation playerAnimation;
+    
+    public PlayerAnimation playerAnimation;
     public PlayerActivity playerActivity;
 
     void Start()
@@ -62,6 +61,10 @@ public class PlayerController : MonoBehaviour
             if(Input.GetMouseButtonDown(0) && NetworkManager.instance.statusRoom == "Game"){
                 playerActivity.Shoot(this.team);
                 NetworkManager.instance.GetComponent<NetworkManager>().CommandShoot();
+            }
+
+            if(Input.GetKeyDown(KeyCode.L)){
+                NetworkManager.instance.ComandSelectedGuns(0);
             }
         }
         currentPosition = transformPlayer.position;

@@ -64,6 +64,7 @@ public class NetworkManager : MonoBehaviour
             StartCoroutine(RaiseLose());
         }
         this.DeleteAllItemServer();
+        AudioManager.Instance.Pause();
     }
     IEnumerator RaiseWin(){
         string uri = "http://localhost:3000/laihieu/user/increasewin";
@@ -111,6 +112,7 @@ public class NetworkManager : MonoBehaviour
             health.OnChangeHealth(rebornJSON.health);
             PlayerController pc = p.GetComponent<PlayerController>();
             pc.setAvtivePlayer = true;
+            pc.playerActivity.ChangeWeapon(rebornJSON.selectedGun);
 		}
     }
     public void ResetRoom(){
@@ -142,6 +144,10 @@ public class NetworkManager : MonoBehaviour
         socketManager.Socket.On("statuslobby",(String data)=>{OnStatusLobby(data);});
         socketManager.Socket.On("item server",(String data)=>{OnItemServer(data);});
         socketManager.Socket.On("changeTeam",(String data)=>{OnChangeTeam(data);});
+        socketManager.Socket.On("post", (String data) => {OnPost(data);});
+    }
+    void OnPost(String data){
+        ConfirmationCanvas.instance.Thongbao(data);
     }
 
     public void OnChangeTeam(String data){
@@ -527,6 +533,7 @@ public class NetworkManager : MonoBehaviour
         public string name;
         public float[] position;
         public int health;
+        public int selectedGun;
         public static RebornJSON CreateFromJSON(string data){
             return JsonUtility.FromJson<RebornJSON>(data);
         }

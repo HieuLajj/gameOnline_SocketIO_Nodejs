@@ -17,7 +17,7 @@ using TMPro;
         [SerializeField]
         private Button chuyendoiBtn;
         [SerializeField]
-        private Text chuyendoiText;
+        private TextMeshProUGUI chuyendoiText;
         private bool flagChuyendoi = false;
         [SerializeField]
         private GameObject LoginCanvas;
@@ -77,7 +77,7 @@ using TMPro;
                             ConfirmationCanvas.instance.Thongbao("Dang nhap that bai");
                         }
                     }
-                    catch(Exception exp){
+                    catch{
                         ConfirmationCanvas.instance.Thongbao("Co loi xay ra");
                         //Debug.Log("co loi xay ra khong ket noi duoc voi may chu");
                     }
@@ -98,7 +98,7 @@ using TMPro;
                 }else{
                     try{
                         ConfirmationCanvas.instance.Thongbao("Dang ki thanh cong");
-                    }catch(Exception exp){
+                    }catch{
                         ConfirmationCanvas.instance.Thongbao("Co loi xay ra");
                     }
                 }

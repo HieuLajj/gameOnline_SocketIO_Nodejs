@@ -5,15 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Static
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Map
   - Water
   - UI
   - 
-  - 
+  - Effect
   - 
   - 
   - 
@@ -42,9 +43,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 634340693
+  - name: Map
+    uniqueID: 3335747607
     locked: 0
   - name: Dust
     uniqueID: 2420960167
+    locked: 0
+  - name: Player
+    uniqueID: 634340693
+    locked: 0
+  - name: Effect
+    uniqueID: 2306087501
     locked: 0

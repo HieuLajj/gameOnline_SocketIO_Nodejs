@@ -35,17 +35,8 @@ public class LobbyUIManager : MonoBehaviour
     }
     void Start()
     {
-        // backButton.onClick.AddListener(delegate(){
-        //     HideButtonClient();
-        //     NetworkManager.instance.JoinGame("0");
-        //     NetworkManager.instance.isRoommaster=0;
-        //     LobbyUI.SetActive(true);
-        //     backButton.gameObject.SetActive(false);
-        //     for(var i = NetworkManager.instance.managerPlayer.transform.childCount-1; i>=0; i--){
-        //         Destroy(NetworkManager.instance.managerPlayer.transform.GetChild(i).gameObject);
-        //     }
-        // });
-        
+        AudioManager.Instance.Pause();
+
         createRoomBtn.onClick.AddListener(()=>{
             Ingame(lobbyText.text);
         });
