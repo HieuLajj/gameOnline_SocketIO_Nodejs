@@ -7,6 +7,8 @@ public class ObjectGeneratorRandomPositionUtil : MonoBehaviour
     // Start is called before the first frame update
     public GameObject objectPrefab;
     public GameObject objectPrefab2;
+    [SerializeField] private GameObject objectPool1;
+    [SerializeField] private GameObject objectPool2;
     public float radius = 0.2f;
     
     protected Vector2 GetRandomPosition(){
@@ -30,7 +32,6 @@ public class ObjectGeneratorRandomPositionUtil : MonoBehaviour
     protected virtual GameObject GetObject2(){
         return Instantiate(objectPrefab2);
     }
-
     public void CreateObject2(){
         Vector2 position = GetRandomPosition();
         GameObject impactObject = GetObject2();

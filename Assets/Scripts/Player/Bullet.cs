@@ -43,7 +43,8 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other){
         if(other.tag=="Static"){
             OnHit?.Invoke();
-            Destroy(this.gameObject);
+            // Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
         if (other.tag != "Player") return; 
         var hit = other.gameObject;
@@ -55,7 +56,8 @@ public class Bullet : MonoBehaviour
                 health.TakeDamage(playerFrom,10);
             }
             OnHit2?.Invoke();
-            Destroy(gameObject);
+            this.gameObject.SetActive(false);
+            //Destroy(gameObject);
         }
     }
 

@@ -16,9 +16,13 @@ public class PlayerActivity : MonoBehaviour
     public Gun[] allGuns;
     public Gun gun;
     public UnityEvent OnShoot = new UnityEvent();
+    public GameObject objectGameobject;
+    private ObjectPool objectPool;
+    [SerializeField] private AudioClip music1;
 
     private void Start() {
         gun.SwitchGunWeapon(selectedGun);
+        objectPool = objectGameobject.GetComponent<ObjectPool>();
     }
 
     // public void SwitchWeapon(){
@@ -46,13 +50,31 @@ public class PlayerActivity : MonoBehaviour
     }
     public void Shoot(int team){
         OnShoot?.Invoke();
+        AudioManager.Instance.PlaySFX(music1);
         for(var i = 0; i<=this.selectedGun; i++){
-            var bullet = Instantiate(bulletPrefab, bulletSpawn.GetChild(i).position, bulletSpawn.GetChild(i).rotation) as GameObject;
-            Bullet b = bullet.GetComponent<Bullet>();
-            b.a = selectedGun;
-            b.playerFrom = gameObject;
-            b.teamPlayerFrom = team;
-            Destroy(bullet, 5.0f);
+            GameObject bullet = objectPool.GetPooledObject();
+            if(bullet!=null){
+                bullet.transform.position = bulletSpawn.GetChild(i).position;
+                bullet.transform.rotation = bulletSpawn.GetChild(i).rotation;
+                Bullet b = bullet.GetComponent<Bullet>();
+                b.a = selectedGun;
+                b.Bung();
+                b.playerFrom = gameObject;
+                b.teamPlayerFrom = team;
+                bullet.SetActive(true);
+                StartCoroutine(HideBullet(bullet,3));
+            }
+            //var bullet = Instantiate(bulletPrefab, bulletSpawn.GetChild(i).position, bulletSpawn.GetChild(i).rotation) as GameObject;
+            // Bullet b = bullet.GetComponent<Bullet>();
+            // b.a = selectedGun;
+            // b.playerFrom = gameObject;
+            // b.teamPlayerFrom = team;
+            //Destroy(bullet, 5.0f);
         }
+    }
+
+    private IEnumerator HideBullet(GameObject bullet, float duration){
+        yield return new WaitForSeconds(duration);
+        bullet.SetActive(false);
     }
 }
