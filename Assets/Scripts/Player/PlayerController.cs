@@ -6,6 +6,10 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private FixedJoystick _joystick;
+    [SerializeField] private FixedJoystick _aimFJ;
+    [SerializeField] private Button _shootBtn;
+
     private float movementHorizontal;
     private float movementVertical;
     protected float indexFlip;
@@ -44,6 +48,17 @@ public class PlayerController : MonoBehaviour
         transformPlayer = GetComponent<Transform>();
         oldPosition = transformPlayer.position;
         currentPosition = transformPlayer.position;
+        if(!isLocalPlayer){
+            _joystick.gameObject.SetActive(false);
+            _aimFJ.gameObject.SetActive(false);
+            _shootBtn.gameObject.SetActive(false);
+        }
+        else{
+            _shootBtn.onClick.AddListener(()=>{
+                playerActivity.Shoot(this.team);
+                NetworkManager.instance.GetComponent<NetworkManager>().CommandShoot();
+            });
+        }
     }
 
     void Update()
@@ -58,10 +73,11 @@ public class PlayerController : MonoBehaviour
             if(currentPosition != oldPosition){
                 NetworkManager.instance.GetComponent<NetworkManager>().ComandMove(transformPlayer.position);
             }
-            if(Input.GetMouseButtonDown(0) && NetworkManager.instance.statusRoom == "Game"){
-                playerActivity.Shoot(this.team);
-                NetworkManager.instance.GetComponent<NetworkManager>().CommandShoot();
-            }
+            // if(Input.GetMouseButtonDown(1) && NetworkManager.instance.statusRoom == "Game"){
+            //     Debug.Log("ok");
+            //     playerActivity.Shoot(this.team);
+            //     NetworkManager.instance.GetComponent<NetworkManager>().CommandShoot();
+            // }
 
             if(Input.GetKeyDown(KeyCode.L)){
                 NetworkManager.instance.ComandSelectedGuns(0);
@@ -90,8 +106,10 @@ public class PlayerController : MonoBehaviour
         playerMovement.Movement(rb,movementHorizontal,movementVertical);
     }
     private void CheckInput(){
-        movementHorizontal = Input.GetAxisRaw("Horizontal");
-        movementVertical = Input.GetAxisRaw("Vertical");
+        // movementHorizontal = Input.GetAxisRaw("Horizontal");
+        // movementVertical = Input.GetAxisRaw("Vertical");
+        movementHorizontal = _joystick.Horizontal;
+        movementVertical = _joystick.Vertical;
     }
     // doi phong
     public void ChangeTeam(int team){

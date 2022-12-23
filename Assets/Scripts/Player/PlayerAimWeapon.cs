@@ -8,8 +8,10 @@ public class PlayerAimWeapon : MonoBehaviour
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
     /// </summary>
+    [SerializeField] private FixedJoystick _aimFJ;
     public bool isLocalPlayer = false;
     private float waitTime = 1/24f;
+    private Vector3 mousepos;
     Rect screenRect;
     void Start()
     {
@@ -20,11 +22,13 @@ public class PlayerAimWeapon : MonoBehaviour
     void Update()
     {
         if(screenRect.Contains(Input.mousePosition) && isLocalPlayer){
-            Vector3 mousepos = Input.mousePosition;
+            //Vector3 mousepos = Input.mousePosition;
             Vector3 gunposition = Camera.main.WorldToScreenPoint(transform.position);
-            mousepos.x = mousepos.x - gunposition.x;
-            mousepos.y = mousepos.y - gunposition.y;
-            
+            // mousepos.x = mousepos.x - gunposition.x;
+            // mousepos.y = mousepos.y - gunposition.y;
+            mousepos.x = _aimFJ.Horizontal;
+            mousepos.y = _aimFJ.Vertical;
+            if (mousepos.x == 0 && mousepos.y==0 ) return;
             float gunangle = Mathf.Atan2(mousepos.y, mousepos.x) * Mathf.Rad2Deg;
             if(Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x){
                 transform.rotation = Quaternion.Euler(new Vector3(180f, 0f, -gunangle));

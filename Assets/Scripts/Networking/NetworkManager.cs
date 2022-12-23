@@ -8,7 +8,7 @@ using System.Web;
 using UnityEngine.Networking;
 using Cinemachine;
 using TMPro;
-
+//http://192.168.1.234:8000
 public class NetworkManager : MonoBehaviour
 {
     public CinemachineVirtualCamera vCam;
@@ -67,7 +67,7 @@ public class NetworkManager : MonoBehaviour
         AudioManager.Instance.Pause();
     }
     IEnumerator RaiseWin(){
-        string uri = "http://localhost:3000/laihieu/user/increasewin";
+        string uri = "http://192.168.1.234:3000/laihieu/user/increasewin";
         WWWForm form = new WWWForm();
         using(UnityWebRequest request = UnityWebRequest.Post(uri,form)){
             request.SetRequestHeader("Authorization",$"jwt {ProfilePlayer.Instance.token}");
@@ -82,7 +82,7 @@ public class NetworkManager : MonoBehaviour
     }
 
     IEnumerator RaiseLose(){
-        string uri = "http://localhost:3000/laihieu/user/increaselose";
+        string uri = "http://192.168.1.234:3000/laihieu/user/increaselose";
         using(UnityWebRequest request = UnityWebRequest.Get(uri)){
             request.SetRequestHeader("Authorization",$"jwt {ProfilePlayer.Instance.token}");
             yield return request.SendWebRequest();
@@ -120,7 +120,7 @@ public class NetworkManager : MonoBehaviour
     }
 
     public void ConnectSocket(){
-        socketManager = new SocketManager(new Uri("http://localhost:3000"));
+        socketManager = new SocketManager(new Uri("http://192.168.1.234:3000"));
         socketManager.Socket.On("connection",()=>{
             Debug.Log("laivanhieu");
         });        
@@ -248,6 +248,7 @@ public class NetworkManager : MonoBehaviour
         ShootJSON shootJSON = ShootJSON.CreateFromJSON(data);
         GameObject p = GameObject.Find(shootJSON.name);
         PlayerController pc = p.GetComponent<PlayerController>();
+        // Debug.Log(data+"netwaord");
         pc.playerActivity.Shoot(pc.team);
     }
     

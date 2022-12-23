@@ -58,7 +58,7 @@ using TMPro;
         }
 
         IEnumerator PostDataSignIn(){
-            string uri = "http://localhost:3000/laihieu/user/sign_in";
+            string uri = "http://192.168.1.234:3000/laihieu/user/sign_in";
             WWWForm form = new WWWForm();
             form.AddField("email",emailText.text);
             form.AddField("password",passwordText.text);
@@ -86,7 +86,7 @@ using TMPro;
         }
 
         IEnumerator PostSignup(){
-            string uri = "http://localhost:3000/laihieu/user/add_user";
+            string uri = "http://192.168.1.234:3000/laihieu/user/add_user";
             WWWForm form = new WWWForm();
             form.AddField("name",nameIFSignUp.text);
             form.AddField("email",emailIFSignUp.text);

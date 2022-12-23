@@ -49,6 +49,8 @@ public class PlayerActivity : MonoBehaviour
         gun.SwitchGunWeapon(selectedGun);
     }
     public void Shoot(int team){
+        if (NetworkManager.instance.statusRoom != "Game") return;
+        Debug.Log("faewf");
         OnShoot?.Invoke();
         AudioManager.Instance.PlaySFX(music1);
         for(var i = 0; i<=this.selectedGun; i++){
@@ -71,6 +73,7 @@ public class PlayerActivity : MonoBehaviour
             // b.teamPlayerFrom = team;
             //Destroy(bullet, 5.0f);
         }
+        //NetworkManager.instance.GetComponent<NetworkManager>().CommandShoot();
     }
 
     private IEnumerator HideBullet(GameObject bullet, float duration){

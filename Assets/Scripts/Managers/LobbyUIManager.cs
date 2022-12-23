@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Newtonsoft.Json.Linq;
 using TMPro;
+using UnityEngine.Networking;
+
 
 public class LobbyUIManager : MonoBehaviour
 {
@@ -25,6 +28,14 @@ public class LobbyUIManager : MonoBehaviour
     public Dropdown luachonmap;
 
     private void Awake() {
+        // string jsonResponse = "[{\"name\": \"JD Bots\",\"email\": \"info@jd-bots.com\"},{\"name\": \"Dewiride Creations\",\"email\": \"info@dewiride.com\"}]";
+        // //string feoppoop ='[{"_id":"636c9f56f122f59082c9b3f0","email":"laihieu@gmail.com","name":"nguyenthach","password":"$2b$08$19JTSPRlHYaIB2xAha3FweNkPu9T5OIx06/9foJumwu5Z7GB8oiYa","win":33,"lose":6,"__v":0},{"_id":"636e6be06f428828586411b2","email":"daiktb2000@gmail.com","name":"hieulajj","password":"$2b$08$xT0NyuxrxIO/8mrywxQ1.uPFY8sOAdMjps/LUILGLtH0cRFujFaRG","win":9,"lose":13,"__v":0},{"_id":"63738899717f64cd9bc4a019","email":"laihieu999@gmail.com","name":"laivantien","password":"$2b$08$Ma9YWivGnm3IHJl29zhLYuXa4vFuACcydhxBFXvKTnwCnCuPuaiUa","win":2,"lose":0,"__v":0},{"_id":"637388fa717f64cd9bc4a021","email":"laihieu777@gmail.com","name":"tranvietdung","password":"$2b$08$1fqoa3fif/9NFsOLl6jHOukCrbGQdfqvymSU4dk5hjc3LFjflhKba","win":0,"lose":2,"__v":0}]';
+        // JArray jArray = JArray.Parse(jsonResponse);
+        // foreach (JObject jObject in jArray)
+        // {
+        //     Debug.Log("--------------------------------------------------------");
+        //     Debug.Log($"hahahahaahahahhaha{(string)jObject["name"]} -> {(string)jObject["email"]}");
+        // }
         if(instance == null){
             instance = this;
         }
